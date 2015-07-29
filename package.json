@@ -32,5 +32,9 @@
   "pre-commit": [
     "jshint",
     "coverage"
-  ]
+  ],
+  "dependencies": {
+    "hapi": "^8.8.0",
+    "redis": "^0.12.1"
+  }
 }
