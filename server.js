@@ -6,12 +6,12 @@ server.connection({
 	port: Number(process.env.PORT)
 });
 
-server.route([
-	{ method: 'GET', path: '/', handler: { file: "public/index.html" } },
-]);
+server.route(require('./lib/routes.js'));
 
 server.start(function () {
-	console.log('Listening on port ' + process.env.PORT);
+	// require('./lib/chat').init(server.listener, function(){
+	// });
+	console.log("Running on port: ", process.env.PORT);
 });
 
 module.exports = server;
