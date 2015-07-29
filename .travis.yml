@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - 0.10
+script:
+  - npm test
+  - npm run coverage
+after success:
+  - npm run codeclimate
+services:
+  - redis-server  
