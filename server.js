@@ -7,7 +7,7 @@ server.connection({
 });
 
 server.route([
-  { method: 'GET', path: '/', handler: { file: "index.html" } },
+  { method: 'GET', path: '/', handler: { file: "public/index.html" } },
   // { method: 'GET', path: '/client.js', handler: { file: './client.js' } },
   // { method: 'GET', path: '/style.css', handler: { file: './style.css' } },
   // { method: 'GET', path: '/load',      handler: require('./lib/load_messages').load }
