@@ -25,3 +25,5 @@ As of 30 July:
 * Server has been built with Hapi
 * Redis database has been initialised (methods still to be written)
 * Basic HTML structures have been completed
+* SASS folder structure has been set up
+* Some pages have been styled with dummy CSS: landing page
