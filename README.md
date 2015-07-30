@@ -7,4 +7,11 @@
 
 
 # JustOpine
-Pupils opinion making platform
+
+JustOpine is a tool to get students talking about current events. Through the platform, teachers are able to assign opinion pieces for students to respond to and discuss.
+
+This project is being completed at [Founders & Coders London](www.foundersandcoders.com).
+
+## Tech Stack
+
+This project is being built in full stack JavaScript, using Node.js and Hapi.js on the backend. We're using Redis as our database for maximum efficiency. Testing tools include Shot and QUnit.
