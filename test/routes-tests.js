@@ -10,85 +10,85 @@ var before = lab.before;
 var after = lab.after;
 var expect = Code.expect;
 
-console.log("#lab works");
 lab.test('returns true when 1 + 1 equals 2', function (done) {
     Code.expect(1+1).to.equal(2);
     done();
+    console.log("#lab works");
 });
 
-console.log("#landing page loads correctly");
 it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/'}, function (res) {
+        console.log(res.statusCode);
         assert.equal(res.statusCode, '200' );
         done();
     });
+    console.log("#landing page loads correctly");
 });
 
-console.log("#set new assignment page loads correctly");
 it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/new'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
+    console.log("#set new assignment page loads correctly");
 });
 
-console.log("#student dashboard page loads correctly");
 it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/studentdash'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
+    console.log("#student dashboard page loads correctly");
 });
 
-console.log("#teacher dashboard page loads correctly");
 it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/teacherdash'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
+    console.log("#teacher dashboard page loads correctly");
 });
 
-console.log("#student discussion page loads correctly");
 it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/studentdiscussion'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
+    console.log("#student discussion page loads correctly");
 });
 
-console.log("#teacher discussion page loads correctly");
 it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/teacherdiscussion'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
+    console.log("#teacher discussion page loads correctly");
 });
 
-console.log("#classes page loads correctly");
 it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/classes'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
+    console.log("#classes page loads correctly");
 });
 
-console.log("#students page loads correctly");
 it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/students'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
+    console.log("#students page loads correctly");
 });
 
-console.log("#students page loads correctly");
 it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/students'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
+    console.log("#students page loads correctly");
 });
 
-console.log("#generic GET request to /static/{path*} works");
 it("Testing generic GET request to /static/{path*} works",
 function(done){
     var options = {
@@ -99,6 +99,7 @@ function(done){
         assert.equal(res.statusCode, '200' );
         done();
     });
+    console.log("#generic GET request to /static/{path*} works");
 });
 
 // it("Test to check that user is sent to index.html with statusCode 200 when not authenticated", function(done){
