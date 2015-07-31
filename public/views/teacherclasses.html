@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Students</title>
-        <link rel="stylesheet" href="../css/main.css">
+        <title>Class Lists</title>
+        <link rel="stylesheet" href="/static/public/css/main.css">
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -22,42 +22,26 @@
             </div>
         </nav>
         <main>
-            <img class="back-icon" src="#">
-            <p>All classes</p>
-            <h2>Students in {class #}</h2>
-            <button class="add-student-button">+ Add Student</button>
-            <div>
-                <table class="student-list">
-                  <tr>
-                    <td></td>
-                    <td>Name</td>
-                    <td>Level</td>
-                  </tr>
-                  <tr>
-                    <td><img class="student-icon" src="#"></td>
-                    <td>{student full name}</td>
-                    <td>{level}</td>
-                  </tr>
-                  <tr>
-                    <td><img class="student-icon" src="#"></td>
-                    <td>{student full name}</td>
-                    <td>{level}</td>
-                  </tr>
-                </table>
+            <h2>My Classes</h2>
+            <div class="class-div">
+                <img class="add-icon" src="#" />
+                <h4>Add Class</h4>
+            </div>
+            <div class="class-div">
+                <img class="class-icon" src="#" />
+                <h4>{class #}</h4>
+            </div>
+            <div class="class-div">
+                <img class="class-icon" src="#" />
+                <h4>{class #}</h4>
             </div>
         </main>
         <footer>
             <p>Copyright JustOpine 2015</p>
         </footer>
-        <div class="add-student-lightbox">
-            <form class="add-student-form">
-                <p>Full name:</p>
-                <input type="text">
-                <p>Current working level:</p>
-                <input type="text">
-                <p>Username:</p>
-                <input type="text">
-                <p>Password:</p>
+        <div class="add-class-lightbox">
+            <form class="add-class-form">
+                <p>Class name:</p>
                 <input type="text">
                 <input type="submit">
             </form>
