@@ -12,5 +12,3 @@ var server   = require('../server.js');
 	//  assert.equal(res.statusCode, '200');
 	//  console.log('Status-Code: ' + res.statusCode + ' GENERIC CALL SUCCESS');
 	//  });
- 
-
