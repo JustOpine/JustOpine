@@ -23,12 +23,14 @@
   "homepage": "https://github.com/foundersandcoders/JustOpine",
   "devDependencies": {
     "codeclimate-test-reporter": "^0.1.0",
+    "fakeredis": "^0.3.1",
     "istanbul": "^0.3.17",
     "jshint": "^2.8.0",
     "nodemon": "^1.4.0",
     "pre-commit": "^1.0.10",
     "qunitjs": "^1.18.0",
-    "shot": "^1.5.3"
+    "shot": "^1.5.3",
+    "tape": "^4.0.1"
   },
   "pre-commit": [
     "jshint",
