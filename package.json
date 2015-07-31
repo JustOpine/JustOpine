@@ -4,12 +4,12 @@
   "description": "Pupils opinion making platform",
   "main": "public/index.js",
   "scripts": {
-    "test": "node test/test_server.js",
+    "test": "node test/*.js",
     "codeclimate": "CODECLIMATE_REPO_TOKEN=80007afecea8ad66d1605eeef438b7f3778952d9e9b2fdb378b4aed3363264f4 ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
     "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
     "start": "node server.js",
     "nodemon": "./node_modules/.bin/nodemon ./server.js",
-    "coverage": "istanbul cover test/test_server.js && ./node_modules/.bin/istanbul check-coverage --statements 10 --functions 10 --lines 10 --branches 10"
+    "coverage": "istanbul cover test/*.js && ./node_modules/.bin/istanbul check-coverage --statements 10 --functions 10 --lines 10 --branches 10"
   },
   "repository": {
     "type": "git",
@@ -22,9 +22,11 @@
   },
   "homepage": "https://github.com/foundersandcoders/JustOpine",
   "devDependencies": {
+    "code": "^1.5.0",
     "codeclimate-test-reporter": "^0.1.0",
     "istanbul": "^0.3.17",
     "jshint": "^2.8.0",
+    "lab": "^5.14.0",
     "nodemon": "^1.4.0",
     "pre-commit": "^1.0.10",
     "qunitjs": "^1.18.0",
