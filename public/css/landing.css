@@ -1,10 +1,22 @@
 button {
-  border: 1px solid black;
+  border: none;
+  -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   font-size: 14px;
-  padding: 5px 15px; }
+  letter-spacing: 2px;
+  padding: 8px 17px; }
 
 button:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  filter: alpha(opacity=70);
+  opacity: 0.7; }
+
+.sign-in {
+  background-color: #00BCD4;
+  font-size: 18px;
+  margin-top: 10px; }
 
 body {
   font-family: 'Roboto', sans-serif; }
@@ -17,7 +29,22 @@ body {
   height: 100%; }
 
 .landing-container {
-  padding-top: 100px;
-  text-align: center; }
+  background-color: #E0F7FA;
+  -webkit-box-shadow: 3px 5px 20px -1px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 3px 5px 20px -1px rgba(0, 0, 0, 0.52);
+  -ms-box-shadow: 3px 5px 20px -1px rgba(0, 0, 0, 0.52);
+  box-shadow: 3px 5px 20px -1px rgba(0, 0, 0, 0.52);
+  margin: 100px auto 0 auto;
+  padding: 50px;
+  text-align: center;
+  width: 500px; }
+
+.landing-logo {
+  height: auto;
+  max-width: 100%; }
+
+@media (max-width: 700px) {
+  .landing-container {
+    width: 200px; } }
 
 /*# sourceMappingURL=landing.css.map */

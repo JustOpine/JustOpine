@@ -1,3 +1,5 @@
+@import '../modules/colours';
+@import '../modules/mixins';
 @import '../components/buttons';
 @import '../components/fonts';
 
@@ -10,10 +12,22 @@ body {
 }
 
 .landing-container {
-    padding-top: 100px;
+    background-color: $turquoise4;
+    @include box-shadow(3px 5px 20px -1px rgba(0,0,0,0.52));
+    margin: 100px auto 0 auto;
+    padding: 50px;
     text-align: center;
+    width: 500px;
+}
+
+.landing-logo {
+    height: auto;
+    max-width: 100%;
 }
 
 @media (max-width: 700px) {
 
+    .landing-container {
+        width: 200px;
+    }
 }

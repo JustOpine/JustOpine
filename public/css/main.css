@@ -4,15 +4,34 @@ body, p, h1, h2, h3, h4, h5, h6 {
   padding: 0; }
 
 h2 {
+  font-weight: normal;
   text-align: center; }
 
+main {
+  padding: 20px 100px; }
+
+footer {
+  padding: 100px; }
+
 button {
-  border: 1px solid black;
+  border: none;
+  -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   font-size: 14px;
-  padding: 5px 15px; }
+  letter-spacing: 2px;
+  padding: 8px 17px; }
 
 button:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  filter: alpha(opacity=70);
+  opacity: 0.7; }
+
+.sign-in {
+  background-color: #00BCD4;
+  font-size: 18px;
+  margin-top: 10px; }
 
 body {
   font-family: 'Roboto', sans-serif; }
