@@ -1,0 +1,38 @@
+body, p, h1, h2, h3, h4, h5, h6 {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+h2 {
+  text-align: center; }
+
+button {
+  border: 1px solid black;
+  font-size: 14px;
+  padding: 5px 15px; }
+
+button:hover {
+  cursor: pointer; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+nav {
+  height: 80px; }
+
+.nav-logo {
+  height: 60px;
+  float: left;
+  padding: 10px;
+  width: 60px; }
+
+.nav-component-div {
+  float: right; }
+
+.nav-component {
+  border: 1px solid black;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px; }
+
+/*# sourceMappingURL=main.css.map */
