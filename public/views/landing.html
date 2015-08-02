@@ -9,9 +9,26 @@
     </head>
     <body>
         <div class="landing-container">
-            <img class="landing-logo" src="https://mail.google.com/mail/u/0/?ui=2&ik=cdf7762786&view=fimg&th=14ed95c1b677277c&attid=0.1&disp=inline&realattid=f_icomqzis0&safe=1&attbid=ANGjdJ-8IP1Hev81r-l1Pm_lWj9EiQjAe0aJd2f8-rucjuSrzMMMK3eHktWqvMMn1wJYotD0NzbuToHhUVwfqfyxLrPWgIzKFrU4K5fZetXCBXyj8x-WleWkrEWp6sM&ats=1438248781677&rm=14ed95c1b677277c&zw&sz=w1364-h605" />
-            <h2 class="tag-line">A place for students to share opinions.</h2>
-            <button class="sign-in">SIGN IN</button>
+            <form class="landing-container-secondview">
+                <h3>Enter your username and password to log in.</h3>
+                <span class="input-container">
+                    <p>Username:</p>
+                    <input type="text" class="sign-in-input">
+                </span>
+                <span class="input-container">
+                    <p>Password:</p>
+                    <input type="password" class="sign-in-input">
+                </span>
+                <input type="submit" class="sign-in-submit" value="SUBMIT">
+            </form>
+            <div class="landing-container-firstview">
+                <img class="landing-logo" src="https://mail.google.com/mail/u/0/?ui=2&ik=cdf7762786&view=fimg&th=14ed95c1b677277c&attid=0.1&disp=inline&realattid=f_icomqzis0&safe=1&attbid=ANGjdJ-8IP1Hev81r-l1Pm_lWj9EiQjAe0aJd2f8-rucjuSrzMMMK3eHktWqvMMn1wJYotD0NzbuToHhUVwfqfyxLrPWgIzKFrU4K5fZetXCBXyj8x-WleWkrEWp6sM&ats=1438248781677&rm=14ed95c1b677277c&zw&sz=w1364-h605" />
+                <h2 class="tag-line">A place for students to share opinions.</h2>
+                <button class="sign-in">SIGN IN</button>
+            </div>
         </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="/static/public/index.js"></script>
     </body>
 </html>

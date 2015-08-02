@@ -1,4 +1,4 @@
-button {
+button, input[type="submit"] {
     border: none;
     @include box-shadow(1px 2px 10px -1px rgba(0,0,0,0.25));
     font-size: 14px;
@@ -6,7 +6,7 @@ button {
     padding: 8px 17px;
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
     cursor: pointer;
     filter: alpha(opacity=70);
     opacity: 0.7;
@@ -16,4 +16,11 @@ button:hover {
     background-color: $turquoise1;
     font-size: 18px;
     margin-top: 10px;
+}
+
+.sign-in-submit {
+    background-color: $turquoise1;
+    display: block;
+    font-size: 18px;
+    margin: 15px auto 0 auto;
 }
