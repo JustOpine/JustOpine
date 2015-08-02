@@ -20,10 +20,11 @@ This project is being built in full stack JavaScript, using Node.js and Hapi.js 
 
 The product is still in development, with the MVP due to be completed by the end of the first week of August.
 
-As of 30 July:
+As of 2 August 2015:
 * Wireframes have been completed and user stories written (see https://github.com/foundersandcoders/JustOpine/issues/16)
 * Server has been built with Hapi
-* Redis database has been initialised (methods still to be written)
-* Basic HTML structures have been completed
-* SASS folder structure has been set up
-* Some pages have been styled with dummy CSS: landing page
+* Page routes and handlers have been written and tested
+* Redis database has been initialised, methods and tests are in progress
+* HTML structures for all views have been completed
+* SASS folder structure and files have been established
+* All ages have been set up with basic CSS, landing page has been fully styled
