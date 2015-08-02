@@ -14,15 +14,52 @@ body {
 .landing-container {
     background-color: $turquoise4;
     @include box-shadow(3px 5px 20px -1px rgba(0,0,0,0.52));
+    height: 250px;
     margin: 100px auto 0 auto;
+    overflow: hidden;
     padding: 50px;
+    // position: absolute;
     text-align: center;
     width: 500px;
-}
 
-.landing-logo {
-    height: auto;
-    max-width: 100%;
+    .landing-logo {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .landing-container-firstview {
+        margin: 0 auto;
+        position: relative;
+        text-align: center;
+    }
+
+    .landing-container-firstview * {
+        // margin: 0 auto;
+        position: relative;
+        text-align: center;
+    }
+
+    .landing-container-secondview {
+        display: none;
+        position: absolute;
+        left: 100%;
+
+        .input-container {
+            display: block;
+        }
+
+        .input-container > * {
+            display: inline;
+            margin: 10px;
+        }
+
+        .sign-in-input {
+            // display: block;
+            font-size: 18px;
+            margin: 10px auto;
+            padding: 5px;
+        }
+    }
 }
 
 @media (max-width: 700px) {

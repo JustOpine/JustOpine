@@ -1,4 +1,4 @@
-button {
+button, input[type="submit"] {
   border: none;
   -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
@@ -8,7 +8,7 @@ button {
   letter-spacing: 2px;
   padding: 8px 17px; }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
   cursor: pointer;
   filter: alpha(opacity=70);
   opacity: 0.7; }
@@ -17,6 +17,12 @@ button:hover {
   background-color: #00BCD4;
   font-size: 18px;
   margin-top: 10px; }
+
+.sign-in-submit {
+  background-color: #00BCD4;
+  display: block;
+  font-size: 18px;
+  margin: 15px auto 0 auto; }
 
 body {
   font-family: 'Roboto', sans-serif; }
@@ -34,14 +40,35 @@ body {
   -moz-box-shadow: 3px 5px 20px -1px rgba(0, 0, 0, 0.52);
   -ms-box-shadow: 3px 5px 20px -1px rgba(0, 0, 0, 0.52);
   box-shadow: 3px 5px 20px -1px rgba(0, 0, 0, 0.52);
+  height: 250px;
   margin: 100px auto 0 auto;
+  overflow: hidden;
   padding: 50px;
   text-align: center;
   width: 500px; }
-
-.landing-logo {
-  height: auto;
-  max-width: 100%; }
+  .landing-container .landing-logo {
+    height: auto;
+    max-width: 100%; }
+  .landing-container .landing-container-firstview {
+    margin: 0 auto;
+    position: relative;
+    text-align: center; }
+  .landing-container .landing-container-firstview * {
+    position: relative;
+    text-align: center; }
+  .landing-container .landing-container-secondview {
+    display: none;
+    position: absolute;
+    left: 100%; }
+    .landing-container .landing-container-secondview .input-container {
+      display: block; }
+    .landing-container .landing-container-secondview .input-container > * {
+      display: inline;
+      margin: 10px; }
+    .landing-container .landing-container-secondview .sign-in-input {
+      font-size: 18px;
+      margin: 10px auto;
+      padding: 5px; }
 
 @media (max-width: 700px) {
   .landing-container {
