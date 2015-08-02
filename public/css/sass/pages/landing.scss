@@ -5,9 +5,10 @@
 
 body {
     background-attachment: fixed;
-    background-image: url('https://mail.google.com/mail/u/0/?ui=2&ik=cdf7762786&view=fimg&th=14ed97d478ac1ee2&attid=0.1&disp=emb&realattid=e1813c196c15e9f_0.1.1&attbid=ANGjdJ-GOKURinV46zEl1Pft4xm6GxeyGtvt0JVUdhxKKpDf2JuFV5h3T7XpcIW0IsOCpqoTKAKg-2eTRaSpurxUFegq9zXvCF6Xwl8E9azDfnBEgQFf-KuES8lXGSA&sz=w1316-h878&ats=1438248781621&rm=14ed97d478ac1ee2&zw&atsh=1');
+    background-image: url('../../../static/public/images/marbles.jpg');
     background-position: center center;
     background-size: cover;
+    color: $fontgrey;
     height: 100%;
 }
 
@@ -25,6 +26,10 @@ body {
     .landing-logo {
         height: auto;
         max-width: 100%;
+    }
+
+    h2 {
+        font-weight: normal;
     }
 
     .landing-container-firstview {
