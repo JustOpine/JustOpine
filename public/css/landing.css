@@ -42,7 +42,7 @@ body {
   -ms-box-shadow: 3px 5px 20px -1px rgba(0, 0, 0, 0.52);
   box-shadow: 3px 5px 20px -1px rgba(0, 0, 0, 0.52);
   height: 250px;
-  margin: 100px auto 0 auto;
+  margin: 100px auto 100px auto;
   overflow: hidden;
   padding: 50px;
   text-align: center;

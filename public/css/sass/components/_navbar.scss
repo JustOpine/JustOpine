@@ -1,4 +1,7 @@
 nav {
+    background-color: white;
+    border-bottom: 1px solid black;
+    @include box-shadow(3px 19px 33px -16px rgba(0,0,0,0.29));
     height: 80px;
 }
 
