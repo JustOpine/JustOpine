@@ -27,3 +27,4 @@ As of 30 July:
 * Basic HTML structures have been completed
 * SASS folder structure has been set up
 * Some pages have been styled with dummy CSS: landing page
+* Preliminary routes have been written and fully tested
