@@ -1,5 +1,4 @@
 $(".sign-in").on('click', function() {
-    console.log("hey");
 
     $(".landing-container-firstview").animate({
            left: '-100%'
@@ -16,5 +15,5 @@ $(".sign-in").on('click', function() {
                left: '0%'
            }, 300);
        });
-
+       
 });
