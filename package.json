@@ -2,7 +2,7 @@
   "name": "JustOpine",
   "version": "0.0.1",
   "description": "Pupils opinion making platform",
-  "main": "public/index.js",
+  "main": "server.js",
   "scripts": {
     "test": "node test/redis-tests.js && node test/routes-tests.js",
     "codeclimate": "CODECLIMATE_REPO_TOKEN=80007afecea8ad66d1605eeef438b7f3778952d9e9b2fdb378b4aed3363264f4 ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
