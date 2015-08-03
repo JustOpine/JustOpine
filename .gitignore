@@ -29,6 +29,9 @@ node_modules
 # DB data
 db-info.js
 
+# to populate db
+lib/meta.js
+
 
 .DS_Store
 .env
