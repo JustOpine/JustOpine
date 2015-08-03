@@ -9,6 +9,7 @@ h2 {
 
 header {
     background-color: white;
+    margin-top:5px;
     padding: 30px;
 
     img, p {
@@ -27,7 +28,9 @@ main {
     padding: 20px 100px;
 }
 
-footer {
-    background-color: white;
-    padding: 100px;
+@media (max-width: 700px) {
+
+    main {
+        padding: 20px 30px;
+    }
 }

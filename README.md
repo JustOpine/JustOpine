@@ -1,10 +1,7 @@
-
 ![Build Status](https://travis-ci.org/foundersandcoders/JustOpine.svg?branch=master)
 [![Test Coverage](https://codeclimate.com/github/plastic-cup/polagraph/badges/coverage.svg)](https://codeclimate.com/github/foundersandcoders/justOpine/coverage)
 [![Code Climate](https://codeclimate.com/github/foundersandcoders/JustOpine/badges/gpa.svg)](https://codeclimate.com/github/foundersandcoders/JustOpine) <a href="https://codeclimate.com/github/foundersandcoders/JustOpine/coverage">
 [![Codecrystal](https://img.shields.io/badge/code-crystal-5CB3FF.svg)](http://codecrystal.herokuapp.com/graph/foundersandcoders/justOpine/master)
-
-
 
 # JustOpine
 
@@ -23,8 +20,9 @@ The product is still in development, with the MVP due to be completed by the end
 As of 2 August 2015:
 * Wireframes have been completed and user stories written (see https://github.com/foundersandcoders/JustOpine/issues/16)
 * Server has been built with Hapi
-* Redis database has been initialised (methods still to be written)
+* Redis database has been initialised, with methods in progress
+* Redis tests are in progress (thus the red Travis badge)
 * Basic HTML structures have been completed
 * SASS folder structure has been set up
-* Some pages have been styled with dummy CSS: landing page
+* All views have basic styling, with landing page and discu
 * Preliminary routes have been written and fully tested
