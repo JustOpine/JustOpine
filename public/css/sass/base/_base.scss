@@ -1,3 +1,33 @@
+body {
+    color: $fontgrey;
+}
+
 h2 {
+    font-weight: normal;
     text-align: center;
+}
+
+header {
+    background-color: white;
+    padding: 30px;
+
+    img, p {
+        display: inline-block;
+    }
+
+    h2 {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+}
+
+main {
+    background-color: $turquoise4;
+    padding: 20px 100px;
+}
+
+footer {
+    background-color: white;
+    padding: 100px;
 }
