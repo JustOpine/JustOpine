@@ -10,58 +10,40 @@
     <body>
         <nav>
             <img class="nav-logo" src="../static/public/images/logo2.png">
-            <div class="nav-component-div">
-                <div class="nav-component">
-                    <h3>Dashboard</h3>
+        </nav>
+        <header>
+            <img class="back-icon" src="../static/public/images/back.png">
+            <p>Home</p>
+            <h2>Have Your Say</h2>
+        </header>
+        <main>
+            <div class="opinion-piece">
+                <div class="opinion-piece-image">
+                    <img src="../../../static/public/images/marbles.jpg">
                 </div>
-                <div class="nav-component">
-                    <h3>Class Lists</h3>
-                </div>
-                <div class="nav-component">
-                    <h3>Set Assignment</h3>
+                <div class="opinion-piece-text">
+                    <h2>Should we give the Elgin Marbles back?</h2>
+                    <p>At the beginning of the 19th century, Thomas Bruce, Lord Elgin, was the British Ambassador to the Ottoman Empire, which occupied Greece. He entered the Parthenon in Athens and documented the sculptures, making moulds and casts. He bribed Turkish officials to allow him to engage in daily excavations before removing a large part of the marbles to Britain. Bribing occupying powers to purloin national treasures is not the sort of behaviour usually deemed worthy of a British Ambassador.</p>
+                    <p>The looting that happened during the Second World War has, on the whole, been made good. No one accepts the right of those who occupied half of Europe to walk off with the revered relics of those subjugated nations in the 20th century. So why was it acceptable to do so in the 19th century?</p>
+                    <p>Britain missed a trick by failing to hand the marbles back during the 2012 Olympic Games, which would have been a spectacular gesture. That it did not is a sad reflection on the enfeebled spirit of philhellenism in Britain. Lord Byron, who died in Greece after travelling to fight in its war of independence, condemned the cultural vandalism of his fellow peer, Elgin. But today there are no Lord Byrons in Britain willing to raise their voice.</p>
                 </div>
             </div>
-        </nav>
-        <main>
-            <img class="back-icon" src="#">
-            <p>Home</p>
-            <h2>Current Assignment</h2>
-            <button class="add-student-button">+ Add Student</button>
-            <div>
-                <table class="student-list">
-                  <tr>
-                    <td></td>
-                    <td>Name</td>
-                    <td>Level</td>
-                  </tr>
-                  <tr>
-                    <td><img class="student-icon" src="#"></td>
-                    <td>{student full name}</td>
-                    <td>{level}</td>
-                  </tr>
-                  <tr>
-                    <td><img class="student-icon" src="#"></td>
-                    <td>{student full name}</td>
-                    <td>{level}</td>
-                  </tr>
-                </table>
+            <div class="responses-container">
+                <div class="student-response">
+                    <img src="../static/public/images/face.png">
+                    <h2>{student name}</h2>
+                    <p class="post-time">{time stamp}</p>
+                    <p>{insert three words here}</p>
+                    <p>{insert response here}</p>
+                </div>
+                <div class="student-response">
+                    <img src="../static/public/images/face.png">
+                    <h2>{student name}</h2>
+                    <p class="post-time">{time stamp}</p>
+                    <p>{insert three words here}</p>
+                    <p>{insert response here}</p>
+                </div>
             </div>
         </main>
-        <footer>
-            <p>Copyright JustOpine 2015</p>
-        </footer>
-        <div class="add-student-lightbox">
-            <form class="add-student-form">
-                <p>Full name:</p>
-                <input type="text">
-                <p>Current working level:</p>
-                <input type="text">
-                <p>Username:</p>
-                <input type="text">
-                <p>Password:</p>
-                <input type="text">
-                <input type="submit">
-            </form>
-        </div>
     </body>
 </html>
