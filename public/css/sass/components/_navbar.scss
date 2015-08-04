@@ -1,4 +1,6 @@
 nav {
+    background-color: white;
+    @include box-shadow(0 4px 0 rgba(0,0,0,.05));
     height: 80px;
 }
 
@@ -14,8 +16,7 @@ nav {
 }
 
 .nav-component {
-    border: 1px solid black;
+    background-color: $turquoise3;
     display: inline-block;
     margin: 10px;
-    padding: 10px;
 }

@@ -1,0 +1,27 @@
+.assignment-form-div {
+    background-color: white;
+    @include box-shadow(1px 2px 10px -1px rgba(0,0,0,0.25));
+    font-size: 18px;
+    margin: 20px auto;
+    padding: 40px;
+
+    p {
+        margin-top: 20px;
+    }
+
+    input[type="text"], textarea, select {
+        font-size: 18px;
+        margin-top: 5px;
+        padding: 5px;
+    }
+
+    input[type="text"], textarea {
+        width: 90%;
+    }
+
+    input[type="submit"] {
+        background-color: $turquoise2;
+        display: block;
+        margin-top: 20px;
+    }
+}

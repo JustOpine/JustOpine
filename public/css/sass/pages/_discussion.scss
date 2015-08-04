@@ -1,0 +1,97 @@
+.opinion-piece, .responses-container {
+    background-color: white;
+    @include box-shadow(1px 2px 10px -1px rgba(0,0,0,0.25));
+    margin: 20px auto;
+    padding: 20px;
+
+    p {
+        margin: 10px;
+    }
+}
+
+.opinion-piece {
+
+    .opinion-piece-image {
+        background-color: white;
+        @include box-shadow(1px 2px 10px -1px rgba(0,0,0,0.25));
+        float: right;
+        margin: 30px;
+        padding: 10px;
+    }
+
+    img {
+        float: right;
+        height: 300px;
+        width: 300px;
+    }
+
+    .opinion-piece-text {
+        font-size: 18px;
+        line-height: 1.5;
+        padding: 30px;
+    }
+}
+
+.response-form, .student-response {
+    background-color: white;
+    // border: 1px solid grey;
+    @include box-shadow(1px 2px 10px -1px rgba(0,0,0,0.25));
+    margin: 30px 30px;
+    padding: 30px;
+
+    img {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+    }
+
+    h2 {
+        display: inline-block;
+    }
+}
+
+.response-form {
+
+    input[type="text"], textarea {
+        font-size: 18px;
+        padding: 5px;
+        width: 90%;
+    }
+
+    input[type="submit"] {
+        background-color: $turquoise2;
+        display: block;
+        margin-top: 20px;
+    }
+
+    textarea {
+        height: 150px;
+        padding: 5px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .opinion-piece, .responses-container {
+        padding: 5px;
+
+        .opinion-piece-text {
+            padding: 5px;
+        }
+
+        p {
+            padding: 5px;
+        }
+    }
+
+    .opinion-piece-image, .opinion-piece-image > img {
+        display: none;
+    }
+
+    .response-form, .student-response {
+        margin: 20px 10px;
+        padding: 10px;
+    }
+
+}
