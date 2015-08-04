@@ -1,5 +1,4 @@
-$(".sign-in").on('click', function() {
-
+function slideEffect () {
     $(".landing-container-firstview").animate({
            left: '-100%'
        }, 300, function() {
@@ -15,5 +14,17 @@ $(".sign-in").on('click', function() {
                left: '0%'
            }, 300);
        });
-       
+}
+
+$(".sign-in").on('click', function() {
+    slideEffect();
+});
+
+$("#add-class").on('click', function() {
+
+    console.log('workin');
+
+    $(".add-class-lightbox").css("display", "block");
+    $("div").first().addClass("overlay");
+
 });

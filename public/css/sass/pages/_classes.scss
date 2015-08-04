@@ -18,6 +18,30 @@
     cursor: pointer;
 }
 
+.overlay {
+    background: rgba(0,0,0,.5);
+    height: 100%;
+    width: 100%;
+}
+
 .add-class-lightbox {
+    background-color: white;
     display: none;
+    left: 30%;
+    margin: 0 auto;
+    position: absolute;
+    right: 30%;
+    top: 40%;
+
+    form {
+        height: 200px;
+        padding: 40px;
+        text-align: center;
+        width: 500px;
+
+        input[type="submit"] {
+            background-color: $turquoise2;
+            display: block;
+        }
+    }
 }
