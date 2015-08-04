@@ -101,8 +101,27 @@ nav {
 .class-div:hover {
   cursor: pointer; }
 
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%; }
+
 .add-class-lightbox {
-  display: none; }
+  background-color: white;
+  display: none;
+  left: 30%;
+  margin: 0 auto;
+  position: absolute;
+  right: 30%;
+  top: 40%; }
+  .add-class-lightbox form {
+    height: 200px;
+    padding: 40px;
+    text-align: center;
+    width: 500px; }
+    .add-class-lightbox form input[type="submit"] {
+      background-color: #26C6DA;
+      display: block; }
 
 .student-list {
   background-color: white;
