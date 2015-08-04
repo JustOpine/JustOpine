@@ -8,9 +8,28 @@
     </head>
     <body>
         <div class="landing-container">
-            <img class="landing-logo" src="https://mail.google.com/mail/u/0/?ui=2&ik=cdf7762786&view=fimg&th=14ed95c1b677277c&attid=0.1&disp=inline&realattid=f_icomqzis0&safe=1&attbid=ANGjdJ-8IP1Hev81r-l1Pm_lWj9EiQjAe0aJd2f8-rucjuSrzMMMK3eHktWqvMMn1wJYotD0NzbuToHhUVwfqfyxLrPWgIzKFrU4K5fZetXCBXyj8x-WleWkrEWp6sM&ats=1438248781677&rm=14ed95c1b677277c&zw&sz=w1364-h605" />
             <h2 class="tag-line">A place for students to share opinions.</h2>
             <button class="sign-in">SIGN IN</button>
+            <button id="testrequest" onclick="sendRequest();">Testrequest</button>
         </div>
+        <script type="text/javascript">
+            function sendRequest(){
+                var obj = {
+                    dbmethod: "addTeacher",
+                    firstname : "Edita",
+                    lastname : "Memisi",
+                    role : "teacher"
+                };
+
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/justopineapi');
+                xhr.send(JSON.stringify(obj));
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4) {
+                      console.log(xhr.responseText);
+                    }
+                };
+            };
+        </script>
     </body>
 </html>
