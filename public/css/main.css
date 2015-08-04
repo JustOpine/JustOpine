@@ -126,6 +126,22 @@ nav {
 .add-student-lightbox {
   display: none; }
 
+.dashboard-container {
+  background-color: white;
+  -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  margin: 20px auto;
+  padding: 20px; }
+
+.dashboard-assignment {
+  -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  margin: 20px; }
+
 .opinion-piece, .responses-container {
   background-color: white;
   -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
