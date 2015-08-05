@@ -3,9 +3,6 @@ body, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
-body {
-  color: #1A1A1A; }
-
 h2 {
   font-weight: normal;
   text-align: center; }
@@ -54,7 +51,11 @@ button:hover, input[type="submit"]:hover {
   margin: 15px auto 0 auto; }
 
 body {
+  color: #1A1A1A;
   font-family: 'Roboto', sans-serif; }
+
+a {
+  text-decoration: none; }
 
 nav {
   background-color: white;
@@ -88,8 +89,15 @@ nav {
   margin: 20px auto;
   padding: 40px;
   text-align: center; }
+  .classes-container button {
+    background-color: #26C6DA;
+    display: block;
+    float: right; }
+  .classes-container div:first-of-type {
+    margin-top: 40px; }
 
 .class-div {
+  background-color: #E0F7FA;
   -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
@@ -101,8 +109,47 @@ nav {
 .class-div:hover {
   cursor: pointer; }
 
+.overlay {
+  background: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
 .add-class-lightbox {
-  display: none; }
+  background-color: white;
+  -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  display: none;
+  height: 200px;
+  left: 30%;
+  margin: 0 auto;
+  padding: 20px;
+  position: absolute;
+  right: 30%;
+  top: 40%;
+  width: 500px; }
+  .add-class-lightbox img {
+    cursor: pointer;
+    float: right;
+    height: 30px;
+    width: 30px; }
+  .add-class-lightbox form {
+    font-size: 18px;
+    padding: 40px;
+    text-align: center; }
+    .add-class-lightbox form p, .add-class-lightbox form input[type="text"] {
+      display: inline-block;
+      font-size: 18px;
+      padding: 5px; }
+    .add-class-lightbox form input[type="submit"] {
+      background-color: #26C6DA;
+      display: block;
+      margin: 15px auto 0 auto; }
 
 .student-list {
   background-color: white;
@@ -124,7 +171,37 @@ nav {
   width: 30px; }
 
 .add-student-lightbox {
-  display: none; }
+  background-color: white;
+  -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+  display: none;
+  height: 200px;
+  left: 30%;
+  margin: 0 auto;
+  padding: 20px;
+  position: absolute;
+  right: 30%;
+  top: 40%;
+  width: 500px; }
+  .add-student-lightbox img {
+    cursor: pointer;
+    float: right;
+    height: 30px;
+    width: 30px; }
+  .add-student-lightbox form {
+    font-size: 18px;
+    padding: 40px;
+    text-align: center; }
+    .add-student-lightbox form p, .add-student-lightbox form input[type="text"] {
+      display: inline-block;
+      font-size: 18px;
+      padding: 5px; }
+    .add-student-lightbox form input[type="submit"] {
+      background-color: #26C6DA;
+      display: block;
+      margin: 15px auto 0 auto; }
 
 .dashboard-container {
   background-color: white;

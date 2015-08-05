@@ -21,5 +21,40 @@
 }
 
 .add-student-lightbox {
+    background-color: white;
+    @include box-shadow(1px 2px 10px -1px rgba(0,0,0,0.25));
     display: none;
+    height: 200px;
+    left: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute;
+    right: 30%;
+    top: 40%;
+    width: 500px;
+
+    img {
+        cursor: pointer;
+        float: right;
+        height: 30px;
+        width: 30px;
+    }
+
+    form {
+        font-size: 18px;
+        padding: 40px;
+        text-align: center;
+
+        p, input[type="text"] {
+            display: inline-block;
+            font-size: 18px;
+            padding: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: $turquoise2;
+            display: block;
+            margin: 15px auto 0 auto;
+        }
+    }
 }

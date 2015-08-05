@@ -8,12 +8,21 @@
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <div></div>
         <nav>
-            <img class="nav-logo" src="../static/public/images/logo2.png">
+            <a href="/teacherdash">
+                <img class="nav-logo" src="../static/public/images/logo2.png">
+            </a>
             <div class="nav-component-div">
-                <button class="nav-component">Dashboard</button>
-                <button class="nav-component">Class Lists</button>
-                <button class="nav-component">Set Assignment</button>
+                <a href="/teacherdash">
+                    <button class="nav-component">Dashboard</button>
+                </a>
+                <a href="/classes">
+                    <button class="nav-component">Class Lists</button>
+                </a>
+                <a href="/new">
+                    <button class="nav-component">Set Assignment</button>
+                </a>
             </div>
         </nav>
         <header>
@@ -21,38 +30,44 @@
         </header>
         <main>
             <div class="classes-container">
-                <div class="class-div">
-                    <img class="add-icon" src="../static/public/images/add.png">
-                    <h4>Add Class</h4>
-                </div>
-                <div class="class-div">
-                    <img class="class-icon" src="../static/public/images/assignment.png">
-                    <h4>{class #}</h4>
-                </div>
-                <div class="class-div">
-                    <img class="class-icon" src="../static/public/images/assignment.png">
-                    <h4>{class #}</h4>
-                </div>
-                <div class="class-div">
-                    <img class="class-icon" src="../static/public/images/assignment.png">
-                    <h4>{class #}</h4>
-                </div>
-                <div class="class-div">
-                    <img class="class-icon" src="../static/public/images/assignment.png">
-                    <h4>{class #}</h4>
-                </div>
-                <div class="class-div">
-                    <img class="class-icon" src="../static/public/images/assignment.png">
-                    <h4>{class #}</h4>
+                <button class="add-class">+ Add Class</button>
+                <div>
+                    <div class="class-div">
+                        <img class="class-icon" src="../static/public/images/assignment.png">
+                        <h4>{class #}</h4>
+                    </div>
+                    <div class="class-div">
+                        <img class="class-icon" src="../static/public/images/assignment.png">
+                        <h4>{class #}</h4>
+                    </div>
+                    <div class="class-div">
+                        <img class="class-icon" src="../static/public/images/assignment.png">
+                        <h4>{class #}</h4>
+                    </div>
+                    <div class="class-div">
+                        <img class="class-icon" src="../static/public/images/assignment.png">
+                        <h4>{class #}</h4>
+                    </div>
+                    <div class="class-div">
+                        <img class="class-icon" src="../static/public/images/assignment.png">
+                        <h4>{class #}</h4>
+                    </div>
+                    <div class="class-div">
+                        <img class="class-icon" src="../static/public/images/assignment.png">
+                        <h4>{class #}</h4>
+                    </div>
                 </div>
             </div>
         </main>
         <div class="add-class-lightbox">
+            <img class="exit-button-class" src="../static/public/images/exit.png">
             <form class="add-class-form" method="POST" action="/api">
                 <p>Class name:</p>
                 <input type="text" name="className">
                 <input type="submit">
             </form>
         </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="/static/public/index.js"></script>
     </body>
 </html>
