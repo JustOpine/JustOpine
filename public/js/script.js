@@ -18,13 +18,7 @@ $(document).ready(function (){
     });
 
     $(".logout").on('click', function() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', '/logout', true);
-        xhr.send();
-        xhr.onreadystatechange = function() {
-            //alert("Succesfully logged out");
-            console.log("logged out");
-        };
+        $.get('/logout');
     });
 });
 
