@@ -61,9 +61,9 @@
         </main>
         <div class="add-class-lightbox">
             <img class="exit-button-class" src="../static/public/images/exit.png">
-            <form>
+            <form class="add-class-form" method="POST" action="/api">
                 <p>Class name:</p>
-                <input type="text">
+                <input type="text" name="className">
                 <input type="submit">
             </form>
         </div>
