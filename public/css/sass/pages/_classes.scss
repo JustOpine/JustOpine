@@ -5,9 +5,20 @@
     margin: 20px auto;
     padding: 40px;
     text-align: center;
+
+    button {
+        background-color: $turquoise2;
+        display: block;
+        float: right;
+    }
+
+    div:first-of-type {
+        margin-top: 40px;
+    }
 }
 
 .class-div {
+    background-color: $turquoise4;
     @include box-shadow(1px 2px 10px -1px rgba(0,0,0,0.25));
     display: inline-block;
     margin: 40px;
