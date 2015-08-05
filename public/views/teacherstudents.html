@@ -8,16 +8,23 @@
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <div></div>
         <nav>
-            <img class="nav-logo" src="../static/public/images/logo2.png">
+            <a href="/teacherdash">
+                <img class="nav-logo" src="../static/public/images/logo2.png">
+            </a>
             <div class="nav-component-div">
                 <button class="nav-component">Dashboard</button>
-                <button class="nav-component">Class Lists</button>
-                <button class="nav-component">Set Assignment</button>
+                <a href="/classes">
+                    <button class="nav-component">Class Lists</button>
+                </a>
+                <a href="/new">
+                    <button class="nav-component">Set Assignment</button>
+                </a>
             </div>
         </nav>
         <header>
-            <a href='/classes'>
+            <a href="/classes">
                 <img class="back-icon" src="../static/public/images/back.png">
                 <p>All classes</p>
             </a>
@@ -25,7 +32,7 @@
         </header>
         <main>
             <div class="student-list">
-                <button>+ Add Student</button>
+                <button class="add-student">+ Add Student</button>
                 <table>
                   <tr>
                     <th></th>
@@ -46,6 +53,7 @@
             </div>
         </main>
         <div class="add-student-lightbox">
+            <img class="exit-button-student" src="../static/public/images/exit.png">
             <form class="add-student-form">
                 <p>Full name:</p>
                 <input type="text">
