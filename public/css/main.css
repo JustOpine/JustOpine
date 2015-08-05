@@ -3,9 +3,6 @@ body, p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0; }
 
-body {
-  color: #1A1A1A; }
-
 h2 {
   font-weight: normal;
   text-align: center; }
@@ -54,7 +51,11 @@ button:hover, input[type="submit"]:hover {
   margin: 15px auto 0 auto; }
 
 body {
+  color: #1A1A1A;
   font-family: 'Roboto', sans-serif; }
+
+a {
+  text-decoration: none; }
 
 nav {
   background-color: white;
@@ -88,8 +89,15 @@ nav {
   margin: 20px auto;
   padding: 40px;
   text-align: center; }
+  .classes-container button {
+    background-color: #26C6DA;
+    display: block;
+    float: right; }
+  .classes-container div:first-of-type {
+    margin-top: 40px; }
 
 .class-div {
+  background-color: #E0F7FA;
   -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
