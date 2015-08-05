@@ -15,25 +15,30 @@ $(".sign-in").on('click', function() {
                left: '0%'
            }, 300);
        });
-       
-});
-var login = document.getElementsByClassName('landing-container-secondview')[0];
-var formData = new FormData(login);
 
-console.log(formData);
-function sendRequest(){
-    var obj = {
-        dbmethod: "addTeacher",
-        firstname : "Edita",
-        lastname : "Memisi",
-        role : "teacher"
-    };
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/justopineapi');
-    xhr.send(JSON.stringify(obj));
+});
+
+$(".logout").on('click', function() {
+    var xht = new XMLHttpRequest();
+    xhr.open('GET', '/logout', true);
+    xhr.send();
     xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4) {
-          console.log(xhr.responseText);
-        }
+        alert("Succesfully logged out");
     };
-}
+});
+
+
+// var login = document.getElementsByClassName('landing-container-secondview')[0];
+// var formData = new FormData(login);
+//
+// console.log(formData);
+// function sendRequest(){
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('POST', '/justopineapi');
+//     xhr.send(JSON.stringify(obj));
+//     xhr.onreadystatechange = function() {
+//         if (xhr.readyState == 4) {
+//           console.log(xhr.responseText);
+//         }
+//     };
+// }
