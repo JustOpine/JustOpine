@@ -9,15 +9,15 @@
     </head>
     <body>
         <div class="landing-container">
-            <form class="landing-container-secondview">
+            <form class="landing-container-secondview" action="/login" method="POST">
                 <h3>Enter your username and password to log in.</h3>
                 <span class="input-container">
                     <p>Username:</p>
-                    <input type="text" class="sign-in-input">
+                    <input type="text" name="username" class="sign-in-input">
                 </span>
                 <span class="input-container">
                     <p>Password:</p>
-                    <input type="password" class="sign-in-input">
+                    <input type="password" name="password" class="sign-in-input">
                 </span>
                 <input type="submit" class="sign-in-submit" value="SUBMIT">
             </form>
@@ -29,6 +29,6 @@
         </div>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-        <script src="/static/public/index.js"></script>
+        <script src="/static/public/js/script.js"></script>
     </body>
 </html>
