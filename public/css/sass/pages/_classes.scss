@@ -1,0 +1,23 @@
+.classes-container {
+    background-color: white;
+    @include box-shadow(1px 2px 10px -1px rgba(0,0,0,0.25));
+    font-size: 18px;
+    margin: 20px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.class-div {
+    @include box-shadow(1px 2px 10px -1px rgba(0,0,0,0.25));
+    display: inline-block;
+    margin: 40px;
+    padding: 50px 100px;
+}
+
+.class-div:hover {
+    cursor: pointer;
+}
+
+.add-class-lightbox {
+    display: none;
+}

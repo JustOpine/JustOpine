@@ -1,5 +1,4 @@
 $(".sign-in").on('click', function() {
-    console.log("hey");
 
     $(".landing-container-firstview").animate({
            left: '-100%'
@@ -16,7 +15,7 @@ $(".sign-in").on('click', function() {
                left: '0%'
            }, 300);
        });
-
+       
 });
 var login = document.getElementsByClassName('landing-container-secondview')[0];
 var formData = new FormData(login);
