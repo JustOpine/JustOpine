@@ -51,3 +51,26 @@ $(".exit-button-class").on('click', function() {
 $(".exit-button-student").on('click', function() {
     deactivateLightBox(".add-student-lightbox");
 });
+
+function sendRequest(){
+    var firstname = document.getElementById('firstname').value;
+    var surname = document.getElementById('surname').value;
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    var obj = {
+        dbmethod: "addTeacher",
+        firstname : firstname,
+        surname : surname,
+        username : username,
+        password : password,
+        role : "teacher"
+    };
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/justopineapi');
+    xhr.send(JSON.stringify(obj));
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+          console.log(xhr.responseText);
+        }
+    };
+}
