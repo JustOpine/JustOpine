@@ -8,3 +8,5 @@ after_script:
   - npm run codeclimate
 services:
   - redis-server
+notifications:
+  email: false
