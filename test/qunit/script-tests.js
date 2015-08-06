@@ -1,6 +1,4 @@
-QUnit.test( "hello test", function( assert ) {
-    assert.ok( 1 == "1", "Passed!");
-});
+//to be tested on landing page
 
 QUnit.test( "slideEffect changes css properties of landing-container-firstview correctly", function(assert) {
     slideEffect();
