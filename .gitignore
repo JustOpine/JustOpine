@@ -29,7 +29,8 @@ node_modules
 # DB data
 db-info.js
 
-
+# meta file
+/lib.meta.js
 
 .DS_Store
 .env
