@@ -12,33 +12,36 @@
             <input type="text" name="username" id="username" placeholder="username">
             <input type="text" name="password" id="password" placeholder="password">
             <!-- <input type="submit" name="submit" value="Submit">-->
-            <button id="testreques  t" onclick="sendRequest();">Submit</button>
+            <button id="testrequest" onclick="sendRequest();">Submit</button>
         </form>
 
-        <script type="text/javascript">
-            function sendRequest(){
-                var firstname = document.getElementById('firstname').value;
-                var surname = document.getElementById('surname').value;
-                var username = document.getElementById('username').value;
-                var password = document.getElementById('password').value;
-                var obj = {
-                    dbmethod: "addTeacher",
-                    firstname : firstname,
-                    surname : surname,
-                    username : username,
-                    password : password,
-                    isTeacher : "true",
-                    role: "teacher"
-                };
-                var xhr = new XMLHttpRequest();
-                xhr.open('POST', '/justopineapi');
-                xhr.send(JSON.stringify(obj));
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState == 4) {
-                      console.log(xhr.responseText);
-                    }
-                };
-            };
-        </script>
+          <!--script type="text/javascript">
+        //     function sendRequest(){
+        //         var firstname = document.getElementById('firstname').value;
+        //         var surname = document.getElementById('surname').value;
+        //         var username = document.getElementById('username').value;
+        //         var password = document.getElementById('password').value;
+        //         var obj = {
+        //             dbmethod: "addTeacher",
+        //             firstname : firstname,
+        //             surname : surname,
+        //             username : username,
+        //             password : password,
+        //             isTeacher : "true",
+        //             role: "teacher"
+        //         };
+        //         var xhr = new XMLHttpRequest();
+        //         xhr.open('POST', '/justopineapi');
+        //         xhr.send(JSON.stringify(obj));
+        //         xhr.onreadystatechange = function() {
+        //             if (xhr.readyState == 4) {
+        //               console.log(xhr.responseText);
+        //             }
+        //         };
+        //     }
+        // </script-->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="/static/public/js/script.js" charset="utf-8"></script>
+
     </body>
 </html>
