@@ -164,7 +164,11 @@ nav {
     background-color: #26C6DA;
     float: right; }
   .student-list table {
+    border-collapse: collapse;
+    border-spacing: 10px;
     margin-top: 50px; }
+  .student-list th, .student-list td {
+    padding: 10px; }
 
 .student-icon {
   height: 30px;
