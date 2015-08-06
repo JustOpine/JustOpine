@@ -36,7 +36,8 @@
   },
   "pre-commit": [
     "jshint",
-    "coverage"
+    "coverage",
+    "codeclimate"
   ],
   "dependencies": {
     "bcrypt": "^0.8.4",
