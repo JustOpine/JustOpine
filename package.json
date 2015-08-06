@@ -42,6 +42,7 @@
     "bcrypt": "^0.8.4",
     "hapi": "^8.8.0",
     "hapi-auth-basic": "^3.0.0",
+    "hapi-auth-cookie": "^3.0.1",
     "redis": "^0.12.1"
   }
 }
