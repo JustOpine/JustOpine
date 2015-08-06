@@ -1,4 +1,4 @@
-// to be checked on classes and student list pages
+// to be tested on classes page
 
 QUnit.test( "getClasses returns an array", function(assert) {
     var result = getClasses();
@@ -16,6 +16,8 @@ QUnit.test( "displayClasses adds divs if the array is not empty (on classes page
     }
     assert.ok(thereAreDivs, true, "divs are added!");
 });
+
+// to be tested on a student list page
 
 QUnit.test( "getStudents returns an array", function(assert) {
     var result = getStudents();

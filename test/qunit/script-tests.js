@@ -1,3 +1,5 @@
+//to be tested on landing page
+
 QUnit.test( "slideEffect changes css properties of landing-container-firstview correctly", function(assert) {
     slideEffect();
     var properties = $(".landing-container-firstview").css(["left"]);
