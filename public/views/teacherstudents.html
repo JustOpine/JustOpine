@@ -6,8 +6,11 @@
         <title>Students</title>
         <link rel="stylesheet" href="/static/public/css/main.css">
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <!-- <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.18.0.css"> -->
     </head>
     <body>
+        <!-- <div id="qunit"></div>
+        <div id="qunit-fixture"></div> -->
         <div></div>
         <nav>
             <a href="/teacherdash">
@@ -36,18 +39,9 @@
                 <table>
                   <tr>
                     <th></th>
-                    <th>Student Name</th>
+                    <th>First Name</th>
+                    <th>Surname</th>
                     <th>Level</th>
-                  </tr>
-                  <tr>
-                    <td><img class="student-icon" src="../static/public/images/face.png"></td>
-                    <td>{student full name}</td>
-                    <td>{level}</td>
-                  </tr>
-                  <tr>
-                    <td><img class="student-icon" src="../static/public/images/face.png"></td>
-                    <td>{student full name}</td>
-                    <td>{level}</td>
                   </tr>
                 </table>
             </div>
@@ -55,7 +49,9 @@
         <div class="add-student-lightbox">
             <img class="exit-button-student" src="../static/public/images/exit.png">
             <form class="add-student-form">
-                <p>Full name:</p>
+                <p>First name:</p>
+                <input type="text">
+                <p>Surname:</p>
                 <input type="text">
                 <p>Current working level:</p>
                 <input type="text">
@@ -67,6 +63,9 @@
             </form>
         </div>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- <script src="//code.jquery.com/qunit/qunit-1.18.0.js"></script> -->
         <script src="/static/public/js/script.js"></script>
+        <script src="/static/public/js/data.js"></script>
+        <!-- <script src="/static/test/qunit/data-tests.js"></script> -->
     </body>
 </html>
