@@ -1,3 +1,5 @@
+// tests found in test/qunit/script-tests.js
+
 $(".sign-in").on('click', function() {
     $(".landing-container-firstview").animate({
            left: '-100%'
@@ -19,6 +21,7 @@ $(".sign-in").on('click', function() {
 $(".logout").on('click', function() {
     $.get('/logout');
 });
+
 function activateLightBox (toadd) {
     $(toadd).css("display", "block");
     $("div").first().addClass("overlay");
