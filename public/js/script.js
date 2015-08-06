@@ -57,16 +57,19 @@ function sendRequest(){
     var surname = document.getElementById('surname').value;
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
+    var isAdmin = document.getElementById('isAdmin').value;
+    var isTeacher = document.getElementById('isTeacher').value;
     var obj = {
-        dbmethod: "addTeacher",
         firstname : firstname,
         surname : surname,
         username : username,
         password : password,
-        role : "teacher"
+        role : "teacher",
+        isTeacher: isTeacher,
+        isAdmin: isAdmin
     };
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/justopineapi');
+    xhr.open('POST', '/api/newUser');
     xhr.send(JSON.stringify(obj));
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
