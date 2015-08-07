@@ -1,17 +1,16 @@
 // tests found in test/qunit/data-tests.js
-
 $(document).ready(function() {
-    displayClassNames(getClassNames());
+    getClassNames();
     displayStudentInfo(getStudentInfo());
 });
 
 function getClassNames () {
-    // $.ajax('/api/classes', {
-    //     success: function(data){
-    //         console.log(data);
-    //     }
-    // });
-    return [1, 2];
+    $.ajax('/api/getClasses', {
+        success: function(classesArray){
+            console.log(classesArray);
+            displayClassNames(JSON.parse(classesArray));
+        }
+    });
 }
 
 function displayClassNames (classArray) {
