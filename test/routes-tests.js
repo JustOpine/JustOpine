@@ -18,14 +18,22 @@ lab.test('returns true when 1 + 1 equals 2', function (done) {
 
 it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/'}, function (res) {
-        console.log(res.statusCode);
         assert.equal(res.statusCode, '200' );
         done();
     });
     console.log("#landing page loads correctly");
 });
 
-it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
+it("Testing that if a teacher is authenticated, they are redirected to their dashboard on going to homepage", function(done){
+  server.inject({method: 'GET', url: '/teacherdash', credentials: {isTeacher : true}}, function (res) {
+      console.log(res);
+      assert.equal(res.response.statusCode, '200');
+    done();
+  });
+  console.log("#authenticated teacher gets to right dashboard");
+});
+
+it("Testing the new assigment page is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/new'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
@@ -33,7 +41,7 @@ it("Testing the landing.html is sent when requested and statusCode is 200", func
     console.log("#set new assignment page loads correctly");
 });
 
-it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
+it("Testing the student dashboard is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/studentdash'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
@@ -41,7 +49,7 @@ it("Testing the landing.html is sent when requested and statusCode is 200", func
     console.log("#student dashboard page loads correctly");
 });
 
-it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
+it("Testing the teacher dashboard is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/teacherdash'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
@@ -49,23 +57,23 @@ it("Testing the landing.html is sent when requested and statusCode is 200", func
     console.log("#teacher dashboard page loads correctly");
 });
 
-it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
+it("Testing the student assignment page is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/studentdiscussion'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
-    console.log("#student discussion page loads correctly");
+    console.log("#student assignment page loads correctly");
 });
 
-it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
+it("Testing the teacher assignment page is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/teacherdiscussion'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
-    console.log("#teacher discussion page loads correctly");
+    console.log("#teacher assignment page loads correctly");
 });
 
-it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
+it("Testing the classes is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/classes'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
@@ -73,15 +81,7 @@ it("Testing the landing.html is sent when requested and statusCode is 200", func
     console.log("#classes page loads correctly");
 });
 
-it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
-    server.inject({method: 'GET', url: '/students'}, function (res) {
-        assert.equal(res.statusCode, '200' );
-        done();
-    });
-    console.log("#students page loads correctly");
-});
-
-it("Testing the landing.html is sent when requested and statusCode is 200", function(done){
+it("Testing the students list page is sent when requested and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/students'}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
@@ -102,12 +102,6 @@ function(done){
     console.log("#generic GET request to /static/{path*} works");
 });
 
-// it("Test to check that user is sent to index.html with statusCode 200 when not authenticated", function(done){
-//   server.inject({method: 'GET', url: '/dashboard'}, function (res) {
-//     assert.equal(res.statusCode, '200' );
-//     done();
-//   });
-// });
 //
 // it("Test to check that user is sent to dashboard.html with statusCode 200 when user is authenticated", function(done){
 //   server.inject({method: 'GET', url: '/dashboard'}, function (res) {
