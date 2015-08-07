@@ -6,15 +6,18 @@
     </head>
     <body>
         <h1>REGISTER A TEACHER</h1>
-        <form class="" action="/meta" method="POST">
-            <input type="text" name="ID" placeholder="id">
-            <input type="text" name="firstname" placeholder="firstname">
-            <input type="text" name="surname" placeholder="surname">
-            <input type="text" name="username" placeholder="username">
-            <input type="text" name="password"placeholder="password">
-            <input type="text" name="isTeacher"placeholder="isTeacher">
-            <input type="text" name="isAdmin"placeholder="isAdmin">
-            <input type="submit" name="submit" value="Submit">
+        <form class="">
+            <input type="text" name="firstname" id="firstname" placeholder="firstname">
+            <input type="text" name="surname" id="surname" placeholder="surname">
+            <input type="text" name="username" id="username" placeholder="username">
+            <input type="text" name="password" id="password" placeholder="password">
+            <input type="text" name="isTeacher" id="isTeacher" placeholder="isTeacher">
+            <input type="text" name="isAdmin" id="isAdmin" placeholder="isAdmin">
+            <!-- <input type="submit" name="submit" value="Submit">-->
+            <button id="testrequest" onclick="sendRequest();">Submit</button>
         </form>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="/static/public/js/script.js" charset="utf-8"></script>
+
     </body>
 </html>
