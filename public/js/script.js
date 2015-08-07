@@ -18,6 +18,7 @@ $(".sign-in").on('click', function() {
        });
 });
 
+// no work :(
 $(".logout").on('click', function() {
     $.get('/logout');
 });

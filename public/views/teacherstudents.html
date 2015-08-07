@@ -48,17 +48,17 @@
         </main>
         <div class="add-student-lightbox">
             <img class="exit-button-student" src="../static/public/images/exit.png">
-            <form class="add-student-form">
+            <form class="add-student-form" method="POST" action='/api/addPupil'>
                 <p>First name:</p>
-                <input type="text">
+                <input type="text" name="firstname">
                 <p>Surname:</p>
-                <input type="text">
+                <input type="text" name="surname">
                 <p>Current working level:</p>
-                <input type="text">
+                <input type="text" name="level">
                 <p>Username:</p>
-                <input type="text">
+                <input type="text" name="username">
                 <p>Password:</p>
-                <input type="text">
+                <input type="text" name="password">
                 <input type="submit">
             </form>
         </div>
