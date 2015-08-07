@@ -51,3 +51,29 @@ $(".exit-button-class").on('click', function() {
 $(".exit-button-student").on('click', function() {
     deactivateLightBox(".add-student-lightbox");
 });
+
+function sendRequest(){
+    var firstname = document.getElementById('firstname').value;
+    var surname = document.getElementById('surname').value;
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    var isAdmin = document.getElementById('isAdmin').value;
+    var isTeacher = document.getElementById('isTeacher').value;
+    var obj = {
+        firstname : firstname,
+        surname : surname,
+        username : username,
+        password : password,
+        role : "teacher",
+        isTeacher: isTeacher,
+        isAdmin: isAdmin
+    };
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/api/newUser');
+    xhr.send(JSON.stringify(obj));
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+          console.log(xhr.responseText);
+        }
+    };
+}
