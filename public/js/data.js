@@ -1,10 +1,16 @@
 // tests found in test/qunit/data-tests.js
 
 $(document).ready(function() {
-    getClassNames();
-    displayStudentInfo(getStudentInfo());
-    displayAssignmentInfo(getAssignmentInfo());
-    displayChatLogs(getChatLogs());
+    var url = window.location.href.split('/')[3];
+    if (url === "classes") {
+        console.log("classes");
+        getClassNames();
+    } else if (url === "pupils") {
+        getPupilInfo();
+    } else if (url === "assignment1" || url === "assignment2") {
+        displayAssignmentInfo(getAssignmentInfo());
+        displayChatLogs(getChatLogs());
+    }
 });
 
 function getClassNames () {
@@ -18,7 +24,7 @@ function getClassNames () {
 function displayClassNames (classArray) {
     for (var i=0; i<classArray.length; i++) {
         var className = classArray[i];
-        var div = '<div class="class-div" id="' + className + '">' + '<img class="class-icon" src="../static/public/images/assignment.png">' + '<h4>' + classArray[i] + '</h4></div>';
+        var div = '<a href="/pupils"><div class="class-div" id="' + className + '">' + '<img class="class-icon" src="../static/public/images/assignment.png">' + '<h4>' + classArray[i] + '</h4></div></a>';
         $(".classes-container").append(div);
         // console.log($('#' + classArray[i])[0]);
         $('#' + className).click(function(){
@@ -28,21 +34,20 @@ function displayClassNames (classArray) {
     }
 }
 
-function getStudentInfo (className) {
+function getPupilInfo (className) {
     console.log(className);
     $.ajax('/api/getPupils', {
         data: className,
-        // success: function(classesArray){
-        //     console.log(classesArray);
-        //     displayClassNames(JSON.parse(classesArray));
-        // }
+        success: function(classesArray){
+            console.log(classesArray);
+            displayClassNames(JSON.parse(classesArray));
+        }
     });
-    return [{firstName: "Michelle", surname: "Garrett", level: "3"}, {firstName: "Mina", surname: "Gyimah", level: "3"}];
 }
 
-function displayStudentInfo (studentsArray) {
-    for (var i=0; i<studentsArray.length; i++) {
-        var div = '<tr>' + '<td><img class="student-icon" src="../static/public/images/face.png"></td>' + '<td>' + studentsArray[i].firstName + '</td><td>' + studentsArray[i].surname + '</td><td>' + studentsArray[i].level + '</td></tr>';
+function displayPupilInfo (pupilsArray) {
+    for (var i=0; i<pupilsArray.length; i++) {
+        var div = '<tr>' + '<td><img class="student-icon" src="../static/public/images/face.png"></td>' + '<td>' + pupilsArray[i].firstName + '</td><td>' + pupilsArray[i].surname + '</td><td>' + pupilsArray[i].level + '</td></tr>';
         $(".student-list").append(div);
     }
 }

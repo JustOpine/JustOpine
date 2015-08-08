@@ -14,6 +14,16 @@ test("database is running", function (t) {
     });
 });
 
+// test("add", function (t) {
+//     client.set('TEST', 'REMOTE');
+//     client.get('TEST', function (err, reply) {
+//         t.equal(reply, 'REMOTE', 'Database is running');
+//         client.del('TEST');
+//         client.end();
+//         t.end();
+//     });
+// });
+
 // test("generateID generates a six digit number", function (t) {
 //     var id = api.generateID;
 //     console.log(id);
