@@ -24,7 +24,7 @@ it("Testing the landing.html is sent when requested and statusCode is 200", func
     console.log("#landing page loads correctly");
 });
 
-it("Testing the new assigment page is sent when requested by authenticated user and statusCode is 200", function(done){
+it("Testing the new assignment page is sent when requested by authenticated user and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/new', credentials: {isTeacher : true}}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
@@ -32,24 +32,24 @@ it("Testing the new assigment page is sent when requested by authenticated user 
     console.log("#set new assignment page loads correctly");
 });
 
-it("Testing the student dashboard is sent when requested by authenticated user and statusCode is 200", function(done){
-    server.inject({method: 'GET', url: '/studentdash', credentials: {isTeacher : true}}, function (res) {
+it("Testing the pupil dashboard is sent when requested by authenticated user and statusCode is 200", function(done){
+    server.inject({method: 'GET', url: '/dash2', credentials: {isTeacher : true}}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
-    console.log("#student dashboard page loads correctly");
+    console.log("#pupil dashboard page loads correctly");
 });
 
 it("Testing the teacher dashboard is sent when requested by authenticated user and statusCode is 200", function(done){
-    server.inject({method: 'GET', url: '/teacherdash', credentials: {isTeacher : true}}, function (res) {
+    server.inject({method: 'GET', url: '/dash1', credentials: {isTeacher : true}}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
     console.log("#teacher dashboard page loads correctly");
 });
 
-it("Testing the student assignment page is sent when requested by authenticated user and statusCode is 200", function(done){
-    server.inject({method: 'GET', url: '/studentdiscussion', credentials: {isTeacher : true}}, function (res) {
+it("Testing the pupil assignment page is sent when requested by authenticated user and statusCode is 200", function(done){
+    server.inject({method: 'GET', url: '/assignment2', credentials: {isTeacher : true}}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
@@ -57,7 +57,7 @@ it("Testing the student assignment page is sent when requested by authenticated 
 });
 
 it("Testing the teacher assignment page is sent when requested by authenticated user and statusCode is 200", function(done){
-    server.inject({method: 'GET', url: '/teacherdiscussion', credentials: {isTeacher : true}}, function (res) {
+    server.inject({method: 'GET', url: '/assignment1', credentials: {isTeacher : true}}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
@@ -72,12 +72,20 @@ it("Testing the classes is sent when requested by authenticated user and statusC
     console.log("#classes page loads correctly");
 });
 
-it("Testing the students list page is sent when requested by authenticated user and statusCode is 200", function(done){
-    server.inject({method: 'GET', url: '/students', credentials: {isTeacher : true}}, function (res) {
+it("Testing the pupils list page is sent when requested by authenticated user and statusCode is 200", function(done){
+    server.inject({method: 'GET', url: '/pupils', credentials: {isTeacher : true}}, function (res) {
         assert.equal(res.statusCode, '200' );
         done();
     });
-    console.log("#students page loads correctly");
+    console.log("#pupils page loads correctly");
+});
+
+it("Testing the teacher registration page is sent when requested by authenticated user and statusCode is 200", function(done){
+    server.inject({method: 'GET', url: '/registration', credentials: {isTeacher : true}}, function (res) {
+        assert.equal(res.statusCode, '200' );
+        done();
+    });
+    console.log("#pupils page loads correctly");
 });
 
 it("Testing generic GET request to /static/{path*} works",
