@@ -1,6 +1,9 @@
+[![Code Climate](https://david-dm.org/foundersandcoders/justopine.svg
+)](https://david-dm.org/)
+[![bitHound Score](https://www.bithound.io/github/foundersandcoders/JustOpine/badges/score.svg)](https://www.bithound.io/github/foundersandcoders/JustOpine)
 ![Build Status](https://travis-ci.org/foundersandcoders/JustOpine.svg?branch=master)
-[![Test Coverage](https://codeclimate.com/github/plastic-cup/polagraph/badges/coverage.svg)](https://codeclimate.com/github/foundersandcoders/justOpine/coverage)
-[![Code Climate](https://codeclimate.com/github/foundersandcoders/JustOpine/badges/gpa.svg)](https://codeclimate.com/github/foundersandcoders/JustOpine) <a href="https://codeclimate.com/github/foundersandcoders/JustOpine/coverage">
+[![Test Coverage](https://codeclimate.com/github/foundersandcoders/JustOpine/badges/coverage.svg)](https://codeclimate.com/github/foundersandcoders/JustOpine/coverage)
+[![Code Climate](https://codeclimate.com/github/foundersandcoders/JustOpine/badges/gpa.svg)](https://codeclimate.com/github/foundersandcoders/JustOpine)
 [![Codecrystal](https://img.shields.io/badge/code-crystal-5CB3FF.svg)](http://codecrystal.herokuapp.com/graph/foundersandcoders/justOpine/master)
 
 # JustOpine
