@@ -3,10 +3,11 @@
 $(document).ready(function() {
     var url = window.location.href.split('/')[3];
     if (url === "classes") {
-        console.log("classes");
         getClassNames();
     } else if (url === "pupils") {
-        getPupilInfo();
+        var className = window.location.href.split('/')[4];
+        addActionToNewPupilForm(className);
+        getPupilInfo(className);
     } else if (url === "assignment1" || url === "assignment2") {
         displayAssignmentInfo(getAssignmentInfo());
         displayChatLogs(getChatLogs());
@@ -24,14 +25,18 @@ function getClassNames () {
 function displayClassNames (classArray) {
     for (var i=0; i<classArray.length; i++) {
         var className = classArray[i];
-        var div = '<a href="/pupils"><div class="class-div" id="' + className + '">' + '<img class="class-icon" src="../static/public/images/assignment.png">' + '<h4>' + classArray[i] + '</h4></div></a>';
+        var div = '<a href="/pupils/' + className + '"><div class="class-div" id="' + className + '">' + '<img class="class-icon" src="../static/public/images/assignment.png">' + '<h4>' + classArray[i] + '</h4></div></a>';
         $(".classes-container").append(div);
         // console.log($('#' + classArray[i])[0]);
-        $('#' + className).click(function(){
-            getStudentInfo(className);
-            // console.log(className);
-        });
+        // $('#' + className).click(function(){
+        //     console.log(className);
+        //     // console.log(className);
+        // });
     }
+}
+
+function addActionToNewPupilForm (className) {
+    $(".add-student-form").attr("action", "/api/addPupil/" + className);
 }
 
 function getPupilInfo (className) {
