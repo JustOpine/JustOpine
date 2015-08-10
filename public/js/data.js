@@ -6,6 +6,7 @@ $(document).ready(function() {
         getClassNames();
     } else if (url === "pupils") {
         var className = window.location.href.split('/')[4];
+        displayClassAsTitle(className);
         addActionToNewPupilForm(className);
         getPupilInfo(className);
     } else if (url === "assignment1" || url === "assignment2") {
@@ -35,12 +36,15 @@ function displayClassNames (classArray) {
     }
 }
 
+function displayClassAsTitle (className) {
+    $(".pupils-page-title").html("Pupils in " + className);
+}
+
 function addActionToNewPupilForm (className) {
     $(".add-student-form").attr("action", "/api/addPupil/" + className);
 }
 
 function getPupilInfo (className) {
-    console.log(className);
     $.ajax('/api/getPupils', {
         data: className,
         success: function(classesArray){
