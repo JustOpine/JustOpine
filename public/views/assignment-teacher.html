@@ -3,21 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0"/>
-        <title>Class Lists</title>
+        <title>Discussion</title>
         <link rel="stylesheet" href="/static/public/css/main.css">
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-        <!-- <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.18.0.css"> -->
     </head>
     <body>
-        <!-- <div id="qunit"></div>
-        <div id="qunit-fixture"></div> -->
-        <div></div>
         <nav>
             <a href="/teacherdash">
                 <img class="nav-logo" src="../static/public/images/logo2.png">
             </a>
             <div class="nav-component-div">
-                <a href="/teacherdash">
+                <a href="/dash1">
                     <button class="nav-component">Dashboard</button>
                 </a>
                 <a href="/classes">
@@ -29,28 +25,23 @@
             </div>
         </nav>
         <header>
-            <h2>My Classes</h2>
+            <a href="/dash1">
+                <img class="back-icon" src="../static/public/images/back.png">
+                <p>Home</p>
+            </a>
+            <h2>Have Your Say</h2>
         </header>
         <main>
-            <div class="classes-container">
-                <button class="add-class">+ Add Class</button>
-                <div>
-
+            <div class="opinion-piece">
+                <div class="opinion-piece-image">
+                </div>
+                <div class="opinion-piece-text">
                 </div>
             </div>
+            <div class="responses-container">
+            </div>
         </main>
-        <div class="add-class-lightbox">
-            <img class="exit-button-class" src="../static/public/images/exit.png">
-            <form class="add-class-form" method="POST" action="/api/addClass">
-                <p>Class name:</p>
-                <input type="text" name="className">
-                <input type="submit">
-            </form>
-        </div>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <!-- <script src="//code.jquery.com/qunit/qunit-1.18.0.js"></script> -->
-        <script src="/static/public/js/script.js"></script>
         <script src="/static/public/js/data.js"></script>
-        <!-- <script src="/static/test/qunit/data-tests.js"></script> -->
     </body>
 </html>
