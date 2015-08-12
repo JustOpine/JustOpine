@@ -3,7 +3,7 @@
 $(document).ready(function() {
     var url = window.location.href.split('/')[3];
     if (url === "classes") {
-        getClassNames();
+        getClassNames(url);
     } else if (url === "pupils") {
         var className = window.location.href.split('/')[4];
         displayClassAsTitle(className);
@@ -12,13 +12,21 @@ $(document).ready(function() {
     } else if (url === "assignment1" || url === "assignment2") {
         displayAssignmentInfo(getAssignmentInfo());
         displayChatLogs(getChatLogs());
+    } else if (url === "new") {
+        getClassNames(url);
     }
 });
 
-function getClassNames () {
+function getClassNames (url) {
+    console.log(url);
     $.ajax('/api/getClasses', {
         success: function(classesArray){
-            displayClassNames(JSON.parse(classesArray));
+            if (url === "classes") {
+                displayClassNames(JSON.parse(classesArray));
+            } else if (url === "new") {
+                console.log(JSON.parse(classesArray));
+                addClassNamesToNewAssignmentForm(JSON.parse(classesArray));
+            }
         }
     });
 }
@@ -28,11 +36,6 @@ function displayClassNames (classArray) {
         var className = classArray[i];
         var div = '<a href="/pupils/' + className + '"><div class="class-div" id="' + className + '">' + '<img class="class-icon" src="../static/public/images/assignment.png">' + '<h4>' + classArray[i] + '</h4></div></a>';
         $(".classes-container").append(div);
-        // console.log($('#' + classArray[i])[0]);
-        // $('#' + className).click(function(){
-        //     console.log(className);
-        //     // console.log(className);
-        // });
     }
 }
 
@@ -40,7 +43,7 @@ function displayClassAsTitle (className) {
     $(".pupils-page-title").html("Pupils in " + className);
 }
 
-function addActionToNewPupilForm (className) {
+function addActionToNewPupilForm (classNames) {
     $(".add-student-form").attr("action", "/api/addPupil/" + className);
 }
 
@@ -48,8 +51,6 @@ function getPupilInfo (pupilData) {
     $.ajax('/api/getPupils', {
         data: pupilData,
         success: function(pupilData){
-            console.log(pupilData);
-            // console.log(JSON.parse(pupilData));
             displayPupilInfo(pupilData);
         }
     });
@@ -60,6 +61,13 @@ function displayPupilInfo (pupilsArray) {
     for (var i=0; i<pupilsArray.length; i++) {
         var div = '<tr>' + '<td><img class="student-icon" src="../static/public/images/face.png"></td>' + '<td>' + pupilsArray[i].firstname + '</td><td>' + pupilsArray[i].surname + '</td><td>' + pupilsArray[i].level + '</td></tr>';
         $(".student-list").append(div);
+    }
+}
+
+function addClassNamesToNewAssignmentForm(classNames) {
+    console.log("it's happening");
+    for (var i = 0; i < classNames.length; i++) {
+        $(".class-dropdown").append("<option value='" + classNames[i] + "'>" + classNames[i] + "</option>");
     }
 }
 
