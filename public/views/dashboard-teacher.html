@@ -9,30 +9,32 @@
     </head>
     <body>
         <nav>
-            <a href="/studentdash">
+            <a href="/dash1">
                 <img class="nav-logo" src="../static/public/images/logo2.png">
             </a>
+            <div class="nav-component-div">
+                <button class="nav-component">Dashboard</button>
+                <a href="/classes">
+                    <button class="nav-component">Class Lists</button>
+                </a>
+                <a href="/new">
+                    <button class="nav-component">Set Assignment</button>
+                </a>
+            </div>
         </nav>
         <header>
             <h2>My Assignments</h2>
         </header>
         <main>
             <div class="dashboard-container">
-                <h3>Current assignments</h3>
-                <div class="dashboard-assignment">
-                    <p>{class name}</p>
-                    <p>{assignment title}</p>
-                </div>
-                <h3>Previous assignments</h3>
-                <div class="dashboard-assignment">
-                    <p>{class name}</p>
-                    <p>{assignment title}</p>
-                </div>
                 <div class="dashboard-assignment">
                     <p>{class name}</p>
                     <p>{assignment title}</p>
                 </div>
             </div>
         </main>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="static/public/js/script.js" charset="utf-8"></script>
     </body>
 </html>
