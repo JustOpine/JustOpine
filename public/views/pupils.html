@@ -13,11 +13,13 @@
         <div id="qunit-fixture"></div> -->
         <div></div>
         <nav>
-            <a href="/teacherdash">
+            <a href="/dash1">
                 <img class="nav-logo" src="../static/public/images/logo2.png">
             </a>
             <div class="nav-component-div">
-                <button class="nav-component">Dashboard</button>
+                <a href="/dash1">
+                    <button class="nav-component">Dashboard</button>
+                </a>
                 <a href="/classes">
                     <button class="nav-component">Class Lists</button>
                 </a>
@@ -31,7 +33,7 @@
                 <img class="back-icon" src="../static/public/images/back.png">
                 <p>All classes</p>
             </a>
-            <h2>Students in {class #}</h2>
+            <h2 class="pupils-page-title"></h2>
         </header>
         <main>
             <div class="student-list">
@@ -48,17 +50,17 @@
         </main>
         <div class="add-student-lightbox">
             <img class="exit-button-student" src="../static/public/images/exit.png">
-            <form class="add-student-form">
+            <form class="add-student-form" method="POST">
                 <p>First name:</p>
-                <input type="text">
+                <input type="text" name="firstname">
                 <p>Surname:</p>
-                <input type="text">
+                <input type="text" name="surname">
                 <p>Current working level:</p>
-                <input type="text">
+                <input type="text" name="level">
                 <p>Username:</p>
-                <input type="text">
+                <input type="text" name="username">
                 <p>Password:</p>
-                <input type="text">
+                <input type="text" name="password">
                 <input type="submit">
             </form>
         </div>

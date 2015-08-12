@@ -1,16 +1,23 @@
 // tests found in test/qunit/data-tests.js
 
 $(document).ready(function() {
-    getClassNames();
-    displayStudentInfo(getStudentInfo());
-    displayAssignmentInfo(getAssignmentInfo());
-    displayChatLogs(getChatLogs());
+    var url = window.location.href.split('/')[3];
+    if (url === "classes") {
+        getClassNames();
+    } else if (url === "pupils") {
+        var className = window.location.href.split('/')[4];
+        displayClassAsTitle(className);
+        addActionToNewPupilForm(className);
+        getPupilInfo(className);
+    } else if (url === "assignment1" || url === "assignment2") {
+        displayAssignmentInfo(getAssignmentInfo());
+        displayChatLogs(getChatLogs());
+    }
 });
 
 function getClassNames () {
     $.ajax('/api/getClasses', {
         success: function(classesArray){
-            console.log(classesArray);
             displayClassNames(JSON.parse(classesArray));
         }
     });
@@ -18,19 +25,40 @@ function getClassNames () {
 
 function displayClassNames (classArray) {
     for (var i=0; i<classArray.length; i++) {
-        var div = '<div class="class-div">' + '<img class="class-icon" src="../static/public/images/assignment.png">' + '<h4>' + classArray[i] + '</h4></div>';
+        var className = classArray[i];
+        var div = '<a href="/pupils/' + className + '"><div class="class-div" id="' + className + '">' + '<img class="class-icon" src="../static/public/images/assignment.png">' + '<h4>' + classArray[i] + '</h4></div></a>';
         $(".classes-container").append(div);
+        // console.log($('#' + classArray[i])[0]);
+        // $('#' + className).click(function(){
+        //     console.log(className);
+        //     // console.log(className);
+        // });
     }
 }
 
-function getStudentInfo () {
-    // hardcoded for now
-    return [{firstName: "Michelle", surname: "Garrett", level: "3"}, {firstName: "Mina", surname: "Jyimah", level: "3"}];
+function displayClassAsTitle (className) {
+    $(".pupils-page-title").html("Pupils in " + className);
 }
 
-function displayStudentInfo (studentsArray) {
-    for (var i=0; i<studentsArray.length; i++) {
-        var div = '<tr>' + '<td><img class="student-icon" src="../static/public/images/face.png"></td>' + '<td>' + studentsArray[i].firstName + '</td><td>' + studentsArray[i].surname + '</td><td>' + studentsArray[i].level + '</td></tr>';
+function addActionToNewPupilForm (className) {
+    $(".add-student-form").attr("action", "/api/addPupil/" + className);
+}
+
+function getPupilInfo (pupilData) {
+    $.ajax('/api/getPupils', {
+        data: pupilData,
+        success: function(pupilData){
+            console.log(pupilData);
+            // console.log(JSON.parse(pupilData));
+            displayPupilInfo(pupilData);
+        }
+    });
+}
+
+function displayPupilInfo (pupilsArray) {
+    console.log("array", pupilsArray);
+    for (var i=0; i<pupilsArray.length; i++) {
+        var div = '<tr>' + '<td><img class="student-icon" src="../static/public/images/face.png"></td>' + '<td>' + pupilsArray[i].firstname + '</td><td>' + pupilsArray[i].surname + '</td><td>' + pupilsArray[i].level + '</td></tr>';
         $(".student-list").append(div);
     }
 }
