@@ -2,9 +2,7 @@
 
 $(document).ready(function() {
     var url = window.location.href.split('/')[3];
-    if (url === "classes") {
-        getClassNames();
-    } else if (url === "pupils") {
+     if (url === "pupils") {
         var className = window.location.href.split('/')[4];
         displayClassAsTitle(className);
         addActionToNewPupilForm(className);
@@ -15,26 +13,6 @@ $(document).ready(function() {
     }
 });
 
-function getClassNames () {
-    $.ajax('/api/getClasses', {
-        success: function(classesArray){
-            displayClassNames(JSON.parse(classesArray));
-        }
-    });
-}
-
-function displayClassNames (classArray) {
-    for (var i=0; i<classArray.length; i++) {
-        var className = classArray[i];
-        var div = '<a href="/pupils/' + className + '"><div class="class-div" id="' + className + '">' + '<img class="class-icon" src="../static/public/images/assignment.png">' + '<h4>' + classArray[i] + '</h4></div></a>';
-        $(".classes-container").append(div);
-        // console.log($('#' + classArray[i])[0]);
-        // $('#' + className).click(function(){
-        //     console.log(className);
-        //     // console.log(className);
-        // });
-    }
-}
 
 function displayClassAsTitle (className) {
     $(".pupils-page-title").html("Pupils in " + className);
