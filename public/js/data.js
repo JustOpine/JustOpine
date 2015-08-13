@@ -43,7 +43,7 @@ function displayClassAsTitle (className) {
     $(".pupils-page-title").html("Pupils in " + className);
 }
 
-function addActionToNewPupilForm (classNames) {
+function addActionToNewPupilForm (className) {
     $(".add-student-form").attr("action", "/api/addPupil/" + className);
 }
 
