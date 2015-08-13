@@ -29,18 +29,18 @@
         </header>
         <main>
             <div class="assignment-form-div">
-                <form method="POST" action="/api/newAssignment"/>
+                <form method="POST" action="/api/newAssignment">
                     <p>Class:</p>
-                    <select class="class-dropdown">
+                    <select class="class-dropdown" name="class">
                     </select>
                     <p>Title of opinion piece:</p>
-                    <input type="text">
+                    <input type="text" name="title">
                     <p>Text of opinion piece:</p>
-                    <textarea></textarea>
+                    <textarea name="text"></textarea>
                     <p>Image URL:</p>
-                    <input type="text">
+                    <input type="text" name="image">
                     <p>Category:</p>
-                    <select>
+                    <select name="category">
                         <option value="culture">Culture</option>
                         <option value="technology">Technology</option>
                         <option value="politics">Politics</option>
@@ -48,7 +48,7 @@
                         <option value="religion & ideas">Religion & Ideas</option>
                     </select>
                     <p>Question to be answered:</p>
-                    <input type="text">
+                    <input type="text" name="question">
                     <input type="submit">
                 </form>
             </div>
