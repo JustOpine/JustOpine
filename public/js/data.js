@@ -2,11 +2,7 @@
 
 $(document).ready(function() {
     var url = window.location.href.split('/')[3];
-    if (url === "classes") {
-        //alert('step1 gets executed');
-        //getClassNames();
-        //alert('step1 is being finished');
-    } else if (url === "pupils") {
+     if (url === "pupils") {
         var className = window.location.href.split('/')[4];
         displayClassAsTitle(className);
         addActionToNewPupilForm(className);
@@ -17,39 +13,6 @@ $(document).ready(function() {
     }
 });
 
-function getClassNames () {
-    alert('step2 gets executed');
-    // $.ajax('/api/getClasses', {
-    //     success: function(classesArray){
-    //         displayClassNames(JSON.parse(classesArray));
-    //     },
-    //     error: function (xhr, ajaxOptions, thrownError) {
-    //     alert('xhr.status: ' + xhr.status);
-    //     //alert('thrownError: ' + thrownError);
-    //     }
-    // });
-    var request = new XMLHttpRequest();
-    request.open('GET', '/api/getClasses');  // `false` makes the request synchronous
-    request.send(null);
-
-    if (request.status === 200) {
-      console.log(request.responseText);
-    }
-}
-
-function displayClassNames (classArray) {
-        alert('step3 gets executed');
-    for (var i=0; i<classArray.length; i++) {
-        var className = classArray[i];
-        var div = '<a href="/pupils/' + className + '"><div class="class-div" id="' + className + '">' + '<img class="class-icon" src="../static/public/images/assignment.png">' + '<h4>' + classArray[i] + '</h4></div></a>';
-        $(".classes-container").append(div);
-        // console.log($('#' + classArray[i])[0]);
-        // $('#' + className).click(function(){
-        //     console.log(className);
-        //     // console.log(className);
-        // });
-    }
-}
 
 function displayClassAsTitle (className) {
     $(".pupils-page-title").html("Pupils in " + className);
