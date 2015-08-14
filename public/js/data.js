@@ -13,22 +13,23 @@ $(document).ready(function() {
         var className = window.location.href.split('/')[4];
         var assignmentID = window.location.href.split('/')[5];
         getAssignmentInfo(className, assignmentID);
-        // displayAssignmentInfo(getAssignmentInfo());
         // displayChatLogs(getChatLogs());
     } else if (url === "new") {
+        getClassNames(url);
+    } else if (url === "dash1") {
         getClassNames(url);
     }
 });
 
 function getClassNames (url) {
-    console.log(url);
     $.ajax('/api/getClasses', {
         success: function(classesArray){
             if (url === "classes") {
                 displayClassNames(JSON.parse(classesArray));
             } else if (url === "new") {
-                console.log(JSON.parse(classesArray));
                 addClassNamesToNewAssignmentForm(JSON.parse(classesArray));
+            } else if (url === "dash1") {
+                displayAssignmentsForAllClasses(classesArray);
             }
         }
     });
@@ -89,6 +90,17 @@ function displayAssignmentInfo (assignment) {
     $(".opinion-piece-image").html("<img src='" + assignment.image + "'>");
     $(".opinion-piece-text").html("<h2>" + assignment.title + "</h2>" + "<p>" + assignment.text + "</p>");
     $(".assignment-question").html("<p>" + assignment.question + "</p>");
+}
+
+function displayAssignmentsForAllClasses(classesArray) {
+    console.log("in", classesArray);
+    for (var i=0; i < classesArray.length; i++) {
+        console.log(classesArray[i]);
+    }
+    // $(".dashboard-container").append('<div class="dashboard-assignment">
+    //     <p>' + discussionData[i].title + '</p>
+    //     <p>' + discussionData[i].title + '</p>
+    // </div>');
 }
 
 function getChatLogs () {
