@@ -84,7 +84,7 @@ function getAssignmentsForAllClasses(classesArray) {
         $.ajax('/api/getClassAssignments/' + className, {
             success: function(assignments) {
                 for (var i=0; i < assignments.length; i++) {
-                    $(".dashboard-container").append('<a href="/assignment1/' + assignments[i].class + '/' + assignments[i].key.split(':')[2] + '"><div class="dashboard-assignment"><p>' + assignments[i].class + '</p><p>' + assignments[i].title + '</p></div></a>');
+                    $(".dashboard-container").append('<a href="/assignment1/' + assignments[i].class + '/' + assignments[i].key.split(':')[2] + '"><div class="dashboard-assignment"><img class="class-icon" src="../static/public/images/assignment.png"><strong><p>' + assignments[i].class + '</p></strong><p>' + assignments[i].title + '</p></div></a>');
                 }
             }
         });
