@@ -9,7 +9,7 @@
     </head>
     <body>
         <nav>
-            <a href="/teacherdash">
+            <a href="/dash1">
                 <img class="nav-logo" src="../static/public/images/logo2.png">
             </a>
             <div class="nav-component-div">
@@ -39,6 +39,17 @@
                 </div>
             </div>
             <div class="responses-container">
+                <div class="response-form">
+                    <img src="../static/public/images/face.png">
+                    <h2>Your Response</h2>
+                    <form method="POST" action="/api/addResponse">
+                        <p>Describe your opinion in three words.</p>
+                        <input type="text" name="threeWords">
+                        <div class="assignment-question"></div>
+                        <textarea name="response"></textarea>
+                        <input type="submit">
+                    </form>
+                </div>
             </div>
         </main>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
