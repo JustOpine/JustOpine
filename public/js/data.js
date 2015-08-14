@@ -2,9 +2,7 @@
 
 $(document).ready(function() {
     var url = window.location.href.split('/')[3];
-    if (url === "classes") {
-        getClassNames(url);
-    } else if (url === "pupils") {
+     if (url === "pupils") {
         var className = window.location.href.split('/')[4];
         displayClassAsTitle(className);
         addActionToNewPupilForm(className);
@@ -13,33 +11,24 @@ $(document).ready(function() {
         var className = window.location.href.split('/')[4];
         var assignmentID = window.location.href.split('/')[5];
         getAssignmentInfo(className, assignmentID);
-        // displayAssignmentInfo(getAssignmentInfo());
-        // displayChatLogs(getChatLogs());
+        displayChatLogs(getChatLogs());
     } else if (url === "new") {
+        getClassNames(url);
+    } else if (url === "dash1") {
         getClassNames(url);
     }
 });
 
 function getClassNames (url) {
-    console.log(url);
     $.ajax('/api/getClasses', {
         success: function(classesArray){
-            if (url === "classes") {
-                displayClassNames(JSON.parse(classesArray));
-            } else if (url === "new") {
-                console.log(JSON.parse(classesArray));
-                addClassNamesToNewAssignmentForm(JSON.parse(classesArray));
+            if (url === "new") {
+                addClassNamesToNewAssignmentForm(classesArray);
+            } else if (url === "dash1") {
+                getAssignmentsForAllClasses(classesArray);
             }
         }
     });
-}
-
-function displayClassNames (classArray) {
-    for (var i=0; i<classArray.length; i++) {
-        var className = classArray[i];
-        var div = '<a href="/pupils/' + className + '"><div class="class-div" id="' + className + '">' + '<img class="class-icon" src="../static/public/images/assignment.png">' + '<h4>' + classArray[i] + '</h4></div></a>';
-        $(".classes-container").append(div);
-    }
 }
 
 function displayClassAsTitle (className) {
@@ -68,9 +57,9 @@ function displayPupilInfo (pupilsArray) {
 }
 
 function addClassNamesToNewAssignmentForm(classNames) {
-    console.log("it's happening");
     for (var i = 0; i < classNames.length; i++) {
-        $(".class-dropdown").append("<option value='" + classNames[i] + "'>" + classNames[i] + "</option>");
+        var name = classNames[i].split(':')[1];
+        $(".class-dropdown").append("<option value='" + name + "'>" + name + "</option>");
     }
 }
 
@@ -89,6 +78,21 @@ function displayAssignmentInfo (assignment) {
     $(".opinion-piece-image").html("<img src='" + assignment.image + "'>");
     $(".opinion-piece-text").html("<h2>" + assignment.title + "</h2>" + "<p>" + assignment.text + "</p>");
     $(".assignment-question").html("<p>" + assignment.question + "</p>");
+}
+
+function getAssignmentsForAllClasses(classesArray) {
+    console.log("in", classesArray);
+    for (var i=0; i < classesArray.length; i++) {
+        className = classesArray[i].split(':')[1];
+        $.ajax('/api/getClassAssignments/' + className, {
+            success: function(assignments) {
+                console.log(assignments);
+                for (var i=0; i < assignments.length; i++) {
+                    $(".dashboard-container").append('<a href="/assignment1/' + assignments[i].class + '/' + assignments[i].key.split(':')[2] + '"><div class="dashboard-assignment"><p>' + assignments[i].class + '</p><p>' + assignments[i].title + '</p></div></a>');
+                }
+            }
+        });
+    }
 }
 
 function getChatLogs () {
