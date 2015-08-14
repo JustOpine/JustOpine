@@ -11,7 +11,7 @@ $(document).ready(function() {
         var className = window.location.href.split('/')[4];
         var assignmentID = window.location.href.split('/')[5];
         getAssignmentInfo(className, assignmentID);
-        displayChatLogs(getChatLogs());
+        getChatLogs();
     } else if (url === "new") {
         getClassNames(url);
     } else if (url === "dash1") {
@@ -67,8 +67,6 @@ function getAssignmentInfo (className, assignmentID) {
     var url = '/api/getAssignment/' + className + '/' + assignmentID;
     $.ajax(url, {
         success: function(data){
-            console.log("hello");
-            console.log(data);
             displayAssignmentInfo(data);
         }
     });
@@ -81,12 +79,10 @@ function displayAssignmentInfo (assignment) {
 }
 
 function getAssignmentsForAllClasses(classesArray) {
-    console.log("in", classesArray);
     for (var i=0; i < classesArray.length; i++) {
         className = classesArray[i].split(':')[1];
         $.ajax('/api/getClassAssignments/' + className, {
             success: function(assignments) {
-                console.log(assignments);
                 for (var i=0; i < assignments.length; i++) {
                     $(".dashboard-container").append('<a href="/assignment1/' + assignments[i].class + '/' + assignments[i].key.split(':')[2] + '"><div class="dashboard-assignment"><p>' + assignments[i].class + '</p><p>' + assignments[i].title + '</p></div></a>');
                 }
@@ -96,24 +92,16 @@ function getAssignmentsForAllClasses(classesArray) {
 }
 
 function getChatLogs () {
-    // hardcoded for now
-    var chatLogs = [{
-        student : {
-            firstName: "Michelle",
-            surname: "Garrett"
-        },
-        time: "13 December 2014",
-        summary: "disappointed, sad, scared",
-        text: "No one accepts the right of those who occupied half of Europe to walk off with the revered relics of those subjugated nations in the 20th century. So why was it acceptable to do so in the 19th century?"
-    }];
-    return chatLogs;
+    $.ajax('/api/getResponses', {
+        success: function(data){
+            displayChatLogs(data);
+        }
+    });
 }
 
 function displayChatLogs (chatLogs) {
-    console.log(chatLogs[0]);
     for (var i = 0; i < chatLogs.length; i++) {
-        console.log("hellooo");
-        var div = "<div class='student-response'>" + "<img src='../static/public/images/face.png'>" + "<h2>" + chatLogs[i].student.firstName + " " + chatLogs[i].student.surname + "</h2>" + "<p class= 'post-time'>" + chatLogs[i].time + "</p><p>" + chatLogs[i].summary + "</p><p>" + chatLogs[i].text + "</p></div>";
+        var div = "<div class='student-response'>" + "<img src='/static/public/images/face.png'>" + "<h2>Student</h2>" + "<p class= 'post-time'>" + chatLogs[i].time + "</p><p>" + chatLogs[i].threeWords + "</p><p>" + chatLogs[i].response + "</p></div>";
         $(".responses-container").append(div);
     }
 }
