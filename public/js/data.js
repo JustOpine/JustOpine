@@ -2,18 +2,15 @@
 
 $(document).ready(function() {
     var url = window.location.href.split('/')[3];
-     if (url === "pupils") {
-        var className = window.location.href.split('/')[4];
-        addActionToNewPupilForm(className);
-    } else if (url === "assignment1" || url === "assignment2") {
+ if (url === "assignment1" || url === "assignment2") {
         displayAssignmentInfo(getAssignmentInfo());
         displayChatLogs(getChatLogs());
     }
 });
 
-function addActionToNewPupilForm (className) {
-    $(".add-student-form").attr("action", "/api/addPupil/" + className);
-}
+// function addActionToNewPupilForm (className) {
+//     $(".add-student-form").attr("action", "/api/addPupil/" + className);
+// }
     
 function getAssignmentInfo () {
     // hardcoded for now

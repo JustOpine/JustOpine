@@ -53,28 +53,52 @@ $(".exit-button-student").on('click', function() {
     deactivateLightBox(".add-student-lightbox");
 });
 
-function sendRequest(){
+function sendRequest(role){
     var firstname = document.getElementById('firstname').value;
     var surname = document.getElementById('surname').value;
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
-    var isAdmin = document.getElementById('isAdmin').value;
-    var isTeacher = document.getElementById('isTeacher').value;
-    var obj = {
-        firstname : firstname,
-        surname : surname,
-        username : username,
-        password : password,
-        role : "teacher",
-        isTeacher: isTeacher,
-        isAdmin: isAdmin
-    };
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/api/newUser');
-    xhr.send(JSON.stringify(obj));
+    
+    if(role = 'pupil'){
+      var level = document.getElementById('level').value;
+      var nameOfClass = window.location.href.split('pupils/');
+
+      var obj = {
+          firstname : firstname,
+          surname : surname,
+          level : level,
+          username : username,
+          role : "pupil",
+          password : password,
+          nameOfClass : nameOfClass[1]
+      };
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '/api/addPupil');
+      xhr.send(JSON.stringify(obj));
+    } else{
+      var isAdmin = document.getElementById('isAdmin').value;
+      var isTeacher = document.getElementById('isTeacher').value;
+      var obj = {
+          firstname : firstname,
+          surname : surname,
+          username : username,
+          password : password,
+          role : "teacher",
+          isTeacher: isTeacher,
+          isAdmin: isAdmin
+      };
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', '/api/newUser');
+      xhr.send(JSON.stringify(obj));
+    }
+
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
           console.log(xhr.responseText);
+          if(xhr.responseText === 'done'){
+            location.reload();
+          };
         }
     };
+
 }
