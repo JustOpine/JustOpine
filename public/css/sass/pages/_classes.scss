@@ -27,6 +27,7 @@
 
 .class-div:hover {
     cursor: pointer;
+    @include transform(scale(1.05));
 }
 
 .overlay {
