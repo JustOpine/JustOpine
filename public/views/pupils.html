@@ -51,7 +51,7 @@
         </main>
         <div class="add-student-lightbox">
             <img class="exit-button-student" src="../static/public/images/exit.png">
-            <form class="add-student-form" method="POST">
+            <form class="add-pupil-form" action="/api/newUser">
                 <p>First name:</p>
                 <input type="text" name="firstname">
                 <p>Surname:</p>
@@ -62,12 +62,13 @@
                 <input type="text" name="username">
                 <p>Password:</p>
                 <input type="text" name="password">
-                <input type="submit">
+                <input type="submit" id="submitPupil">
             </form>
         </div>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- <script src="//code.jquery.com/qunit/qunit-1.18.0.js"></script> -->
         <script src="/static/public/js/script.js"></script>
+        <script src="/static/public/js/addPupil.js"></script>
         <script src="/static/public/js/data.js"></script>
         <!-- <script src="/static/test/qunit/data-tests.js"></script> -->
     </body>
