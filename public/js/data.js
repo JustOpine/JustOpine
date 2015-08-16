@@ -36,7 +36,7 @@ function displayClassAsTitle (className) {
 }
 
 function addActionToNewPupilForm (className) {
-    $(".add-student-form").attr("action", "/api/addPupil/" + className);
+    $(".add-pupil-form").attr("action", "/api/addPupil/" + className);
 }
 
 function getPupilInfo (pupilData) {
