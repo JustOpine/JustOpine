@@ -6,13 +6,15 @@
     </head>
     <body>
         <h1>REGISTER A TEACHER</h1>
-        <form class="" action="/api/newUser">
+        <form class="" action="/api/addTeacher">
             <input type="text" name="firstname" id="firstname" placeholder="firstname">
             <input type="text" name="surname" id="surname" placeholder="surname">
             <input type="text" name="username" id="username" placeholder="username">
             <input type="text" name="password" id="password" placeholder="password">
+            isTeacher
             <input type="checkbox" name="isTeacher" id="isTeacher" value="true">
-            <input type="text" name="isAdmin" id="isAdmin" value="true">
+            isAdmin
+            <input type="checkbox" name="isAdmin" id="isAdmin" value="true">
             <input type="submit" name="Submit" value="Submit">
         </form>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
