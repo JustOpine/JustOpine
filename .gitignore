@@ -32,5 +32,8 @@ db-info.js
 # meta file
 /lib.meta.js
 
+# environment variables
+env.json
+
 .DS_Store
 .env

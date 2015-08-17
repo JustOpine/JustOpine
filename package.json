@@ -24,6 +24,7 @@
   "devDependencies": {
     "code": "^1.5.0",
     "codeclimate-test-reporter": "^0.1.0",
+    "env2": "^1.0.5",
     "fakeredis": "^0.3.1",
     "istanbul": "^0.3.17",
     "jshint": "^2.8.0",
