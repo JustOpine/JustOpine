@@ -25,7 +25,6 @@ $(".logout").on('click', function() {
       url: '/logout',
       type: 'POST',
       success: function(){
-        // window.location = '/';
         window.location.href = '/';
       }
     });
