@@ -7,8 +7,8 @@ $('form').submit(function(e){
     url: $('form').attr('action'),
     type: 'POST',
     data: form,
-    success: function(result){
-      console.log(result);
+    success: function(){
+      location.reload();
     }
   });
 });
