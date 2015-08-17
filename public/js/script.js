@@ -20,7 +20,15 @@ $(".sign-in").on('click', function() {
 
 // no work :(
 $(".logout").on('click', function() {
-    $.get('/logout');
+  console.log('logging out!');
+    $.ajax({
+      url: '/logout',
+      type: 'POST',
+      success: function(){
+        // window.location = '/';
+        window.location.href = '/';
+      }
+    });
 });
 
 function activateLightBox (toadd) {
