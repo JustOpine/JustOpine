@@ -1,23 +1,38 @@
 // tests found in test/qunit/data-tests.js
-
-$(document).ready(function() {
-    var url = window.location.href.split('/')[3];
-     if (url === "pupils") {
-        var className = window.location.href.split('/')[4];
-        displayClassAsTitle(className);
-        addActionToNewPupilForm(className);
-        getPupilInfo(className);
-    } else if (url === "assignment1" || url === "assignment2") {
-        var className = window.location.href.split('/')[4];
-        var assignmentID = window.location.href.split('/')[5];
-        getAssignmentInfo(className, assignmentID);
-        getChatLogs();
-    } else if (url === "new") {
-        getClassNames(url);
-    } else if (url === "dash1") {
-        getClassNames(url);
-    }
-});
+var url = window.location.href.split('/')[3];
+ if (url === "pupils") {
+    var className = window.location.href.split('/')[4];
+    displayClassAsTitle(className);
+    addActionToNewPupilForm(className);
+    getPupilInfo(className);
+} else if (url === "assignment1" || url === "assignment2") {
+    var className = window.location.href.split('/')[4];
+    var assignmentID = window.location.href.split('/')[5];
+    getAssignmentInfo(className, assignmentID);
+    getChatLogs();
+} else if (url === "new") {
+    getClassNames(url);
+} else if (url === "dash1") {
+    getClassNames(url);
+}
+// $(document).ready(function() {
+//     var url = window.location.href.split('/')[3];
+//      if (url === "pupils") {
+//         var className = window.location.href.split('/')[4];
+//         displayClassAsTitle(className);
+//         addActionToNewPupilForm(className);
+//         getPupilInfo(className);
+//     } else if (url === "assignment1" || url === "assignment2") {
+//         var className = window.location.href.split('/')[4];
+//         var assignmentID = window.location.href.split('/')[5];
+//         getAssignmentInfo(className, assignmentID);
+//         getChatLogs();
+//     } else if (url === "new") {
+//         getClassNames(url);
+//     } else if (url === "dash1") {
+//         getClassNames(url);
+//     }
+// });
 
 function getClassNames (url) {
     $.ajax('/api/getClasses', {
