@@ -52,19 +52,18 @@
         </main>
         <div class="add-student-lightbox">
             <img class="exit-button-student" src="../static/public/images/exit.png">
-            <form class="add-pupil-form" action="/api/newUser">
-
-                <p>Surname:</p>
-                <input type="text" name="surname">
+            <form class="add-student-form" method="POST">
                 <p>First name:</p>
-                <input type="text" name="firstname">
+                <input type="text" name="firstname"><br>
+                <p>Surname:</p>
+                <input type="text" name="surname"><br>
                 <p>Current working level:</p>
-                <input type="text" name="level">
+                <input type="text" name="level"><br>
                 <p>Username:</p>
-                <input type="text" name="username">
+                <input type="text" name="username"><br>
                 <p>Password:</p>
-                <input type="text" name="password">
-                <input type="submit" id="submitPupil">
+                <input type="password" name="password"><br>
+                <input type="submit">
             </form>
         </div>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

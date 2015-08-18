@@ -6,11 +6,12 @@
         <title>Discussion</title>
         <link rel="stylesheet" href="/static/public/css/main.css">
         <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link rel='shortcut icon' href='/static/public/images/favicon.ico' type='image/x-icon'/ >
     </head>
     <body>
         <nav>
-            <a href="/teacherdash">
-                <img class="nav-logo" src="../static/public/images/logo2.png">
+            <a href="/dash1">
+                <img class="nav-logo" src="/static/public/images/logo2.png">
             </a>
             <div class="nav-component-div">
               {{name}}
@@ -28,7 +29,7 @@
         </nav>
         <header>
             <a href="/dash1">
-                <img class="back-icon" src="../static/public/images/back.png">
+                <img class="back-icon" src="/static/public/images/back.png">
                 <p>Home</p>
             </a>
             <h2>Have Your Say</h2>
@@ -41,6 +42,17 @@
                 </div>
             </div>
             <div class="responses-container">
+                <div class="response-form">
+                    <img src="/static/public/images/face.png">
+                    <h2>Your Response</h2>
+                    <form method="POST" action="/api/addResponse">
+                        <p>Describe your opinion in three words.</p>
+                        <input type="text" name="threeWords">
+                        <div class="assignment-question"></div>
+                        <textarea name="response"></textarea>
+                        <input type="submit">
+                    </form>
+                </div>
             </div>
         </main>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
