@@ -24,7 +24,6 @@
   "devDependencies": {
     "code": "^1.5.0",
     "codeclimate-test-reporter": "^0.1.0",
-    "env2": "^1.0.5",
     "fakeredis": "^0.3.1",
     "istanbul": "^0.3.17",
     "jshint": "^2.8.0",
@@ -41,7 +40,7 @@
   ],
   "dependencies": {
     "bcrypt": "^0.8.4",
-    "env2": "^1.0.6",
+    "env2": "^2.0.1",
     "hapi": "^8.8.0",
     "hapi-auth-basic": "^3.0.0",
     "hapi-auth-cookie": "^3.0.1",
