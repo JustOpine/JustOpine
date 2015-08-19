@@ -35,26 +35,29 @@ function displayClassAsTitle (className) {
 }
 
 function addActionToNewPupilForm (className) {
-    $(".add-pupil-form").attr("action", "/api/addPupil/" + className);
+    $(".add-student-form").attr("action", "/api/addPupil/" + className);
 }
 
-function getPupilInfo (pupilData) {
-    $.ajax('/api/getPupils', {
-        data: pupilData,
+function getPupilInfo (className) {
+  console.log(className);
+    $.ajax({
+        url: 'pupils?' +  className,
+        // data: pupilData,
         success: function(pupilData){
             displayPupilInfo(pupilData);
         }
     });
 }
 
-function displayPupilInfo (pupilsArray) {
-    var div = "";
-    for (var i=0; i<pupilsArray.length; i++) {
-        var pupils = JSON.parse(pupilsArray[i]);
-        div += '<tr>' + '<td><img class="student-icon" src="../static/public/images/face.png"></td>' + '<td>' + pupils.firstname + '</td><td>' + pupils.surname + '</td><td>' + pupils.level + '</td></tr>';
-    }
-    $(".student-list").append(div);
-}
+// function displayPupilInfo (pupilsArray) {
+//     var div = "";
+//     for (var i=0; i<pupilsArray.length; i++) {
+//         console.log(pupilsArray[i]);
+//         var pupils = JSON.parse(pupilsArray[i]);
+//         div += '<tr>' + '<td><img class="student-icon" src="../static/public/images/face.png"></td>' + '<td>' + pupils.firstname + '</td><td>' + pupils.surname + '</td><td>' + pupils.level + '</td></tr>';
+//     }
+//     $(".student-list").append(div);
+// }
 
 function addClassNamesToNewAssignmentForm(classNames) {
     for (var i = 0; i < classNames.length; i++) {
