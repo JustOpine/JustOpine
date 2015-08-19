@@ -64,11 +64,12 @@ function getPupilInfo (pupilData) {
 }
 
 function displayPupilInfo (pupilsArray) {
-    console.log("array", pupilsArray);
+    var div = "";
     for (var i=0; i<pupilsArray.length; i++) {
-        var div = '<tr>' + '<td><img class="student-icon" src="../static/public/images/face.png"></td>' + '<td>' + pupilsArray[i].firstname + '</td><td>' + pupilsArray[i].surname + '</td><td>' + pupilsArray[i].level + '</td></tr>';
-        $(".student-list").append(div);
+        var pupils = JSON.parse(pupilsArray[i]);
+        div += '<tr>' + '<td><img class="student-icon" src="../static/public/images/face.png"></td>' + '<td>' + pupils["firstname"] + '</td><td>' + pupils["surname"] + '</td><td>' + pupils["level"] + '</td></tr>';
     }
+    $(".student-list").append(div);
 }
 
 function addClassNamesToNewAssignmentForm(classNames) {
