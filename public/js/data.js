@@ -1,38 +1,22 @@
-// tests found in test/qunit/data-tests.js
-var url = window.location.href.split('/')[3];
- if (url === "pupils") {
-    var className = window.location.href.split('/')[4];
-    displayClassAsTitle(className);
-    addActionToNewPupilForm(className);
-    getPupilInfo(className);
-} else if (url === "assignment1" || url === "assignment2") {
-    var className = window.location.href.split('/')[4];
-    var assignmentID = window.location.href.split('/')[5];
-    getAssignmentInfo(className, assignmentID);
-    getChatLogs();
-} else if (url === "new") {
-    getClassNames(url);
-} else if (url === "dash1") {
-    getClassNames(url);
-}
-// $(document).ready(function() {
-//     var url = window.location.href.split('/')[3];
-//      if (url === "pupils") {
-//         var className = window.location.href.split('/')[4];
-//         displayClassAsTitle(className);
-//         addActionToNewPupilForm(className);
-//         getPupilInfo(className);
-//     } else if (url === "assignment1" || url === "assignment2") {
-//         var className = window.location.href.split('/')[4];
-//         var assignmentID = window.location.href.split('/')[5];
-//         getAssignmentInfo(className, assignmentID);
-//         getChatLogs();
-//     } else if (url === "new") {
-//         getClassNames(url);
-//     } else if (url === "dash1") {
-//         getClassNames(url);
-//     }
-// });
+
+$(document).ready(function() {
+    var url = window.location.href.split('/')[3];
+     if (url === "pupils") {
+        var className = window.location.href.split('/')[4];
+        displayClassAsTitle(className);
+        addActionToNewPupilForm(className);
+        getPupilInfo(className);
+    } else if (url === "assignment1" || url === "assignment2") {
+        var className = window.location.href.split('/')[4];
+        var assignmentID = window.location.href.split('/')[5];
+        getAssignmentInfo(className, assignmentID);
+        getChatLogs();
+    } else if (url === "new") {
+        getClassNames(url);
+    } else if (url === "dash1") {
+        getClassNames(url);
+    }
+});
 
 function getClassNames (url) {
     $.ajax('/api/getClasses', {
@@ -67,7 +51,7 @@ function displayPupilInfo (pupilsArray) {
     var div = "";
     for (var i=0; i<pupilsArray.length; i++) {
         var pupils = JSON.parse(pupilsArray[i]);
-        div += '<tr>' + '<td><img class="student-icon" src="../static/public/images/face.png"></td>' + '<td>' + pupils["firstname"] + '</td><td>' + pupils["surname"] + '</td><td>' + pupils["level"] + '</td></tr>';
+        div += '<tr>' + '<td><img class="student-icon" src="../static/public/images/face.png"></td>' + '<td>' + pupils.firstname + '</td><td>' + pupils.surname + '</td><td>' + pupils.level + '</td></tr>';
     }
     $(".student-list").append(div);
 }
