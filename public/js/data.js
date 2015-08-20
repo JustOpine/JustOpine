@@ -41,7 +41,8 @@ function addActionToNewPupilForm (className) {
 function getPupilInfo (className) {
   console.log(className);
     $.ajax({
-        url: 'pupils?' +  className,
+        url: '/pupils',
+        data: className,
         // data: pupilData,
         success: function(pupilData){
             displayPupilInfo(pupilData);
