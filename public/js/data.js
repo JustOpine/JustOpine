@@ -18,17 +18,17 @@ $(document).ready(function() {
     }
 });
 
-function getClassNames (url) {
-    $.ajax('/api/getClasses', {
-        success: function(classesArray){
-            if (url === "new") {
-                addClassNamesToNewAssignmentForm(classesArray);
-            } else if (url === "dash1") {
-                getAssignmentsForAllClasses(classesArray);
-            }
-        }
-    });
-}
+// function getClassNames (url) {
+//     $.ajax('/api/getClasses', {
+//         success: function(classesArray){
+//             if (url === "new") {
+//                 addClassNamesToNewAssignmentForm(classesArray);
+//             } else if (url === "dash1") {
+//                 getAssignmentsForAllClasses(classesArray);
+//             }
+//         }
+//     });
+// }
 
 function displayClassAsTitle (className) {
     $(".pupils-page-title").html("Pupils in " + className);
@@ -38,17 +38,17 @@ function addActionToNewPupilForm (className) {
     $(".add-student-form").attr("action", "/api/addPupil/" + className);
 }
 
-function getPupilInfo (className) {
-  console.log(className);
-    $.ajax({
-        url: '/pupils',
-        data: className,
-        // data: pupilData,
-        success: function(pupilData){
-            displayPupilInfo(pupilData);
-        }
-    });
-}
+// function getPupilInfo (className) {
+//   console.log(className);
+//     $.ajax({
+//         url: '/pupils',
+//         data: className,
+//         // data: pupilData,
+//         success: function(pupilData){
+//             displayPupilInfo(pupilData);
+//         }
+//     });
+// }
 
 // function displayPupilInfo (pupilsArray) {
 //     var div = "";
