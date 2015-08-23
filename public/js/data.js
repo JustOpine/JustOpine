@@ -105,7 +105,7 @@ function getChatLogs () {
 
 function displayChatLogs (chatLogs) {
     for (var i = 0; i < chatLogs.length; i++) {
-        var div = "<div class='student-response'>" + "<img src='/static/public/images/face.png'>" + "<h2>Student</h2>" + "<p class= 'post-time'>" + chatLogs[i].time + "</p><p><i>" + chatLogs[i].threeWords + "</i></p><p>" + chatLogs[i].response + "</p></div>";
+        var div = "<div class='student-response'>" + "<img src='/static/public/images/face.png'>" + "<h2>Pupil</h2>" + "<p class= 'post-time'>" + chatLogs[i].time + "</p><p><i>" + chatLogs[i].threeWords + "</i></p><p>" + chatLogs[i].response + "</p></div>";
         $(".responses-container").append(div);
     }
 }
