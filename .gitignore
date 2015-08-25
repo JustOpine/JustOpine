@@ -36,3 +36,6 @@ db-info.js
 env.json
 
 .DS_Store
+
+# Sass stuff
+/.sass-cache
