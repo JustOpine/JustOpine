@@ -1,13 +1,13 @@
 
 $(document).ready(function() {
     var url = window.location.href.split('/')[3];
-     if (url === "pupils") {
-        var className = window.location.href.split('/')[4];
+     if (url.match(/pupils/) !== null) {
+        var className = window.location.href.split('?')[1];
         displayClassAsTitle(className);
         addActionToNewPupilForm(className);
-        getPupilInfo(className);
     } else if (url === "assignment1" || url === "assignment2") {
         var className = window.location.href.split('/')[4];
+        console.log(className);
         var assignmentID = window.location.href.split('/')[5];
         getAssignmentInfo(className, assignmentID);
         getChatLogs();
@@ -18,47 +18,15 @@ $(document).ready(function() {
     }
 });
 
-// function getClassNames (url) {
-//     $.ajax('/api/getClasses', {
-//         success: function(classesArray){
-//             if (url === "new") {
-//                 addClassNamesToNewAssignmentForm(classesArray);
-//             } else if (url === "dash1") {
-//                 getAssignmentsForAllClasses(classesArray);
-//             }
-//         }
-//     });
-// }
 
 function displayClassAsTitle (className) {
     $(".pupils-page-title").html("Pupils in " + className);
 }
 
 function addActionToNewPupilForm (className) {
+  console.log('add action');
     $(".add-student-form").attr("action", "/api/addPupil/" + className);
 }
-
-// function getPupilInfo (className) {
-//   console.log(className);
-//     $.ajax({
-//         url: '/pupils',
-//         data: className,
-//         // data: pupilData,
-//         success: function(pupilData){
-//             displayPupilInfo(pupilData);
-//         }
-//     });
-// }
-
-// function displayPupilInfo (pupilsArray) {
-//     var div = "";
-//     for (var i=0; i<pupilsArray.length; i++) {
-//         console.log(pupilsArray[i]);
-//         var pupils = JSON.parse(pupilsArray[i]);
-//         div += '<tr>' + '<td><img class="student-icon" src="../static/public/images/face.png"></td>' + '<td>' + pupils.firstname + '</td><td>' + pupils.surname + '</td><td>' + pupils.level + '</td></tr>';
-//     }
-//     $(".student-list").append(div);
-// }
 
 function addClassNamesToNewAssignmentForm(classNames) {
     for (var i = 0; i < classNames.length; i++) {
