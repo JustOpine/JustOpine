@@ -1,5 +1,7 @@
 // tests found in test/qunit/script-tests.js
 
+// landing page slide effects
+
 function slideEffect (direction) {
     if (direction === "right") {
         $(".landing-container-firstview").animate({
@@ -37,14 +39,15 @@ function slideEffect (direction) {
     }
 }
 
-
 $(".sign-in").on('click', function() {
     slideEffect("right");
 });
 
 $(".landing-back-icon").on('click', function() {
     slideEffect("left");
-})
+});
+
+// logout
 
 $(".logout").on('click', function() {
     $.ajax({
@@ -61,7 +64,7 @@ $(".logout").on('click', function() {
 $(".hamburger").on('click', function() {
     $(".mobile-nav-component-div").slideToggle();
     $("nav").toggleClass("box-shadow");
-})
+});
 
 $(window).on('resize', function() {
     if ($(window).width() > 699) {
@@ -69,12 +72,6 @@ $(window).on('resize', function() {
         $("nav").addClass("box-shadow");
     }
 });
-
-// $(window).on('resize', function() {
-//     if ($(window).width() < 750) {
-//         $(".mobile-nav-component-div").addClass("box-shadow");
-//     }
-// });
 
 // lightbox
 
@@ -102,4 +99,15 @@ $(".exit-button-class").on('click', function() {
 
 $(".exit-button-student").on('click', function() {
     deactivateLightBox(".add-student-lightbox");
+});
+
+// limiting threewords input to three words
+
+$('.threewords').keyup(function () {
+    if (this.value.split(" ").length > 3) {
+        $(".threewords").css('color', 'red');
+    }
+    if (this.value.split(" ").length < 4) {
+        $(".threewords").css('color', '#1A1A1A');
+    }
 });
