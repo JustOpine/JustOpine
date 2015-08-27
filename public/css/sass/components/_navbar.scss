@@ -39,6 +39,7 @@ nav {
 }
 
 .mobile-nav-component-div {
+    @include box-shadow(0 4px 0 rgba(0,0,0,.05));
     display: none;
     font-size: 18px;
 
