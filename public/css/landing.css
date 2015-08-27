@@ -25,7 +25,11 @@ button:hover, input[type="submit"]:hover {
   margin: 15px auto 0 auto; }
 
 body {
+  color: #1A1A1A;
   font-family: 'Roboto', sans-serif; }
+
+a {
+  text-decoration: none; }
 
 body {
   background-attachment: fixed;
@@ -34,6 +38,12 @@ body {
   background-size: cover;
   color: #1A1A1A;
   height: 100%; }
+
+.landing-back-icon {
+  text-align: left; }
+
+.landing-back-icon:hover {
+  cursor: pointer; }
 
 .landing-container {
   background-color: #E0F7FA;
@@ -45,13 +55,14 @@ body {
   margin: 100px auto 100px auto;
   overflow: hidden;
   padding: 50px;
-  text-align: center;
   width: 500px; }
   .landing-container .landing-logo {
     height: auto;
-    max-width: 100%; }
+    max-width: 100%;
+    text-align: center; }
   .landing-container h2 {
-    font-weight: normal; }
+    font-weight: normal;
+    text-align: center; }
   .landing-container .landing-container-firstview {
     margin: 0 auto;
     position: relative;
@@ -63,15 +74,20 @@ body {
     display: none;
     position: absolute;
     left: 100%; }
+    .landing-container .landing-container-secondview h3 {
+      margin-top: 5px;
+      text-align: center; }
     .landing-container .landing-container-secondview .input-container {
-      display: block; }
+      display: block;
+      text-align: center; }
     .landing-container .landing-container-secondview .input-container > * {
       display: inline;
       margin: 10px; }
     .landing-container .landing-container-secondview .sign-in-input {
       font-size: 18px;
       margin: 10px auto;
-      padding: 5px; }
+      padding: 5px;
+      text-align: center; }
 
 @media (max-width: 700px) {
   .landing-container {
