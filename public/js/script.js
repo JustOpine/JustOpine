@@ -61,15 +61,20 @@ $(".logout").on('click', function() {
 $(".hamburger").on('click', function() {
     $(".mobile-nav-component-div").slideToggle();
     $("nav").toggleClass("box-shadow");
-    $(".mobile-nav-component-div").toggleClass("box-shadow");
 })
+
 $(window).on('resize', function() {
     if ($(window).width() > 699) {
-        console.log("hello")
         $(".mobile-nav-component-div").css('display', 'none');
         $("nav").addClass("box-shadow");
     }
 });
+
+// $(window).on('resize', function() {
+//     if ($(window).width() < 750) {
+//         $(".mobile-nav-component-div").addClass("box-shadow");
+//     }
+// });
 
 // lightbox
 
