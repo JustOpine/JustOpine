@@ -26,6 +26,7 @@ function getAssignmentInfo (className, assignmentID) {
     var url = '/api/getAssignment/' + className + '/' + assignmentID;
     $.ajax(url, {
         success: function(data){
+            console.log(data);
             displayAssignmentInfo(data);
         }
     });
