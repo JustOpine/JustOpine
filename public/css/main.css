@@ -60,12 +60,14 @@ body {
 a {
   text-decoration: none; }
 
-nav {
-  background-color: white;
+.box-shadow {
   -webkit-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.05);
   -ms-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.05); }
+
+nav {
+  background-color: white;
   height: 80px; }
 
 .nav-logo {
@@ -75,13 +77,45 @@ nav {
   width: 60px; }
 
 .nav-component-div {
-  float: right; }
+  float: right;
+  padding-top: 10px; }
 
 .nav-component {
   background-color: #B2EBF2;
   display: inline-block;
   margin: 10px; }
 
+.hamburger {
+  display: none;
+  float: right;
+  height: 40px;
+  padding: 20px;
+  width: 40px; }
+
+.hamburger:hover {
+  cursor: pointer; }
+
+.mobile-nav-component-div {
+  display: none;
+  font-size: 18px; }
+  .mobile-nav-component-div p {
+    border-top: 1px solid #F3F3F3;
+    padding: 5px 0;
+    text-align: center; }
+  .mobile-nav-component-div .logout {
+    padding-bottom: 10px; }
+  .mobile-nav-component-div p:hover {
+    cursor: pointer; }
+
+@media (max-width: 700px) {
+  .nav-component-div {
+    display: none; }
+
+  .hamburger {
+    display: block; } }
+@media (min-width: 700px) {
+  .mobile-nav-component-div {
+    display: none; } }
 .classes-container {
   background-color: white;
   -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
