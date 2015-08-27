@@ -47,6 +47,7 @@
             <h2>Have Your Say</h2>
         </header>
         <main>
+            <div class="category"></div>
             <div class="opinion-piece">
                 <div class="opinion-piece-image">
                 </div>
@@ -59,7 +60,7 @@
                     <h2>Your Response</h2>
                     <form method="POST" action="/api/addResponse">
                         <p>Describe your opinion in three words.</p>
-                        <input type="text" name="threeWords">
+                        <input class="threewords" type="text" name="threeWords">
                         <div class="assignment-question"></div>
                         <textarea name="response"></textarea>
                         <input type="submit">
@@ -69,5 +70,6 @@
         </main>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="/static/public/js/data.js"></script>
+        <script src="/static/public/js/script.js"></script>
     </body>
 </html>
