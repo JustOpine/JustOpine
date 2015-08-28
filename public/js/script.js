@@ -1,5 +1,10 @@
 // tests found in test/qunit/script-tests.js
 
+
+$(".nav-component").on('click', function() {
+    console.log("clicking!");
+});
+
 // landing page slide effects
 
 function slideEffect (direction) {
