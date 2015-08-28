@@ -18,7 +18,6 @@ function displayClassAsTitle (className) {
 }
 
 function addActionToNewPupilForm (className) {
-  console.log('add action');
     $(".add-student-form").attr("action", "/api/addPupil/" + className);
 }
 
@@ -26,7 +25,6 @@ function getAssignmentInfo (className, assignmentID) {
     var url = '/api/getAssignment/' + className + '/' + assignmentID;
     $.ajax(url, {
         success: function(data){
-            console.log(data);
             displayAssignmentInfo(data);
         }
     });
