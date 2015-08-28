@@ -104,7 +104,13 @@ $(".exit-button-student").on('click', function() {
 // limiting threewords input to three words
 
 $('.threewords').keyup(function () {
-    if (this.value.split(" ").length > 3) {
+    var input = this.value.split(" ").filter(function(e) {
+        return e !== ' ';
+    }).filter(function(e) {
+        return e !== '';
+
+    });
+    if (input.length > 3){
         $(".threewords").css('color', 'red');
     }
     if (this.value.split(" ").length < 4) {
