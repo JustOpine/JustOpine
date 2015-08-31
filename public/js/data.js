@@ -18,7 +18,6 @@ function displayClassAsTitle (className) {
 }
 
 function addActionToNewPupilForm (className) {
-  console.log('add action');
     $(".add-student-form").attr("action", "/api/addPupil/" + className);
 }
 
@@ -26,7 +25,6 @@ function getAssignmentInfo (className, assignmentID) {
     var url = '/api/getAssignment/' + className + '/' + assignmentID;
     $.ajax(url, {
         success: function(data){
-            console.log(data);
             displayAssignmentInfo(data);
         }
     });
@@ -48,7 +46,7 @@ function getChatLogs () {
 
 function displayChatLogs (chatLogs) {
     for (var i = 0; i < chatLogs.length; i++) {
-        var div = "<div class='student-response'>" + "<img src='/static/public/images/face.png'>" + "<h2>Pupil</h2>" + "<p class= 'post-time'>" + chatLogs[i].time + "</p><p><i>" + chatLogs[i].threeWords + "</i></p><p>" + chatLogs[i].response + "</p></div>";
+        var div = "<div class='student-response'>" + "<img src='/static/public/images/face.png'>" + "<h2>" + chatLogs[i].name + "</h2>" + "<p class= 'post-time'>" + chatLogs[i].time.toString().split(' ').splice(0, 5).join(' ') + "</p><p><i>" + chatLogs[i].threeWords + "</i></p><p>" + chatLogs[i].response + "</p></div>";
         $(".responses-container").append(div);
     }
 }
