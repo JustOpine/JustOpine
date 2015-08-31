@@ -12,6 +12,14 @@ body {
     height: 100%;
 }
 
+.landing-back-icon {
+    text-align: left;
+}
+
+.landing-back-icon:hover {
+    cursor: pointer;
+}
+
 .landing-container {
     background-color: $turquoise4;
     @include box-shadow(3px 5px 20px -1px rgba(0,0,0,0.52));
@@ -20,16 +28,17 @@ body {
     overflow: hidden;
     padding: 50px;
     // position: absolute;
-    text-align: center;
     width: 500px;
 
     .landing-logo {
         height: auto;
         max-width: 100%;
+        text-align: center;
     }
 
     h2 {
         font-weight: normal;
+        text-align: center;
     }
 
     .landing-container-firstview {
@@ -49,8 +58,14 @@ body {
         position: absolute;
         left: 100%;
 
+        h3 {
+            margin-top: 5px;
+            text-align: center;
+        }
+
         .input-container {
             display: block;
+            text-align: center;
         }
 
         .input-container > * {
