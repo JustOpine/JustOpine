@@ -24,14 +24,14 @@
   "devDependencies": {
     "code": "^1.5.0",
     "codeclimate-test-reporter": "^0.1.0",
-    "fakeredis": "^0.3.1",
-    "istanbul": "^0.3.17",
+    "env2": "^2.0.2",
+    "istanbul": "^0.3.19",
     "jshint": "^2.8.0",
-    "lab": "^5.14.0",
-    "nodemon": "^1.4.0",
-    "pre-commit": "^1.0.10",
-    "shot": "^1.5.3",
-    "tape": "^4.0.1"
+    "lab": "^5.15.2",
+    "nodemon": "^1.4.1",
+    "pre-commit": "^1.1.1",
+    "shot": "^1.6.0",
+    "tape": "^4.2.0"
   },
   "pre-commit": [
     "jshint",
@@ -39,11 +39,11 @@
     "codeclimate"
   ],
   "dependencies": {
-    "bcrypt": "^0.8.4",
-    "env2": "^2.0.1",
-    "hapi": "^8.8.0",
+    "bcrypt": "^0.8.5",
+    "hapi": "^8.8.1",
     "hapi-auth-basic": "^3.0.0",
-    "hapi-auth-cookie": "^3.0.1",
+    "hapi-auth-cookie": "^3.1.0",
+    "inert": "^3.0.1",
     "redis": "^0.12.1"
   }
 }
