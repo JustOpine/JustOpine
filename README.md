@@ -1,6 +1,6 @@
-[![Code Climate](https://david-dm.org/foundersandcoders/justopine.svg
+[![Code Climate](https://david-dm.org/JustOpine/justopine.svg
 )](https://david-dm.org/)
-[![bitHound Score](https://www.bithound.io/github/foundersandcoders/JustOpine/badges/score.svg)](https://www.bithound.io/github/foundersandcoders/JustOpine)
+[![bitHound Score](https://www.bithound.io/github/JustOpine/JustOpine/badges/score.svg)](https://www.bithound.io/github/JustOpine/JustOpine)
 ![Build Status](https://travis-ci.org/foundersandcoders/JustOpine.svg?branch=master)
 [![Test Coverage](https://codeclimate.com/github/foundersandcoders/JustOpine/badges/coverage.svg)](https://codeclimate.com/github/foundersandcoders/JustOpine/coverage)
 [![Code Climate](https://codeclimate.com/github/foundersandcoders/JustOpine/badges/gpa.svg)](https://codeclimate.com/github/foundersandcoders/JustOpine)
@@ -10,7 +10,7 @@
 
 JustOpine is a tool to get students talking about current events. Through the platform, teachers are able to assign opinion pieces for students to respond to and discuss.
 
-This project is being completed at [Founders & Coders London](www.foundersandcoders.com).
+The tech team for this project is based at [Founders & Coders London](www.foundersandcoders.com).
 
 ## Tech Stack
 
@@ -18,4 +18,4 @@ This project is being built in full stack JavaScript, using Node.js and Hapi.js 
 
 ## Current Status
 
-Project is still in development, with MVP due for release soon. Database has been built in Redis, front-end fully built out in SASS, and we're just grappling with some final data display issues and testing on the backend.
+Project is still in development, with MVP due for release soon. Database has been built in Redis, front-end fully built out in SASS. We're just working through with some final data display issues and testing on the backend.
