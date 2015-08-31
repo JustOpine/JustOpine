@@ -9,9 +9,9 @@
         <link rel='shortcut icon' href='/static/public/images/favicon.ico' type='image/x-icon'/ >
     </head>
     <body>
-        <nav>
+        <nav class="box-shadow">
             <a href="/dash1">
-                <img class="nav-logo" src="/static/public/images/logo2.png">
+                <img class="nav-logo" src="../static/public/images/logo2.png">
             </a>
             <div class="nav-component-div">
                 <a href="/dash1">
@@ -23,8 +23,22 @@
                 <a href="/new">
                     <button class="nav-component">Set Assignment</button>
                 </a>
+                <button class="nav-component logout">Logout</button>
             </div>
+            <img class="hamburger" src="../static/public/images/hamburger.png">
         </nav>
+        <div class="mobile-nav-component-div">
+            <a href="/dash1">
+                <p>Dashboard</p>
+            </a>
+            <a href="/classes">
+                <p>Class Lists</p>
+            </a>
+            <a href="/new">
+                <p>Set Assignment</p>
+            </a>
+            <p class="logout">Logout</p>
+        </div>
         <header>
             <a href="/dash1">
                 <img class="back-icon" src="/static/public/images/back.png">
@@ -33,6 +47,7 @@
             <h2>Have Your Say</h2>
         </header>
         <main>
+            <div class="category"></div>
             <div class="opinion-piece">
                 <div class="opinion-piece-image">
                 </div>
@@ -45,7 +60,7 @@
                     <h2>Your Response</h2>
                     <form method="POST" action="/api/addResponse">
                         <p>Describe your opinion in three words.</p>
-                        <input type="text" name="threeWords">
+                        <input class="threewords" type="text" name="threeWords">
                         <div class="assignment-question"></div>
                         <textarea name="response"></textarea>
                         <input type="submit">
@@ -55,5 +70,6 @@
         </main>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="/static/public/js/data.js"></script>
+        <script src="/static/public/js/script.js"></script>
     </body>
 </html>

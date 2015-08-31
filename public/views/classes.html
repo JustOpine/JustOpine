@@ -10,10 +10,8 @@
         <!-- <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.18.0.css"> -->
     </head>
     <body>
-        <!-- <div id="qunit"></div>
-        <div id="qunit-fixture"></div> -->
         <div></div>
-        <nav>
+        <nav class="box-shadow">
             <a href="/dash1">
                 <img class="nav-logo" src="../static/public/images/logo2.png">
             </a>
@@ -27,8 +25,22 @@
                 <a href="/new">
                     <button class="nav-component">Set Assignment</button>
                 </a>
+                <button class="nav-component logout">Logout</button>
             </div>
+            <img class="hamburger" src="../static/public/images/hamburger.png">
         </nav>
+        <div class="mobile-nav-component-div">
+            <a href="/dash1">
+                <p>Dashboard</p>
+            </a>
+            <a href="/classes">
+                <p>Class Lists</p>
+            </a>
+            <a href="/new">
+                <p>Set Assignment</p>
+            </a>
+            <p class="logout">Logout</p>
+        </div>
         <header>
             <h2>My Classes</h2>
         </header>

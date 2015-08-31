@@ -6,18 +6,22 @@
         <link rel='shortcut icon' href='/static/public/images/favicon.ico' type='image/x-icon'/ >
     </head>
     <body>
+      <button class="nav-component logout">Logout</button>
         <h1>REGISTER A TEACHER</h1>
-        <form class="">
+        <form class="" action="/api/addTeacher">
+            <input type="text" name="userID" id="userID" placeholder="userID">
             <input type="text" name="firstname" id="firstname" placeholder="firstname">
             <input type="text" name="surname" id="surname" placeholder="surname">
             <input type="text" name="username" id="username" placeholder="username">
             <input type="text" name="password" id="password" placeholder="password">
-            <input type="text" name="isTeacher" id="isTeacher" placeholder="isTeacher">
-            <input type="text" name="isAdmin" id="isAdmin" placeholder="isAdmin">
-            <button id="testrequest" onclick="sendRequest();">Submit</button>
+            isTeacher
+            <input type="checkbox" name="isTeacher" id="isTeacher" value="true">
+            isAdmin
+            <input type="checkbox" name="isAdmin" id="isAdmin" value="true">
+            <input type="submit" name="Submit" value="Submit">
         </form>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="/static/public/js/script.js" charset="utf-8"></script>
+        <script src="/static/public/js/addUser.js" charset="utf-8"></script>
 
     </body>
 </html>

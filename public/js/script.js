@@ -1,27 +1,79 @@
 // tests found in test/qunit/script-tests.js
 
-$(".sign-in").on('click', function() {
-    $(".landing-container-firstview").animate({
-           left: '-100%'
-       }, 300, function() {
-           $(".landing-container-firstview").css('left', '150%');
-           $(".landing-container-firstview").appendTo('.landingcontainer');
+// landing page slide effects
 
-           $(".landing-container-secondview").css({
-               display: 'block',
-               position: 'relative'
+function slideEffect (direction) {
+    if (direction === "right") {
+        $(".landing-container-firstview").animate({
+               left: '-100%'
+           }, 300, function() {
+               $(".landing-container-firstview").css('display', 'none');
+               $(".landing-container-firstview").appendTo('.landingcontainer');
+
+               $(".landing-container-secondview").css({
+                   display: 'block',
+                   position: 'relative'
+               });
+
+               $(".landing-container-secondview").animate({
+                   left: '0%'
+               }, 300);
            });
+    } else if (direction === "left") {
+        $(".landing-container-secondview").animate({
+               left: '100%'
+           }, 300, function() {
+               $(".landing-container-secondview").css('display', 'none');
+               $(".landing-container-secondview").appendTo('.landingcontainer');
 
-           $(".landing-container-secondview").animate({
-               left: '0%'
-           }, 300);
-       });
+               $(".landing-container-firstview").css({
+                   display: 'block',
+                   position: 'relative'
+               });
+
+               $(".landing-container-firstview").animate({
+                //    right: '-150%',
+                   left: '0%'
+               }, 300);
+           });
+    }
+}
+
+$(".sign-in").on('click', function() {
+    slideEffect("right");
 });
 
-// no work :(
+$(".landing-back-icon").on('click', function() {
+    slideEffect("left");
+});
+
+// logout
+
 $(".logout").on('click', function() {
-    $.get('/logout');
+    $.ajax({
+      url: '/logout',
+      type: 'POST',
+      success: function(){
+        window.location.href = '/';
+      }
+    });
 });
+
+// mobile nav
+
+$(".hamburger").on('click', function() {
+    $(".mobile-nav-component-div").slideToggle();
+    $("nav").toggleClass("box-shadow");
+});
+
+$(window).on('resize', function() {
+    if ($(window).width() > 699) {
+        $(".mobile-nav-component-div").css('display', 'none');
+        $("nav").addClass("box-shadow");
+    }
+});
+
+// lightbox
 
 function activateLightBox (toadd) {
     $(toadd).css("display", "block");
@@ -32,10 +84,6 @@ function deactivateLightBox (toremove) {
     $(toremove).css("display", "none");
     $("div").first().removeClass("overlay");
 }
-
-$(".sign-in").on('click', function() {
-    slideEffect();
-});
 
 $(".add-class").on('click', function() {
     activateLightBox(".add-class-lightbox");
@@ -53,28 +101,19 @@ $(".exit-button-student").on('click', function() {
     deactivateLightBox(".add-student-lightbox");
 });
 
-function sendRequest(){
-    var firstname = document.getElementById('firstname').value;
-    var surname = document.getElementById('surname').value;
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
-    var isAdmin = document.getElementById('isAdmin').value;
-    var isTeacher = document.getElementById('isTeacher').value;
-    var obj = {
-        firstname : firstname,
-        surname : surname,
-        username : username,
-        password : password,
-        role : "teacher",
-        isTeacher: isTeacher,
-        isAdmin: isAdmin
-    };
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/api/newUser');
-    xhr.send(JSON.stringify(obj));
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4) {
-          console.log(xhr.responseText);
-        }
-    };
-}
+// limiting threewords input to three words
+
+$('.threewords').keyup(function () {
+    var input = this.value.split(" ").filter(function(e) {
+        return e !== ' ';
+    }).filter(function(e) {
+        return e !== '';
+
+    });
+    if (input.length > 3){
+        $(".threewords").css('color', 'red');
+    }
+    if (this.value.split(" ").length < 4) {
+        $(".threewords").css('color', '#1A1A1A');
+    }
+});

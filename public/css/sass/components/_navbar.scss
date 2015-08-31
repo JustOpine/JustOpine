@@ -1,6 +1,6 @@
 nav {
     background-color: white;
-    @include box-shadow(0 4px 0 rgba(0,0,0,.05));
+    // @include box-shadow(0 4px 0 rgba(0,0,0,.05));
     height: 80px;
 }
 
@@ -13,10 +13,66 @@ nav {
 
 .nav-component-div {
     float: right;
+    padding-top: 10px;
 }
 
 .nav-component {
     background-color: $turquoise3;
     display: inline-block;
     margin: 10px;
+}
+
+.hamburger {
+    display: none;
+    float: right;
+    height: 40px;
+    padding: 20px;
+    width: 40px;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.mobile-nav-component-div {
+    @include box-shadow(0 4px 0 rgba(0,0,0,.05));
+    display: none;
+    font-size: 18px;
+
+    p {
+        border-top: 1px solid #F3F3F3;
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    .logout {
+        padding-bottom: 10px;
+    }
+
+    p:hover {
+        cursor: pointer;
+    }
+
+}
+
+.box-shadow {
+    @include box-shadow(0 4px 0 rgba(0,0,0,.05));
+}
+
+@media (max-width: 700px) {
+
+    .nav-component-div {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (min-width: 700px) {
+
+    .mobile-nav-component-div {
+        display: none;
+    }
 }
