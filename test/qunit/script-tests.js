@@ -1,4 +1,4 @@
-//to be tested on landing page
+// to be tested on landing page
 
 QUnit.test( "slideEffect changes css properties of landing-container-firstview correctly", function(assert) {
     slideEffect();

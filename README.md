@@ -14,8 +14,8 @@ The tech team for this project is based at [Founders & Coders London](www.founde
 
 ## Tech Stack
 
-This project is being built in full stack JavaScript, using Node.js and Hapi.js on the backend. SASS is being used on the frontend. We're using Redis as our database for maximum efficiency. Testing tools include Lab, Code and Tape.
+This project is being built in full stack JavaScript, using Node.js and Hapi.js on the backend. SASS is being used on the frontend. We're using Redis as our database. Testing tools include Lab, Code and Tape.
 
 ## Current Status
 
-Project is still in development, with MVP due for release soon. Database has been built in Redis, front-end fully built out in SASS. We're just working through with some final data display issues and testing on the backend.
+JustOpine 1.0 has MVP due for release soon. The Node backend has been built, Redis integrated as the database, and the front-end fully built out in SASS. JustOpine 1.0 is now  The team is just working through some final touches for the MVP.
