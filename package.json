@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/foundersandcoders/JustOpine"
+    "url": "https://github.com/JustOpine/JustOpine"
   },
   "author": "msmichellegar,minaorangina,Lukars",
   "license": "GPU v2",
   "bugs": {
-    "url": "https://github.com/foundersandcoders/JustOpine/issues"
+    "url": "https://github.com/JustOpine/JustOpine/issues"
   },
-  "homepage": "https://github.com/foundersandcoders/JustOpine",
+  "homepage": "https://github.com/JustOpine/JustOpine",
   "devDependencies": {
     "code": "^1.5.0",
     "codeclimate-test-reporter": "^0.1.0",
@@ -40,8 +40,8 @@
   ],
   "dependencies": {
     "bcrypt": "^0.8.5",
+    "dust": "^0.3.0",
     "hapi": "^8.8.1",
-    "hapi-auth-basic": "^3.0.0",
     "hapi-auth-cookie": "^3.1.0",
     "inert": "^3.0.1",
     "redis": "^1.0.0"
