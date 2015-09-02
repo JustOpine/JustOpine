@@ -35,7 +35,7 @@ test("addClass adds to a list", function (t) {
 
 test("getClasses returns an array of the correct data and length", function(t) {
     client.sadd("123456:class", "testClass", function(err, data) {
-        api.getClasses("123456", function(err, classData) {
+        api.getClasses("123456", function(error, classData) {
             t.equal(classData, ["testClass"], 'correct data comes out');
             t.equal(classData.length, 1, 'array is correct length');
             client.del("12345:class");
