@@ -39,7 +39,7 @@ body {
   color: #1A1A1A;
   height: 100%;
   opacity: 0;
-  transition: opacity 1s ease-in-out; }
+  transition: opacity 1.4s ease-in-out; }
 
 .fade-in {
   opacity: 1; }
