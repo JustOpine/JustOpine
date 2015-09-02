@@ -22,7 +22,6 @@ function addActionToNewPupilForm (className) {
 }
 
 function getAssignmentInfo (className, assignmentID) {
-    console.log("getting assignments");
     var url = '/api/getAssignment/' + className + '/' + assignmentID;
     $.ajax(url, {
         success: function(data){
