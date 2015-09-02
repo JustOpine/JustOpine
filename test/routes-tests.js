@@ -102,3 +102,12 @@ it("Testing the teacher dashboard is sent when requested by authenticated user a
 //         console.log("#generic GET request to /static/{path*} works");
 //     });
 // });
+
+// var header = res.headers['set-cookie'];
+// var cookie = header[0].match(/(?:[^\x00-\x20\(\)<>@\,;\:\\"\/\[\]\?\=\{\}\x7F]+)\s*=\s*(?:([^\x00-\x20\"\,\;\\\x7F]*))/);
+// server.inject({ method: 'GET', url: '/resource', headers: { cookie: 'special=' + cookie[1] } }, function (res) {
+//     expect(res.statusCode).to.equal(200);
+//     expect(res.headers['set-cookie']).to.not.exist();
+//     expect(res.result).to.equal('resource');
+//     done();
+// });

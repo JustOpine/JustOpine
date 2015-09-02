@@ -34,8 +34,6 @@
     "tape": "^4.2.0"
   },
   "pre-commit": [
-    "jshint",
-    "coverage",
     "codeclimate"
   ],
   "dependencies": {
