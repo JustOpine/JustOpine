@@ -11,7 +11,7 @@ test("database is running", function (t) {
         t.end();
     });
 });
-//
+
 // test("getPupils returns an array of correct data and length", function (t) {
 //     client.hmset("123456:testClass:pupil", "testPupil1", {"surname":"Izaak","firstname":"Sofer","level":"genius"}, "testPupil2", {"surname":"Izaak","firstname":"Sofer","level":"genius"}, function(err, data1) {
 //         api.getPupils("123456", "test", function(err, data) {
@@ -25,7 +25,7 @@ test("database is running", function (t) {
 
 test("addClass adds to a list", function (t) {
     api.addClass("123456", "testClass", function(err, data) {
-        client.smembers("123456:class", function(err, classData) {
+        client.smembers("123456:class", function(error, classData) {
             t.equal(classData, ["testClass"], 'addClass is working');
             client.del("123456:class");
             t.end();
@@ -49,7 +49,7 @@ test("addAssignment adds an assignment to a hash", function(t) {
         class: "testClass"
     };
     api.addAssignment("123456", assignmentObject, function(err, data) {
-        client.hgetall("123456:testClass:assignment", function(err, assignmentData) {
+        client.hgetall("123456:testClass:assignment", function(error, assignmentData) {
             t.equal(assignmentData.length, 1);
             client.del("123456:testClass:assignment");
             t.end();
@@ -62,7 +62,7 @@ test("getAssignment returns a stringified object with assignment info", function
         class: "testClass"
     };
     client.hmset("123456:testClass:assignment", assignmentObject, function(err, data) {
-        api.getAssignment("123456", "testClass", "testAssignment", function(err, assignmentData) {
+        api.getAssignment("123456", "testClass", "testAssignment", function(error, assignmentData) {
             t.equal(assignmentData, testAssignment);
             client.del("123456:testClass:assignment");
             t.end();
@@ -75,7 +75,7 @@ test("getAssignmentsForOneClass returns an array of objects of correct length", 
         class: "testClass"
     };
     client.hmset("123456:testClass:assignment", testAssignment, function(err, data) {
-        api.getAssignmentsForOneClass("123456", "testClass", function(err, assignmentData) {
+        api.getAssignmentsForOneClass("123456", "testClass", function(error, assignmentData) {
             t.equal(assignmentData, testAssignment, "correct data");
             t.equal(assignmentData.length, 1, "correct length");
             client.del("123456:testClass:assignment");
@@ -93,7 +93,7 @@ test("getAssignmentsForAllClasses returns an array of objects of correct length"
         client.sadd("123456:class", "testClass2", function(err2, data2) {
             client.hmset("123456:testClass:assignment", assignmentObject, function(err3, data3) {
                 client.hmset("123456:testClass2:assignment", assignmentObject, function(err4, data4) {
-                    api.getAssignmentsForAllClasses("123456", function(err, assignmentData) {
+                    api.getAssignmentsForAllClasses("123456", function(error, assignmentData) {
                         t.equal(assignmentData, expectedData, "correct data");
                         t.equal(assignmentData.length, 2, "correct length");
                         client.del("123456:testClass:assignment");
@@ -113,10 +113,3 @@ test("addResponse saves response key to a set of discussions", function(t) {
 
     });
 });
-
-
-
-
-
-
-var end;
