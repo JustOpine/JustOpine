@@ -18,4 +18,4 @@ This project is being built in full stack JavaScript, using Node.js and Hapi.js 
 
 ## Current Status
 
-JustOpine 1.0 has MVP due for release soon. The Node backend has been built, Redis integrated as the database, and the front-end fully built out in SASS. JustOpine 1.0 is now  The team is just working through some final touches for the MVP.
+JustOpine 1.0 is due for release soon. The Node backend has been built, Redis integrated as the database, and the front-end fully built out in SASS. The team is just working through some final additions to the MVP.

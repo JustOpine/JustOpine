@@ -61,7 +61,7 @@ test("getAssignment returns a stringified object with assignment info", function
     var testAssignment = {
         class: "testClass"
     };
-    client.hmset("123456:testClass:assignment", assignmentObject, function(err,data) {
+    client.hmset("123456:testClass:assignment", assignmentObject, function(err, data) {
         api.getAssignment("123456", "testClass", "testAssignment", function(err, assignmentData) {
             t.equal(assignmentData, testAssignment);
             client.del("123456:testClass:assignment");
@@ -74,7 +74,7 @@ test("getAssignmentsForOneClass returns an array of objects of correct length", 
     var testAssignment = {
         class: "testClass"
     };
-    client.hmset("123456:testClass:assignment", testAssignment, function(err,data) {
+    client.hmset("123456:testClass:assignment", testAssignment, function(err, data) {
         api.getAssignmentsForOneClass("123456", "testClass", function(err, assignmentData) {
             t.equal(assignmentData, testAssignment, "correct data");
             t.equal(assignmentData.length, 1, "correct length");
@@ -90,9 +90,9 @@ test("getAssignmentsForAllClasses returns an array of objects of correct length"
     };
     var expectedData = [{ }, { }];
     client.sadd("123456:class", "testClass", function(err, data) {
-        client.sadd("123456:class", "testClass2", function(err, data2) {
-            client.hmset("123456:testClass:assignment", assignmentObject, function(err, assignmentData) {
-                client.hmset("123456:testClass2:assignment", assignmentObject, function(err, assignmentData2) {
+        client.sadd("123456:class", "testClass2", function(err2, data2) {
+            client.hmset("123456:testClass:assignment", assignmentObject, function(err3, data3) {
+                client.hmset("123456:testClass2:assignment", assignmentObject, function(err4, data4) {
                     api.getAssignmentsForAllClasses("123456", function(err, assignmentData) {
                         t.equal(assignmentData, expectedData, "correct data");
                         t.equal(assignmentData.length, 2, "correct length");
