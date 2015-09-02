@@ -4,12 +4,12 @@
   "description": "Pupils opinion making platform",
   "main": "server.js",
   "scripts": {
-    "test": "node test/routes-tests.js && node test/redis-tests.js",
+    "test": "node test/routes-tests.js",
     "codeclimate": "CODECLIMATE_REPO_TOKEN=80007afecea8ad66d1605eeef438b7f3778952d9e9b2fdb378b4aed3363264f4 ./node_modules/codeclimate-test-reporter/bin/codeclimate.js < ./coverage/lcov.info",
     "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
     "start": "node server.js",
     "nodemon": "./node_modules/.bin/nodemon ./server.js",
-    "coverage": "istanbul cover test/routes-tests.js && istanbul cover test/redis-tests.js && ./node_modules/.bin/istanbul check-coverage --statements 10 --functions 10 --lines 10 --branches 10"
+    "coverage": "istanbul cover test/redis-tests.js && istanbul cover test/routes-tests.js && ./node_modules/.bin/istanbul check-coverage --statements 10 --functions 10 --lines 10 --branches 10"
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,6 @@
     "hapi": "^8.8.1",
     "hapi-auth-cookie": "^3.1.0",
     "inert": "^3.0.1",
-    "redis": "^0.12.1"
+    "redis": "^1.0.0"
   }
 }
