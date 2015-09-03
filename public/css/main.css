@@ -293,6 +293,16 @@ nav {
 
 .opinion-piece {
   min-height: 375px; }
+  .opinion-piece .opinion-piece-category {
+    background-color: #00BCD4;
+    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    letter-spacing: 2px;
+    margin: 0px 30px 10px 30px;
+    padding: 8px 17px; }
   .opinion-piece .opinion-piece-image {
     background-color: white;
     -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
@@ -309,7 +319,7 @@ nav {
   .opinion-piece .opinion-piece-text {
     font-size: 18px;
     line-height: 1.5;
-    padding: 30px; }
+    padding: 30px 30px 10px 30px; }
 
 .response-form, .student-response {
   background-color: white;
@@ -339,16 +349,15 @@ nav {
   padding: 5px; }
 
 @media (max-width: 700px) {
-  .category {
-    height: 100px; }
-
   .opinion-piece {
     height: initial; }
 
   .opinion-piece, .responses-container {
     padding: 5px; }
+    .opinion-piece .opinion-piece-category, .responses-container .opinion-piece-category {
+      margin: 0px 15px 15px 15px; }
     .opinion-piece .opinion-piece-text, .responses-container .opinion-piece-text {
-      padding: 5px; }
+      padding: 20px 5px 5px 5px; }
     .opinion-piece p, .responses-container p {
       padding: 5px; }
 

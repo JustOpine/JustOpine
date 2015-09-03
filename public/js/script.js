@@ -121,3 +121,11 @@ $('.threewords').keyup(function () {
         $(".threewords").css('color', '#1A1A1A');
     }
 });
+
+// registering line breaks in assignment text
+
+$(textarea).keyup(function(){
+    var value = $(this).val();
+    var contentAttr = $(this).attr('name');
+    $("." + contentAttr + "").html(value.replace(/\r?\n/g, "<br/><br/>"));
+})
