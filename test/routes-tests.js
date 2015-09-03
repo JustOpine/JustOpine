@@ -3,6 +3,8 @@ var server = require('../server.js');
 var Lab = require('lab');
 var lab = exports.lab = Lab.script();
 var Code = require('code');
+var client = require('../lib/db.js');
+var api = require('../lib/api.js');
 
 var describe = lab.describe;
 var it = lab.it;
@@ -32,82 +34,77 @@ it("Testing the new assignment page is sent when requested by authenticated user
     });
 });
 
-// it("Testing the pupil dashboard is sent when requested by authenticated user and statusCode is 200", function(done){
-//     server.inject({method: 'GET', url: '/dash2', credentials: {isTeacher : true}}, function (res) {
-//         assert.equal(res.statusCode, '200' );
-//         done();
-//         console.log("#pupil dashboard page loads correctly");
-//     });
-// });
+it("Testing the pupil dashboard is sent when requested by authenticated user and statusCode is 200", function(done){
+    server.inject({method: 'GET', url: '/dash2', credentials: {isTeacher : false}}, function (res) {
+        assert.equal(res.statusCode, '200' );
+        done();
+        console.log("#pupil dashboard page loads correctly");
+    });
+});
 
 it("Testing the teacher dashboard is sent when requested by authenticated user and statusCode is 200", function(done){
     server.inject({method: 'GET', url: '/dash1', credentials: {isTeacher : true}}, function (res) {
-        console.log(res);
         assert.equal(res.statusCode, '200' );
         done();
         console.log("#teacher dashboard page loads correctly");
     });
 });
 
-// it("Testing the pupil assignment page is sent when requested by authenticated user and statusCode is 200", function(done){
-//     server.inject({method: 'GET', url: '/assignment2', credentials: {isTeacher : true}}, function (res) {
-//         assert.equal(res.statusCode, '200' );
-//         done();
-//         console.log("#student assignment page loads correctly");
-//     });
-// });
-//
-// it("Testing the teacher assignment page is sent when requested by authenticated user and statusCode is 200", function(done){
-//     server.inject({method: 'GET', url: '/assignment1', credentials: {isTeacher : true}}, function (res) {
-//         assert.equal(res.statusCode, '200' );
-//         done();
-//         console.log("#teacher assignment page loads correctly");
-//     });
-// });
-//
-// it("Testing the classes is sent when requested by authenticated user and statusCode is 200", function(done){
-//     server.inject({method: 'GET', url: '/classes', credentials: {isTeacher : true}}, function (res) {
-//         assert.equal(res.statusCode, '200' );
-//         done();
-//         console.log("#classes page loads correctly");
-//     });
-// });
-//
+it("Testing the pupil assignment page is sent when requested by authenticated user and statusCode is 200", function(done){
+    server.inject({method: 'GET', url: '/assignment2', credentials: {isTeacher : true}}, function (res) {
+        assert.equal(res.statusCode, '200' );
+        done();
+        console.log("#student assignment page loads correctly");
+    });
+});
+
+it("Testing the teacher assignment page is sent when requested by authenticated user and statusCode is 200", function(done){
+    server.inject({method: 'GET', url: '/assignment1', credentials: {isTeacher : true}}, function (res) {
+        assert.equal(res.statusCode, '200' );
+        done();
+        console.log("#teacher assignment page loads correctly");
+    });
+});
+
+it("Testing the classes is sent when requested by authenticated user and statusCode is 200", function(done){
+    server.inject({method: 'GET', url: '/classes', credentials: {isTeacher : true}}, function (res) {
+        assert.equal(res.statusCode, '200' );
+        done();
+        console.log("#classes page loads correctly");
+    });
+});
+
+// TODO: make this test pass, there seems to be an issue even though res.StatusCode === 200
+
 // it("Testing the pupils list page is sent when requested by authenticated user and statusCode is 200", function(done){
-//     server.inject({method: 'GET', url: '/pupils?6K', credentials: {isTeacher : true}}, function (res) {
-//         assert.equal(res.statusCode, '200' );
-//         done();
-//         console.log("#pupils page loads correctly");
-//     });
-// });
-//
-// it("Testing the teacher registration page is sent when requested by authenticated user and statusCode is 200", function(done){
-//     server.inject({method: 'GET', url: '/registration', credentials: {isTeacher : true}}, function (res) {
-//         assert.equal(res.statusCode, '200' );
-//         done();
-//         console.log("#pupils page loads correctly");
-//     });
-// });
-//
-// it("Testing generic GET request to /static/{path*} works",
-// function(done){
-//     var options = {
-//         method: "GET",
-//         url: "/static/public/images/marbles.jpg",
-//         credentials: {isTeacher : true}
-//     };
-//     server.inject(options, function (res) {
-//         assert.equal(res.statusCode, '200' );
-//         done();
-//         console.log("#generic GET request to /static/{path*} works");
-//     });
+//     api.addClass("testTeacher", "testClass", function(err, data) {
+//         server.inject({method: 'GET', url: '/pupils?testClass', credentials: {isTeacher : true}}, function (res) {
+//             assert.equal(res.statusCode === 200, true);
+//             done();
+//             client.del("testTeacher:class");
+//             console.log("#pupils page loads correctly");
+//         });
+//     })
 // });
 
-// var header = res.headers['set-cookie'];
-// var cookie = header[0].match(/(?:[^\x00-\x20\(\)<>@\,;\:\\"\/\[\]\?\=\{\}\x7F]+)\s*=\s*(?:([^\x00-\x20\"\,\;\\\x7F]*))/);
-// server.inject({ method: 'GET', url: '/resource', headers: { cookie: 'special=' + cookie[1] } }, function (res) {
-//     expect(res.statusCode).to.equal(200);
-//     expect(res.headers['set-cookie']).to.not.exist();
-//     expect(res.result).to.equal('resource');
-//     done();
-// });
+it("Testing the teacher registration page is sent when requested by authenticated user and statusCode is 200", function(done){
+    server.inject({method: 'GET', url: '/registration', credentials: {isTeacher : true}}, function (res) {
+        assert.equal(res.statusCode, '200' );
+        done();
+        console.log("#pupils page loads correctly");
+    });
+});
+
+it("Testing generic GET request to /static/{path*} works",
+function(done){
+    var options = {
+        method: "GET",
+        url: "/static/public/images/marbles.jpg",
+        credentials: {isTeacher : true}
+    };
+    server.inject(options, function (res) {
+        assert.equal(res.statusCode, '200' );
+        done();
+        console.log("#generic GET request to /static/{path*} works");
+    });
+});
