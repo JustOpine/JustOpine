@@ -9,7 +9,7 @@
     "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
     "start": "node server.js",
     "nodemon": "./node_modules/.bin/nodemon ./server.js",
-    "coverage": "istanbul cover test/redis-tests.js && istanbul cover test/routes-tests.js && ./node_modules/.bin/istanbul check-coverage --statements 10 --functions 10 --lines 10 --branches 10"
+    "coverage": "istanbul cover test/*.js && ./node_modules/.bin/istanbul check-coverage --statements 10 --functions 10 --lines 10 --branches 10"
   },
   "repository": {
     "type": "git",

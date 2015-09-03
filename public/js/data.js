@@ -31,6 +31,7 @@ function getAssignmentInfo (className, assignmentID) {
 }
 
 function displayAssignmentInfo (assignment) {
+    $(".opinion-piece-category").html(assignment.category);
     $(".opinion-piece-image").html("<img src='" + assignment.image + "'>");
     $(".opinion-piece-text").html("<h2>" + assignment.title + "</h2>" + "<p>" + assignment.text + "</p>");
     $(".assignment-question").html("<p>" + assignment.question + "</p>");
