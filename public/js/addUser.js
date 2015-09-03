@@ -1,9 +1,9 @@
-$('form').unbind();
-$('form').submit(function(e){
+$('add-student-form').unbind();
+$('add-student-form').submit(function(e){
   var form = $(this).serialize();
   e.preventDefault();
   $.ajax({
-    url: $('form').attr('action'),
+    url: $('add-student-form').attr('action'),
     type: 'POST',
     data: form,
     success: function(className){
