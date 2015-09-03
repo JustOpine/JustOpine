@@ -24,9 +24,10 @@ test("database is running", function (t) {
 // });
 
 test("addClass adds to a list", function (t) {
-    api.addClass("123456", "testClass", function(err, data) {
+    var setKey = "123456:class";
+    api.addClass(setKey, "testClass", function(err, data) {
         client.smembers("123456:class", function(error, classData) {
-            t.equal(classData, ["testClass"], 'addClass is working');
+            t.deepEqual(classData, ["testClass"], 'addClass is working');
             client.del("123456:class");
             t.end();
         });
@@ -36,7 +37,7 @@ test("addClass adds to a list", function (t) {
 test("getClasses returns an array of the correct data and length", function(t) {
     client.sadd("123456:class", "testClass", function(err, data) {
         api.getClasses("123456", function(error, classData) {
-            t.equal(classData, ["testClass"], 'correct data comes out');
+            t.deepEqual(classData, ["testClass"], 'correct data comes out');
             t.equal(classData.length, 1, 'array is correct length');
             client.del("12345:class");
             t.end();
@@ -44,12 +45,13 @@ test("getClasses returns an array of the correct data and length", function(t) {
     });
 });
 
-test("addAssignment adds an assignment to a hash", function(t) {
+test.only("addAssignment adds an assignment to a hash", function(t) {
     var assignmentObject = {
         class: "testClass"
     };
     api.addAssignment("123456", assignmentObject, function(err, data) {
         client.hgetall("123456:testClass:assignment", function(error, assignmentData) {
+            console.log(">>>", assignmentData);
             t.equal(assignmentData.length, 1);
             client.del("123456:testClass:assignment");
             t.end();
