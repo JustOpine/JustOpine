@@ -39,3 +39,8 @@ env.json
 
 # Sass stuff
 /.sass-cache
+
+# for heroku
+/node_modules
+npm-debug.log
+/*.env
