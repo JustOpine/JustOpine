@@ -1,6 +1,10 @@
 // tests found in test/qunit/script-tests.js
 
 // landing page slide effects
+$(document).ready(function() {
+    $(document.body).addClass("fade-in");
+    console.log($("body"));
+});
 
 function slideEffect (direction) {
     if (direction === "right") {
