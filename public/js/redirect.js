@@ -7,6 +7,10 @@ $(document).ready(function(){
         setTimeout(function(){
             window.location.href = "/classes";
         }, 2700);
+    } else if (document.title.match(/Added teacher/)) {
+        setTimeout(function(){
+            window.location.href = "/registration";
+        }, 2700);
     }
 
 });
