@@ -40,7 +40,6 @@
   "dependencies": {
     "bcrypt": "^0.8.5",
     "dust": "^0.3.0",
-    "env2": "^2.0.2",
     "hapi": "^8.8.1",
     "hapi-auth-cookie": "^3.1.0",
     "inert": "^3.0.1",
