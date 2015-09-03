@@ -61,7 +61,7 @@ test("getAssignment returns a stringified object with assignment info", function
     var testAssignment = {
         class: "testClass"
     };
-    client.hmset("123456:testClass:assignment", assignmentObject, function(err, data) {
+    client.hmset("123456:testClass:assignment", testAssignment, function(err, data) {
         api.getAssignment("123456", "testClass", "testAssignment", function(error, assignmentData) {
             t.equal(assignmentData, testAssignment);
             client.del("123456:testClass:assignment");
