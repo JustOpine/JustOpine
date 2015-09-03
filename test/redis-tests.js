@@ -44,7 +44,7 @@ test("getClasses returns an array of the correct data and length", function(t) {
     });
 });
 
-test.only("addAssignment adds an assignment to a hash", function(t) {
+test("addAssignment adds an assignment to a hash", function(t) {
     var assignmentObject = {
         class: "testClass"
     };
@@ -84,12 +84,13 @@ test("getAssignmentsForOneClass returns an array of objects of correct length", 
     });
 });
 
-// test("getAssignmentsForOneClass returns an array of objects of correct length", function(t) {
+// test.only("getAssignmentsForOneClass returns an array of objects of correct length", function(t) {
 //     var testAssignment = {
 //         class: "testClass"
 //     };
-//     client.hmset("123456:testClass:assignment", testAssignment, function(err, data) {
+//     client.hmset("123456:testClass:assignment", JSON.stringify(testAssignment), function(err, data) {
 //         api.getAssignmentsForOneClass("123456", "testClass", function(error, assignmentData) {
+//             console.log(">>>", assignmentData);
 //             t.equal(assignmentData, testAssignment, "correct data");
 //             t.equal(assignmentData.length, 1, "correct length");
 //             client.del("123456:testClass:assignment");
