@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for lib/api.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">lib/api.js</span></h1>
+    <h2>
+        Statements: <span class="metric">2.03% <small>(3 / 148)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 64)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">0% <small>(0 / 40)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">2.03% <small>(3 / 148)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">lib/</a> &#187; api.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var bcrypt = require("bcrypt");
+var client = require("./db.js");
+&nbsp;
+module.exports = {
+&nbsp;
+    client: client,
+&nbsp;
+    addPerson: <span class="fstat-no" title="function not covered" >function (userInfo, callback) {</span>
+        // if id exists, skip generateID
+<span class="cstat-no" title="statement not covered" >        if (userInfo.userID){</span>
+<span class="cstat-no" title="statement not covered" >            this.encryptPassword(userInfo, userInfo.userID, callback);</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >           this.generateID(userInfo, <span class="fstat-no" title="function not covered" >function (err, id) {</span></span>
+<span class="cstat-no" title="statement not covered" >                if(err){</span>
+<span class="cstat-no" title="statement not covered" >                    callback(err, null);</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    this.encryptPassword(userInfo, id, callback);</span>
+                }
+            }.bind(this));
+        }
+    },
+&nbsp;
+    generateID: <span class="fstat-no" title="function not covered" >function (userInfo, callback) {</span>
+<span class="cstat-no" title="statement not covered" >        var id = Math.floor(100000 + Math.random() * 900000);</span>
+<span class="cstat-no" title="statement not covered" >        this.client.sismember("allUserIDs", id, <span class="fstat-no" title="function not covered" >function(err, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (err){</span>
+<span class="cstat-no" title="statement not covered" >                callback(err, null);</span>
+            } else <span class="cstat-no" title="statement not covered" >if (data === 1) { // if duplicate IDs</span>
+<span class="cstat-no" title="statement not covered" >                this.generateID(userInfo, callback);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                callback(null, id);</span>
+            }
+        }.bind(this));
+    },
+&nbsp;
+    encryptPassword: <span class="fstat-no" title="function not covered" >function (userInfo, id, callback) {</span>
+<span class="cstat-no" title="statement not covered" >        bcrypt.genSalt(10, <span class="fstat-no" title="function not covered" >function(err, salt) {</span></span>
+<span class="cstat-no" title="statement not covered" >            bcrypt.hash(userInfo.password, salt, <span class="fstat-no" title="function not covered" >function(err, passHash) {</span></span>
+<span class="cstat-no" title="statement not covered" >                this.store(userInfo, passHash, id, <span class="fstat-no" title="function not covered" >function(err, userInfo){</span></span>
+<span class="cstat-no" title="statement not covered" >                    if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                        callback(err, null);</span>
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        callback(null, userInfo);</span>
+                    }
+                });
+            }.bind(module.exports));
+        });
+    },
+&nbsp;
+    store: <span class="fstat-no" title="function not covered" >function (userInfo, passHash, id, callback) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var finalID = (userInfo.isTeacher ? id : userInfo.teacherID + ":" + userInfo.className + ":" + id);</span>
+<span class="cstat-no" title="statement not covered" >        userInfo.userID = finalID;</span>
+<span class="cstat-no" title="statement not covered" >        userInfo.password = passHash;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        var userInformation = JSON.stringify(userInfo);</span>
+<span class="cstat-no" title="statement not covered" >        var loginInformation = JSON.stringify({"userID": finalID, "password": passHash});</span>
+<span class="cstat-no" title="statement not covered" >        var key2;</span>
+<span class="cstat-no" title="statement not covered" >        if(userInfo.className){</span>
+<span class="cstat-no" title="statement not covered" >          key2 = userInfo.teacherID + ":" + userInfo.className + ":pupil";</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          key2 = "teacher";</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        client.sadd("allUserIDs", id, <span class="fstat-no" title="function not covered" >function(err, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if(err){</span>
+<span class="cstat-no" title="statement not covered" >                callback("error in sadd: " + err, null);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                client.hmset("login", userInfo.username, loginInformation, <span class="fstat-no" title="function not covered" >function(err, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if(err){</span>
+<span class="cstat-no" title="statement not covered" >                        callback("error in hset with login: " + err, null);</span>
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        delete userInfo.password;</span>
+<span class="cstat-no" title="statement not covered" >                        client.hmset(key2, finalID, userInformation, <span class="fstat-no" title="function not covered" >function(err, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                            if(err){</span>
+<span class="cstat-no" title="statement not covered" >                                callback("error in hset with key2: " + err, null);</span>
+                            } else {
+<span class="cstat-no" title="statement not covered" >                                callback(null, "UI" + JSON.stringify(userInfo));</span>
+                            }
+                        });
+                    }
+                });
+            }
+        });
+    },
+&nbsp;
+    getPupils: <span class="fstat-no" title="function not covered" >function(teacherID, className, callback) {</span>
+<span class="cstat-no" title="statement not covered" >        var pupilsArray = [];</span>
+<span class="cstat-no" title="statement not covered" >        var hashKey = teacherID + ":" + className + ":" + "pupil";</span>
+<span class="cstat-no" title="statement not covered" >        this.client.hgetall(hashKey, <span class="fstat-no" title="function not covered" >function(err, pupils) {</span></span>
+<span class="cstat-no" title="statement not covered" >            for (var key in pupils) {</span>
+<span class="cstat-no" title="statement not covered" >                pupilsArray.push(pupils[key]);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            var alphabeticalBySurname = pupilsArray.map(<span class="fstat-no" title="function not covered" >function(pupilObj) {</span></span>
+<span class="cstat-no" title="statement not covered" >                return JSON.parse(pupilObj);</span>
+            })
+            .sort(<span class="fstat-no" title="function not covered" >function(a, b) {</span>
+<span class="cstat-no" title="statement not covered" >  				if (a.surname &lt; b.surname) {</span>
+<span class="cstat-no" title="statement not covered" >                    return -1;</span>
+                } else <span class="cstat-no" title="statement not covered" >if (a.surname &gt; b.surname) {</span>
+<span class="cstat-no" title="statement not covered" >                    return 1;</span>
+                } else {
+<span class="cstat-no" title="statement not covered" >                    return 0;</span>
+                }
+  			});
+<span class="cstat-no" title="statement not covered" >            callback(null, alphabeticalBySurname);</span>
+        });
+    },
+&nbsp;
+    addClass: <span class="fstat-no" title="function not covered" >function(teacherID, className, callback) {</span>
+<span class="cstat-no" title="statement not covered" >        var setKey = teacherID + ":" + "class";</span>
+<span class="cstat-no" title="statement not covered" >        this.client.sadd(setKey, className, <span class="fstat-no" title="function not covered" >function(err, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if(err){</span>
+<span class="cstat-no" title="statement not covered" >                callback(err, null);</span>
+            } else <span class="cstat-no" title="statement not covered" >if (data === 0){</span>
+<span class="cstat-no" title="statement not covered" >                callback(null, false);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                callback(null, true);</span>
+            }
+        }.bind(this));
+&nbsp;
+    },
+&nbsp;
+    getClasses: <span class="fstat-no" title="function not covered" >function(teacherID, callback) {</span>
+<span class="cstat-no" title="statement not covered" >        var setKey = teacherID + ":" + "class";</span>
+<span class="cstat-no" title="statement not covered" >        client.smembers(setKey, <span class="fstat-no" title="function not covered" >function(err, classes) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (err){</span>
+<span class="cstat-no" title="statement not covered" >                callback(err, null);</span>
+            } else <span class="cstat-no" title="statement not covered" >if (!classes || classes.length === 0){</span>
+<span class="cstat-no" title="statement not covered" >                callback(null, classes);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                var sortedClasses = classes.sort(<span class="fstat-no" title="function not covered" >function(a, b) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if(parseInt(a.match(/\d+/)[0]) &gt; parseInt(b.match(/\d+/)[0]) ) {</span>
+<span class="cstat-no" title="statement not covered" >                        return 1;</span>
+                    } else <span class="cstat-no" title="statement not covered" >if (parseInt(a.match(/\d+/)[0]) &gt; parseInt(b.match(/\d+/)[0]) ) {</span>
+<span class="cstat-no" title="statement not covered" >                        return -1;</span>
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        return 0;</span>
+                    }
+                });
+<span class="cstat-no" title="statement not covered" >                callback(null, sortedClasses);</span>
+            }
+        });
+    },
+&nbsp;
+    addAssignment: <span class="fstat-no" title="function not covered" >function (teacherID, newAssignmentInfo, callback) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.generateID(newAssignmentInfo, <span class="fstat-no" title="function not covered" >function (err, assignmentID) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if(err){</span>
+<span class="cstat-no" title="statement not covered" >                callback(err, null);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                var hashKey = teacherID + ":" + newAssignmentInfo.class + ":assignment";</span>
+<span class="cstat-no" title="statement not covered" >                newAssignmentInfo.assignmentID = assignmentID;</span>
+<span class="cstat-no" title="statement not covered" >                newAssignmentInfo.timestamp = new Date();</span>
+<span class="cstat-no" title="statement not covered" >                client.hmset(hashKey, assignmentID, JSON.stringify(newAssignmentInfo), <span class="fstat-no" title="function not covered" >function(err, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if(err){</span>
+<span class="cstat-no" title="statement not covered" >                        callback(err, null);</span>
+                    } else <span class="cstat-no" title="statement not covered" >if (data === 0){</span>
+<span class="cstat-no" title="statement not covered" >                        callback(null, false);</span>
+                    } else { // data === 1
+<span class="cstat-no" title="statement not covered" >                        callback(null, true);</span>
+                    }
+                });
+&nbsp;
+            }
+        });
+    },
+&nbsp;
+    getAssignment: <span class="fstat-no" title="function not covered" >function(teacherID, className, assignmentID, callback) {</span>
+<span class="cstat-no" title="statement not covered" >        var hashKey = teacherID + ":" + className + ":" + "assignment";</span>
+<span class="cstat-no" title="statement not covered" >        this.client.hgetall(hashKey, <span class="fstat-no" title="function not covered" >function(err, allClassAssignments) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var parsedAssignment = JSON.parse(allClassAssignments[assignmentID]);</span>
+<span class="cstat-no" title="statement not covered" >            callback(null, parsedAssignment);</span>
+        });
+    },
+&nbsp;
+    getAssignmentsForOneClass: <span class="fstat-no" title="function not covered" >function (teacherID, className, callback) {</span>
+<span class="cstat-no" title="statement not covered" >        var hashKey = teacherID + ":" + className + ":assignment";</span>
+<span class="cstat-no" title="statement not covered" >        var responseData = [];</span>
+<span class="cstat-no" title="statement not covered" >        client.hgetall(hashKey, <span class="fstat-no" title="function not covered" >function(err, assignments) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                callback(err, null);</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            for (var assignmentID in assignments){</span>
+<span class="cstat-no" title="statement not covered" >                var parsedData = JSON.parse(assignments[assignmentID]);</span>
+<span class="cstat-no" title="statement not covered" >                responseData.push(parsedData);</span>
+            }
+<span class="cstat-no" title="statement not covered" >            callback(null, responseData);</span>
+        });
+    },
+&nbsp;
+    getAssignmentsForAllClasses: <span class="fstat-no" title="function not covered" >function (teacherID, callback) {</span>
+<span class="cstat-no" title="statement not covered" >        this.getClasses(teacherID, <span class="fstat-no" title="function not covered" >function(err, classesArray) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                callback(err, null);</span>
+            } else <span class="cstat-no" title="statement not covered" >if (!classesArray || classesArray.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >                callback(null, classesArray);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                var assignments = [];</span>
+<span class="cstat-no" title="statement not covered" >                var counter = 0;</span>
+<span class="cstat-no" title="statement not covered" >                classesArray.forEach(<span class="fstat-no" title="function not covered" >function(e) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    var hashKey = teacherID + ":" + e + ":" + "assignment";</span>
+<span class="cstat-no" title="statement not covered" >                    return client.hgetall(hashKey, <span class="fstat-no" title="function not covered" >function(err, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                        for (var assignmentID in data){</span>
+<span class="cstat-no" title="statement not covered" >                            var parsedData = JSON.parse(data[assignmentID]);</span>
+<span class="cstat-no" title="statement not covered" >                            assignments.push(parsedData);</span>
+                        }
+<span class="cstat-no" title="statement not covered" >                        if(++counter === classesArray.length) {</span>
+<span class="cstat-no" title="statement not covered" >                            callback(null, assignments);</span>
+                        }
+                    });
+                });
+            }
+        });
+    },
+&nbsp;
+    addResponse: <span class="fstat-no" title="function not covered" >function (timestamp, className, assignmentID, response, teacherID, userName, callback) {</span>
+<span class="cstat-no" title="statement not covered" >        var responseID;</span>
+<span class="cstat-no" title="statement not covered" >        var setKey;</span>
+<span class="cstat-no" title="statement not covered" >        var hashKey;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.generateID(response, <span class="fstat-no" title="function not covered" >function (err, id) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if(err){</span>
+<span class="cstat-no" title="statement not covered" >                callback(err, null);</span>
+            } else {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                responseID = id;</span>
+<span class="cstat-no" title="statement not covered" >                setKey = teacherID + ":" + className + ":" + assignmentID + ":reply";</span>
+<span class="cstat-no" title="statement not covered" >                hashKey = teacherID + ":" + className + ":" + assignmentID  + ":" + responseID;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                client.zadd(setKey, Number(timestamp), hashKey, <span class="fstat-no" title="function not covered" >function(err, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                    if(err){</span>
+<span class="cstat-no" title="statement not covered" >                        callback(err, null);</span>
+                    } else <span class="cstat-no" title="statement not covered" >if (data === 0){</span>
+<span class="cstat-no" title="statement not covered" >                        callback(null, false);</span>
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        callback(null, true);</span>
+                    }
+                });
+&nbsp;
+                // create discussion hash with assignment info
+<span class="cstat-no" title="statement not covered" >                client.hset(hashKey, "key", hashKey);</span>
+<span class="cstat-no" title="statement not covered" >                client.hset(hashKey, "time", timestamp);</span>
+<span class="cstat-no" title="statement not covered" >                client.hset(hashKey, "teacher", teacherID);</span>
+<span class="cstat-no" title="statement not covered" >                client.hset(hashKey, "name", userName);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                for (var objKey in response) {</span>
+<span class="cstat-no" title="statement not covered" >                    client.hset(hashKey, objKey, response[objKey]);</span>
+                }
+            }
+        });
+    },
+&nbsp;
+    getResponseKeys: <span class="fstat-no" title="function not covered" >function (className, assignmentID, teacherID, callback) {</span>
+<span class="cstat-no" title="statement not covered" >        var setKey = teacherID + ":" + className + ":" + assignmentID + ":reply";</span>
+<span class="cstat-no" title="statement not covered" >        client.zrange(setKey, 0, -1, <span class="fstat-no" title="function not covered" >function(err, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            if(err){</span>
+<span class="cstat-no" title="statement not covered" >                callback(err, null);</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                callback(null, data);</span>
+            }
+        });
+    },
+&nbsp;
+    getResponseInfo: <span class="fstat-no" title="function not covered" >function (responseKeys, callback) {</span>
+<span class="cstat-no" title="statement not covered" >        var responseData = [];</span>
+<span class="cstat-no" title="statement not covered" >        var counter = 0;</span>
+<span class="cstat-no" title="statement not covered" >        responseKeys.forEach(<span class="fstat-no" title="function not covered" >function(responseKey) {</span></span>
+<span class="cstat-no" title="statement not covered" >            return client.hgetall(responseKey, <span class="fstat-no" title="function not covered" >function(err, data) {</span></span>
+<span class="cstat-no" title="statement not covered" >                responseData.push(data);</span>
+<span class="cstat-no" title="statement not covered" >                if(++counter === responseKeys.length) {</span>
+<span class="cstat-no" title="statement not covered" >                    callback(null, responseData);</span>
+                }
+            });
+        });
+    },
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Sep 03 2015 16:06:26 GMT+0100 (BST)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
