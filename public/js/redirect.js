@@ -6,10 +6,14 @@ $(document).ready(function(){
     } else if (document.title.match(/No classes registered/)) {
         setTimeout(function(){
             window.location.href = "/classes";
+        }, 3300);
+    } else if (document.title.match(/Added teacher/)) {
+        setTimeout(function(){
+            window.location.href = "/registration";
         }, 2700);
     }
 
 });
-$('go-back').click(function() {
+$('.go-back').click(function() {
     window.history.back();
 });

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0"/>
+        <title>Admin Dashboard</title>
+        <link rel="stylesheet" href="/static/public/css/main.css">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link rel='shortcut icon' href='/static/public/images/favicon.ico' type='image/x-icon'/ >
+    </head>
+    <body>
+        <nav class="box-shadow">
+            <a href="/dash3">
+                <img class="nav-logo" src="../static/public/images/logo2.png">
+            </a>
+            <div class="nav-component-div">
+                <a href="/dash3">
+                    <button class="nav-component">Dashboard</button>
+                </a>
+                <a href="/classes">
+                    <button class="nav-component">Class Lists</button>
+                </a>
+                <a href="/new">
+                    <button class="nav-component">Set Assignment</button>
+                </a>
+                <a href="/registration">
+                    <button class="nav-component">Add Teacher</button>
+                </a>
+                <button class="nav-component logout">Logout</button>
+            </div>
+            <img class="hamburger" src="../static/public/images/hamburger.png">
+        </nav>
+        <div class="mobile-nav-component-div">
+            <a href="/dash3">
+                <p>Dashboard</p>
+            </a>
+            <a href="/classes">
+                <p>Class Lists</p>
+            </a>
+            <a href="/new">
+                <p>Set Assignment</p>
+            </a>
+            <a href="/registration">
+                <p>Add Teacher</p>
+            </a>
+            <p class="logout">Logout</p>
+        </div>
+        <header>
+            <h2>My Assignments</h2>
+        </header>
+        <main>
+            <div class="dashboard-container">
+                <div id='appendhere'>
+            </div>
+        </main>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="/static/public/js/data.js" charset="utf-8"></script>
+        <script src="/static/public/js/script.js" charset="utf-8"></script>
+    </body>
+</html>

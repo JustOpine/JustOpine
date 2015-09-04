@@ -49,9 +49,9 @@
                     <h2>Your Response</h2>
                     <form method="POST" action="/api/addResponse">
                         <p>Describe your opinion in three words.</p>
-                        <input class="threewords" type="text" name="threeWords">
+                        <input class="threewords" type="text" name="threeWords" spellcheck="false">
                         <div class="assignment-question"></div>
-                        <textarea name="response"></textarea>
+                        <textarea name="response" spellcheck="false"></textarea>
                         <input type="submit">
                     </form>
                 </div>
@@ -60,5 +60,6 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="/static/public/js/data.js"></script>
         <script src="/static/public/js/script.js"></script>
+        <script src="/static/public/js/moment-with-locales.min.js"></script>
     </body>
 </html>
