@@ -122,7 +122,7 @@ test("getAssignment returns a parsed object with assignment info", function(t) {
 // });
 
 // test("addResponse saves response key to a set of discussions", function(t) {
-//     var timestamp = new Date();
+//     var timestamp = Date.now();
 //     var testReponse = {};
 //     api.addResponse(timestamp, "testClass", "testAssignment", testReponse, "123456", "Test Name", function(err, data) {
 //
