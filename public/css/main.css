@@ -74,6 +74,9 @@ nav {
   float: right;
   padding-top: 10px; }
 
+.add-teacher-button {
+  text-align: center; }
+
 .nav-component {
   background-color: #B2EBF2;
   display: inline-block;
