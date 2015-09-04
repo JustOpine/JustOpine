@@ -24,7 +24,10 @@ main {
   background-color: #E0F7FA;
   padding: 20px 100px; }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+  .special-header img, .special-header p {
+    display: none; }
+
   main {
     padding: 20px 30px; } }
 button, input[type="submit"] {
@@ -271,10 +274,46 @@ nav {
   -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
-  margin: 20px; }
-  .dashboard-assignment p, .dashboard-assignment img {
+  margin: 20px;
+  min-height: 300px; }
+  .dashboard-assignment .assignment-icon {
+    display: none;
+    height: 25px;
+    padding-right: 10px;
+    width: 25px; }
+  .dashboard-assignment .dashboard-image {
+    background-color: white;
+    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
     display: inline-block;
+    float: left;
+    margin: 30px 20px 10px 30px;
     padding: 10px; }
+  .dashboard-assignment img {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    width: 200px; }
+  .dashboard-assignment h2 {
+    display: inline-block;
+    padding: 35px 30px 10px 0;
+    text-align: left; }
+  .dashboard-assignment p {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px 30px 10px 20px; }
+  .dashboard-assignment .tag {
+    background-color: #00BCD4;
+    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    letter-spacing: 2px;
+    margin: 10px 0 30px 20px;
+    padding: 8px 17px; }
 
 .dashboard-assignment:hover {
   -webkit-transform: scale(1.01);
@@ -283,6 +322,30 @@ nav {
   -o-transform: scale(1.01);
   transform: scale(1.01); }
 
+@media (max-width: 880px) {
+  .dashboard-assignment {
+    min-height: 100px; }
+    .dashboard-assignment .assignment-icon {
+      display: inline-block; }
+    .dashboard-assignment .dashboard-image {
+      display: none; }
+    .dashboard-assignment h2 {
+      display: block;
+      font-size: 20px;
+      margin: 0;
+      padding: 10px; }
+    .dashboard-assignment p {
+      display: none; }
+    .dashboard-assignment .tag {
+      font-size: 14px;
+      margin: 10px 10px 20px 10px; }
+
+  .dashboard-assignment:hover {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
 .opinion-piece, .responses-container {
   background-color: white;
   -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
@@ -296,6 +359,16 @@ nav {
 
 .opinion-piece {
   min-height: 375px; }
+  .opinion-piece .opinion-piece-category {
+    background-color: #00BCD4;
+    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    letter-spacing: 2px;
+    margin: 0px 30px 10px 30px;
+    padding: 8px 17px; }
   .opinion-piece .opinion-piece-image {
     background-color: white;
     -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
@@ -303,16 +376,18 @@ nav {
     -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
     box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
     float: right;
-    margin: 30px;
+    margin: 30px 30px 15px 30px;
     padding: 10px; }
   .opinion-piece img {
     float: right;
     height: 300px;
+    object-fit: cover;
+    object-position: center;
     width: 300px; }
   .opinion-piece .opinion-piece-text {
     font-size: 18px;
     line-height: 1.5;
-    padding: 30px; }
+    padding: 30px 30px 10px 30px; }
 
 .response-form, .student-response {
   background-color: white;
@@ -324,8 +399,9 @@ nav {
   padding: 30px; }
   .response-form img, .student-response img {
     display: inline-block;
-    height: 50px;
-    width: 50px; }
+    height: 40px;
+    padding-right: 10px;
+    width: 40px; }
   .response-form h2, .student-response h2 {
     display: inline-block; }
 
@@ -341,17 +417,16 @@ nav {
   height: 150px;
   padding: 5px; }
 
-@media (max-width: 700px) {
-  .category {
-    height: 100px; }
-
+@media (max-width: 880px) {
   .opinion-piece {
     height: initial; }
 
   .opinion-piece, .responses-container {
     padding: 5px; }
+    .opinion-piece .opinion-piece-category, .responses-container .opinion-piece-category {
+      margin: 0px 15px 15px 15px; }
     .opinion-piece .opinion-piece-text, .responses-container .opinion-piece-text {
-      padding: 5px; }
+      padding: 20px 5px 5px 5px; }
     .opinion-piece p, .responses-container p {
       padding: 5px; }
 

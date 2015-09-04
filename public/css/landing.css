@@ -94,6 +94,9 @@ body {
       padding: 5px; }
 
 @media (max-width: 700px) {
+  .landing-back-icon {
+    display: none; }
+
   .landing-container {
     width: 200px; } }
 
