@@ -52,6 +52,8 @@ function displayChatLogs (chatLogs) {
     }
 }
 
+
 function parseDate(timestampAsString){
-    return moment(parseInt(timestampAsString, 10)).format("dddd, Do MMMM YYYY h:mm a");
+    var responseTime = parseInt(timestampAsString, 10);
+    return moment(responseTime).calendar();
 }
