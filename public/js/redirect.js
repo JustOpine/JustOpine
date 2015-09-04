@@ -11,10 +11,6 @@ $(document).ready(function(){
         setTimeout(function(){
             window.location.href = "/registration";
         }, 2700);
-    // } else if (document.title.match(/Incomplete response/)) {
-    //     setTimeout(function(){
-    //         window.history.back();
-    //     }, 2700);
     }
 
 });
