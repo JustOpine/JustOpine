@@ -45,8 +45,15 @@ function getChatLogs () {
 }
 
 function displayChatLogs (chatLogs) {
-    for (var i = 0; i < chatLogs.length; i++) {
-        var div = "<div class='student-response'>" + "<img src='/static/public/images/face.png'>" + "<h2>" + chatLogs[i].name + "</h2>" + "<p class= 'post-time'>" + chatLogs[i].time.toString().split(' ').splice(0, 5).join(' ') + "</p><p><i>" + chatLogs[i].threeWords + "</i></p><p>" + chatLogs[i].response + "</p></div>";
+    var chatLogsLength = chatLogs.length;
+    for (var i = 0; i < chatLogsLength; i++) {
+        var div = "<div class='student-response'>" + "<img src='/static/public/images/face.png'>" + "<h2>" + chatLogs[i].name + "</h2>" + "<p class= 'post-time'>" + parseDate(chatLogs[i].time) + "</p><p><i>" + chatLogs[i].threeWords + "</i></p><p>" + chatLogs[i].response + "</p></div>";
         $(".responses-container").append(div);
     }
+}
+
+
+function parseDate(timestampAsString){
+    var responseTime = parseInt(timestampAsString, 10);
+    return moment(responseTime).calendar();
 }
