@@ -23,8 +23,7 @@ test("database is running", function (t) {
 // });
 
 test("addClass adds to a list", function (t) {
-    var setKey = "123456:class";
-    api.addClass(setKey, "testClass", function(err, data) {
+    api.addClass("123456", "testClass", function(err, data) {
         client.smembers("123456:class", function(error, classData) {
             t.deepEqual(classData, ["testClass"], 'addClass is working');
             client.del("123456:class");
