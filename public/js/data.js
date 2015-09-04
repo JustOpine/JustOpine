@@ -39,16 +39,14 @@ function displayAssignmentInfo (assignment) {
 function getChatLogs () {
     $.ajax('/api/getResponses', {
         success: function(data){
-            console.log(data);
             displayChatLogs(data);
         }
     });
 }
 
 function displayChatLogs (chatLogs) {
-    console.log(chatLogs);
     for (var i = 0; i < chatLogs.length; i++) {
-        var div = "<div class='student-response'>" + "<img src='/static/public/images/face.png'>" + "<h2>" + chatLogs[i].name + "</h2>" + "<p class= 'post-time'>" +  "</p><p><i>" + chatLogs[i].threeWords + "</i></p><p>" + chatLogs[i].response + "</p></div>";
+        var div = "<div class='student-response'>" + "<img src='/static/public/images/face.png'>" + "<h2>" + chatLogs[i].name + "</h2>" + "<p class= 'post-time'>" + parseDate(chatLogs[i].time) + "</p><p><i>" + chatLogs[i].threeWords + "</i></p><p>" + chatLogs[i].response + "</p></div>";
         $(".responses-container").append(div);
     }
 }
