@@ -10,7 +10,7 @@
 
 JustOpine is a tool to get students talking about current events. Through the platform, teachers are able to assign opinion pieces for students to respond to and discuss.
 
-The tech team for this project is based at [Founders & Coders London](www.foundersandcoders.com).
+The tech team for this project is based at [Founders & Coders London](http://www.foundersandcoders.com/).
 
 ## Tech Stack
 
