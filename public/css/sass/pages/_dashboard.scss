@@ -9,7 +9,20 @@
     @include box-shadow(1px 2px 10px -1px rgba(0,0,0,0.25));
     margin: 20px;
 
-    p, img {
+    .dashboard-image {
+        background-color: white;
+        @include box-shadow(1px 2px 10px -1px rgba(0,0,0,0.25));
+        display: inline-block;
+        margin: 30px;
+        padding: 10px;
+    }
+
+    img {
+        height: 300px;
+        width: 300px;
+    }
+
+    p {
         display: inline-block;
         padding: 10px;
     }
