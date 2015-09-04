@@ -120,3 +120,5 @@ $('.threewords').keyup(function () {
         $(".threewords").css('color', '#1A1A1A');
     }
 });
+
+// registering line breaks in assignment text
