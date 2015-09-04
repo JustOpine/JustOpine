@@ -268,7 +268,8 @@ nav {
   -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
-  margin: 20px; }
+  margin: 20px;
+  min-height: 300px; }
   .dashboard-assignment .dashboard-image {
     background-color: white;
     -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
@@ -276,14 +277,31 @@ nav {
     -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
     box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
     display: inline-block;
+    float: left;
     margin: 30px;
     padding: 10px; }
   .dashboard-assignment img {
-    height: 300px;
-    width: 300px; }
-  .dashboard-assignment p {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    width: 200px; }
+  .dashboard-assignment h2 {
     display: inline-block;
-    padding: 10px; }
+    padding: 35px 30px 10px 0; }
+  .dashboard-assignment p {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px 30px 10px 0; }
+  .dashboard-assignment .tag {
+    background-color: #00BCD4;
+    -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    letter-spacing: 2px;
+    margin: 10px 10px 30px 0;
+    padding: 8px 17px; }
 
 .dashboard-assignment:hover {
   -webkit-transform: scale(1.01);
@@ -327,6 +345,8 @@ nav {
   .opinion-piece img {
     float: right;
     height: 300px;
+    object-fit: cover;
+    object-position: center;
     width: 300px; }
   .opinion-piece .opinion-piece-text {
     font-size: 18px;
