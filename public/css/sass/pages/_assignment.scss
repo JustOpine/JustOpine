@@ -53,8 +53,9 @@
 
     img {
         display: inline-block;
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        padding-right: 10px;
+        width: 40px;
     }
 
     h2 {
@@ -83,7 +84,7 @@
 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 880px) {
 
     .opinion-piece {
         height: initial;

@@ -24,7 +24,10 @@ main {
   background-color: #E0F7FA;
   padding: 20px 100px; }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
+  .special-header img, .special-header p {
+    display: none; }
+
   main {
     padding: 20px 30px; } }
 button, input[type="submit"] {
@@ -393,8 +396,9 @@ nav {
   padding: 30px; }
   .response-form img, .student-response img {
     display: inline-block;
-    height: 50px;
-    width: 50px; }
+    height: 40px;
+    padding-right: 10px;
+    width: 40px; }
   .response-form h2, .student-response h2 {
     display: inline-block; }
 
@@ -410,7 +414,7 @@ nav {
   height: 150px;
   padding: 5px; }
 
-@media (max-width: 700px) {
+@media (max-width: 880px) {
   .opinion-piece {
     height: initial; }
 
