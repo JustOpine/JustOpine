@@ -47,13 +47,15 @@ function getChatLogs () {
 
 function displayChatLogs (chatLogs) {
     var chatLogsLength = chatLogs.length;
+    var date = parseDate(chatLogs[i].time);
     for (var i = 0; i < chatLogsLength; i++) {
-        var div = "<div class='student-response'>" + "<h2><img src='/static/public/images/face.png'>" + chatLogs[i].name + "</h2>" + "<p class= 'post-time'>" + parseDate(chatLogs[i].time) + "</p><p><i>" + chatLogs[i].threeWords + "</i></p><p>" + chatLogs[i].response + "</p></div>";
+        var div = "<div class='student-response'>" + "<h2><img src='/static/public/images/face.png'>" + chatLogs[i].name + "</h2>" + "<p class= 'post-time'>" + date + "</p><p><i>" + chatLogs[i].threeWords + "</i></p><p>" + chatLogs[i].response + "</p></div>";
         $(".responses-container").append(div);
     }
 }
 
+
 function parseDate(timestampAsString){
-    console.log(timestampAsString)
-    return moment(parseInt(timestampAsString, 10)).format("dddd, Do MMMM YYYY h:mm a");
+    var responseTime = parseInt(timestampAsString, 10);
+    return moment(responseTime).calendar();
 }
