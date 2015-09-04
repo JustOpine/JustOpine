@@ -54,7 +54,6 @@ body {
     }
 
     .landing-container-firstview * {
-        // margin: 0 auto;
         position: relative;
         text-align: center;
     }
@@ -89,6 +88,10 @@ body {
 }
 
 @media (max-width: 700px) {
+
+    .landing-back-icon {
+        display: none;
+    }
 
     .landing-container {
         width: 200px;
