@@ -40,6 +40,7 @@ function displayAssignmentInfo (assignment) {
 function getChatLogs () {
     $.ajax('/api/getResponses', {
         success: function(data){
+            console.log(data);
             displayChatLogs(data);
         }
     });
