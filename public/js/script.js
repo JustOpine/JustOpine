@@ -121,4 +121,22 @@ $('.threewords').keyup(function () {
     }
 });
 
+// limiting response input to 250 words
+
+$(".response").on("keyup", function(){
+    var wordCount;
+    if(this.value.match(/\S+/g)){
+        wordCount = this.value.match(/\S+/g).length;
+    }
+    var wordCountColour = (wordCount >= 240 ? "red" : "black");
+    $(".words-left").css({"color": wordCountColour });
+    if(wordCount > 250){
+        // split the string, truncate after 250th element, join back up with spaces
+        var trimmed = $(this).val().split(/\s+/, 250).join(" ");
+        $(this).val(trimmed + " ");
+    } else {
+        $(".words-left").text(250 - (wordCount || 0));
+    }
+});
+
 // registering line breaks in assignment text
