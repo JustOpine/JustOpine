@@ -128,7 +128,7 @@ $(".response").on("keyup", function(){
     if(this.value.match(/\S+/g)){
         wordCount = this.value.match(/\S+/g).length;
     }
-    var wordCountColour = (wordCount >= 240 ? "red" : "black");
+    var wordCountColour = (wordCount >= 240 ? "red" : "#1A1A1A");
     $(".words-left").css({"color": wordCountColour });
     if(wordCount > 250){
         // split the string, truncate after 250th element, join back up with spaces
