@@ -2,27 +2,20 @@
 $(document).ready(function() {
 
     $(".response").on("keyup", function(){
-        console.log(!!this.value.match(/\S+/g));
         var wordCount;
         if(this.value.match(/\S+/g)){
             wordCount = this.value.match(/\S+/g).length;
         }
-        if(wordCount >= 240){
-            $(".words-left").css({"color":"red"});
-        } else {
-            $(".words-left").css({"color":"black"});
-        }
+        var wordCountColour = (wordCount >= 240 ? "red" : "black");
+        $(".words-left").css({"color": wordCountColour });
         if(wordCount > 250){
-            // split the string as far as the first 250 words
-            // join back up with spaces
+            // split the string, truncate after 250th element, join back up with spaces
             var trimmed = $(this).val().split(/\s+/, 250).join(" ");
             $(this).val(trimmed + " ");
-
         } else {
             $(".words-left").text(250 - (wordCount || 0));
         }
     });
-
 
     var url = window.location.href.split('/')[3];
      if (url.match(/pupils/) !== null) {
