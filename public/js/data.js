@@ -1,5 +1,29 @@
 
 $(document).ready(function() {
+
+    $(".response").on("keyup", function(){
+        console.log(!!this.value.match(/\S+/g));
+        var wordCount;
+        if(this.value.match(/\S+/g)){
+            wordCount = this.value.match(/\S+/g).length;
+        }
+        if(wordCount >= 240){
+            $(".words-left").css({"color":"red"});
+        } else {
+            $(".words-left").css({"color":"black"});
+        }
+        if(wordCount > 250){
+            // split the string as far as the first 250 words
+            // join back up with spaces
+            var trimmed = $(this).val().split(/\s+/, 250).join(" ");
+            $(this).val(trimmed + " ");
+
+        } else {
+            $(".words-left").text(250 - (wordCount || 0));
+        }
+    });
+
+
     var url = window.location.href.split('/')[3];
      if (url.match(/pupils/) !== null) {
         var className = window.location.href.split('?')[1];
@@ -34,13 +58,12 @@ function displayAssignmentInfo (assignment) {
     $(".opinion-piece-category").html(assignment.category);
     $(".opinion-piece-image").html("<img src='" + assignment.image + "'>");
     $(".opinion-piece-text").html("<h2>" + assignment.title + "</h2>" + "<p>" + assignment.text + "</p>");
-    $(".assignment-question").html("<p>" + assignment.question + "</p>");
+    $(".assignment-question").html("<p class='question'>" + assignment.question + "    <em>(Maximum of 250 words)</em></p>");
 }
 
 function getChatLogs () {
     $.ajax('/api/getResponses', {
         success: function(data){
-            console.log(data);
             displayChatLogs(data);
         }
     });
