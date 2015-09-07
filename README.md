@@ -1,4 +1,4 @@
-[![Code Climate](https://david-dm.org/JustOpine/justopine.svg
+[![david-dm](https://david-dm.org/JustOpine/justopine.svg
 )](https://david-dm.org/)
 [![bitHound Score](https://www.bithound.io/github/JustOpine/JustOpine/badges/score.svg)](https://www.bithound.io/github/JustOpine/JustOpine)
 ![Build Status](https://travis-ci.org/foundersandcoders/JustOpine.svg?branch=master)
