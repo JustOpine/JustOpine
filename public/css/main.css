@@ -204,9 +204,7 @@ nav {
 
 @media (max-width: 900px) {
   .classes-container {
-    padding: 5px; }
-    .classes-container button {
-      margin: 30px 35px 40px 0; }
+    padding: 20px 10px; }
 
   .class-div {
     margin: 20px; } }
@@ -267,12 +265,10 @@ nav {
       display: block;
       margin: 15px auto 0 auto; }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .student-list {
     font-size: 16px;
-    padding: 5px; }
-    .student-list button {
-      margin: 30px 35px 10px 0; }
+    padding: 20px 10px; }
 
   .student-icon {
     display: none; } }
