@@ -180,6 +180,7 @@ nav {
   margin: 0 auto;
   padding: 20px;
   position: absolute;
+  text-align: center;
   right: 30%;
   top: 40%;
   width: 500px; }
@@ -202,6 +203,11 @@ nav {
       margin: 15px auto 0 auto; }
 
 @media (max-width: 900px) {
+  .classes-container {
+    padding: 5px; }
+    .classes-container button {
+      margin: 30px 35px 40px 0; }
+
   .class-div {
     margin: 20px; } }
 .student-list {
