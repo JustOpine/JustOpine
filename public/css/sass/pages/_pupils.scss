@@ -65,3 +65,19 @@
         }
     }
 }
+
+@media (max-width: 400px) {
+
+    .student-list {
+        font-size: 16px;
+        padding: 5px;
+
+        button {
+            margin: 30px 35px 10px 0;
+        }
+    }
+
+    .student-icon {
+        display: none;
+    }
+}
