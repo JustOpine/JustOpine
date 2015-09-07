@@ -51,6 +51,7 @@
     margin: 0 auto;
     padding: 20px;
     position: absolute;
+    text-align: center;
     right: 30%;
     top: 40%;
     width: 500px;
@@ -82,6 +83,11 @@
 }
 
 @media (max-width: 900px) {
+
+    .classes-container {
+        padding: 20px 10px;
+
+    }
 
     .class-div {
         margin: 20px;
