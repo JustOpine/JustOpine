@@ -77,9 +77,6 @@ nav {
   float: right;
   padding-top: 10px; }
 
-.add-teacher-button {
-  text-align: center; }
-
 .nav-component {
   background-color: #B2EBF2;
   display: inline-block;
@@ -297,7 +294,7 @@ nav {
     object-position: center;
     width: 200px; }
   .dashboard-assignment h2 {
-    display: inline-block;
+    display: block;
     padding: 35px 30px 10px 0;
     text-align: left; }
   .dashboard-assignment p {
