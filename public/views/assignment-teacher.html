@@ -60,9 +60,10 @@
                     <h2>Your Response</h2>
                     <form method="POST" action="/api/addResponse">
                         <p>Describe your opinion in three words.</p>
-                        <input class="threewords" type="text" name="threeWords">
+                        <input class="threewords" type="text" name="threeWords" spellcheck="false">
                         <div class="assignment-question"></div>
-                        <textarea name="response"></textarea>
+                        <textarea name="response" class="response" spellcheck="false"></textarea>
+                        <div class="word-count">Words left: <span class="words-left">250</span></div>
                         <input type="submit">
                     </form>
                 </div>
