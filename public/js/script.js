@@ -107,17 +107,35 @@ $(".exit-button-student").on('click', function() {
 // limiting threewords input to three words
 
 $('.threewords').keyup(function () {
+    console.log("here");
     var input = this.value.split(" ").filter(function(e) {
         return e !== ' ';
     }).filter(function(e) {
         return e !== '';
 
     });
-    if (input.length > 3){
-        $(".threewords").css('color', 'red');
+    var splitCondition = ($(this).val().match(/\s+/) ? /\s+/ : ",");
+    if (this.value.split(splitCondition).length > 3) {
+        var trimmed = $(this).val().split(splitCondition, 3).join(" ");
+        $(this).val(trimmed + " ");
     }
-    if (this.value.split(" ").length < 4) {
-        $(".threewords").css('color', '#1A1A1A');
+});
+
+// limiting response input to 250 words
+
+$(".response").on("keyup", function(){
+    var wordCount;
+    if(this.value.match(/\S+/g)){
+        wordCount = this.value.match(/\S+/g).length;
+    }
+    var wordCountColour = (wordCount >= 240 ? "red" : "#1A1A1A");
+    $(".words-left").css({"color": wordCountColour });
+    if(wordCount > 250){
+        // split the string, truncate after 250th element, join back up with spaces
+        var trimmed = $(this).val().split(/\s+/, 250).join(" ");
+        $(this).val(trimmed + " ");
+    } else {
+        $(".words-left").text(250 - (wordCount || 0));
     }
 });
 
