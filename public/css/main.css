@@ -261,6 +261,15 @@ nav {
       display: block;
       margin: 15px auto 0 auto; }
 
+@media (max-width: 400px) {
+  .student-list {
+    font-size: 16px;
+    padding: 5px; }
+    .student-list button {
+      margin: 30px 35px 10px 0; }
+
+  .student-icon {
+    display: none; } }
 .dashboard-container {
   background-color: white;
   -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
@@ -323,7 +332,7 @@ nav {
   -o-transform: scale(1.01);
   transform: scale(1.01); }
 
-@media (max-width: 1030px) {
+@media (max-width: 1050px) {
   .dashboard-assignment h2 {
     font-size: 20px;
     padding-bottom: 5px; }
