@@ -113,11 +113,9 @@ $('.threewords').keyup(function () {
         return e !== '';
 
     });
-    if (input.length > 3){
-        $(".threewords").css('color', 'red');
-    }
-    if (this.value.split(" ").length < 4) {
-        $(".threewords").css('color', '#1A1A1A');
+    if (this.value.split(/\s+/).length > 3) {
+        var trimmed = $(this).val().split(/\s+/, 3).join(" ");
+        $(this).val(trimmed + " ");
     }
 });
 
