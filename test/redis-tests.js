@@ -1,6 +1,7 @@
 var test = require("tape");
 var client = require('../lib/db.js');
 var api = require('../lib/api.js');
+var server = require('../server.js');
 
 test("database is running", function (t) {
     client.set('test', 'testData');
@@ -128,3 +129,14 @@ test("getAssignment returns a parsed object with assignment info", function(t) {
 //
 //     });
 // });
+
+
+// extra routes test migrated from routes-tests.js
+// TODO: migrate it back to its proper file
+
+test("pupilDash", function(t) {
+    server.inject({method: 'GET', url: '/dash2', credentials: {isTeacher : false}}, function (res) {
+        t.equal(res.statusCode === 200, true, "pupil dashboard page loads correctly");
+        t.end();
+    });
+});
