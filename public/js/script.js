@@ -107,14 +107,16 @@ $(".exit-button-student").on('click', function() {
 // limiting threewords input to three words
 
 $('.threewords').keyup(function () {
+    console.log("here");
     var input = this.value.split(" ").filter(function(e) {
         return e !== ' ';
     }).filter(function(e) {
         return e !== '';
 
     });
-    if (this.value.split(/\s+/).length > 3) {
-        var trimmed = $(this).val().split(/\s+/, 3).join(" ");
+    var splitCondition = ($(this).val().match(/\s+/) ? /\s+/ : ",");
+    if (this.value.split(splitCondition).length > 3) {
+        var trimmed = $(this).val().split(splitCondition, 3).join(" ");
         $(this).val(trimmed + " ");
     }
 });
