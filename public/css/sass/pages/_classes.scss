@@ -6,15 +6,17 @@
     padding: 40px;
     text-align: center;
 
+    .add-class-button-container {
+        display: block;
+        margin-bottom: 40px;
+    }
+
     button {
         background-color: $turquoise2;
-        display: block;
+        display: inline-block;
         float: right;
     }
 
-    div:first-of-type {
-        margin-top: 40px;
-    }
 }
 
 .class-div {
@@ -76,5 +78,12 @@
             display: block;
             margin: 15px auto 0 auto;
         }
+    }
+}
+
+@media (max-width: 900px) {
+
+    .class-div {
+        margin: 20px;
     }
 }
