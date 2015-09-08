@@ -367,6 +367,9 @@ nav {
     margin-bottom: 35px;
     margin-top: 5px; } }
 @media (max-width: 880px) {
+  .dashboard-container {
+    padding: 10px; }
+
   .dashboard-assignment {
     min-height: 100px;
     padding: 0 0 10px 0; }
