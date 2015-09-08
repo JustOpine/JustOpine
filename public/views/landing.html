@@ -10,25 +10,31 @@
         <link rel='shortcut icon' href='/static/public/images/favicon.ico' type='image/x-icon'/ >
     </head>
     <body>
-        <div class="landing-container">
-            <form class="landing-container-secondview" action="/login" method="POST" autocomplete="off">
-                <img class="back-icon landing-back-icon" src="../static/public/images/back.png">
-                <h3>Enter your username and password to log in.</h3>
-                <span class="input-container">
-                    <p>Username:</p>
-                    <input type="text" name="username" class="sign-in-input">
-                </span>
-                <span class="input-container">
-                    <p>Password:</p>
-                    <input type="password" name="password" class="sign-in-input">
-                </span>
-                <input type="submit" class="sign-in-submit" value="SUBMIT">
-            </form>
-            <div class="landing-container-firstview">
-                <img class="landing-logo" src="../static/public/images/logo1.png">
-                <h2 class="tag-line">A space to express your opinions.</h2>
-                <button class="sign-in">SIGN IN</button>
+        <div class="landing-top">
+            <div class="landing-container">
+                <form class="landing-container-secondview" action="/login" method="POST" autocomplete="off">
+                    <img class="back-icon landing-back-icon" src="../static/public/images/back.png">
+                    <h3>Enter your username and password to log in.</h3>
+                    <span class="input-container">
+                        <p>Username:</p>
+                        <input type="text" name="username" class="sign-in-input">
+                    </span>
+                    <span class="input-container">
+                        <p>Password:</p>
+                        <input type="password" name="password" class="sign-in-input">
+                    </span>
+                    <input type="submit" class="sign-in-submit" value="SUBMIT">
+                </form>
+                <div class="landing-container-firstview">
+                    <img class="landing-logo" src="../static/public/images/logo1.png">
+                    <h2 class="tag-line">A space to express your opinions.</h2>
+                    <button class="sign-in">SIGN IN</button>
+                </div>
             </div>
+        </div>
+        <div class="landing-info">
+            <p>JustOpine is a web application for schools that allows pupils to discuss various topics, moderated by their teachers. Here, pupils are afforded the opportunity to ask questions independently to enable them to interrogate, contest and have a response to what they read.</p>
+            <p>The vision of JustOpine is to broaden the cultural reference point of all pupils, irrespective of socioeconomic background, through providing them with accessible, high quality information in the form of a supplementary educational tool.</p>
         </div>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>

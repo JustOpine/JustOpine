@@ -8,30 +8,44 @@
         <link rel='shortcut icon' href='/static/public/images/favicon.ico' type='image/x-icon'/ >
     </head>
     <body>
-        <h1>REGISTER A TEACHER</h1>
-        <form action="/api/addTeacher" method="POST" autocomplete="off">
-            <input type="text" name="userID" id="userID" placeholder="userID">
-            <input type="text" name="firstname" id="firstname" placeholder="firstname">
-            <input type="text" name="surname" id="surname" placeholder="surname">
-            <input type="text" name="username" id="username" placeholder="username">
-            <input type="text" name="password" id="password" placeholder="password">
-                isTeacher
-            <input type="checkbox" name="isTeacher" id="isTeacher" value="true">    
-            <input type="submit" name="Submit" value="Submit">
-        </form>
-        <div class="student-list">
-            <h3>Registered teachers</h3>
-            <table>
-              <tr>
-                <th></th>
-                <th>Surname</th>
-                <th>First Name</th>
-                <th>Level</th>
-              </tr>
-              <div id='appendhere'></div>
-            </table>
+        <div></div>
+        <nav class="box-shadow">
+            <a href="/dash1">
+                <img class="nav-logo" src="/static/public/images/logo2.png">
+            </a>
+            <div class="nav-component-div">
+            </div>
+        </nav>
+        <header>
+            <h2>Teacher Registration</h2>
+        </header>
+        <main>
+            <div class="student-list">
+                <button class="add-student">+ Add Teacher</button>
+                <table>
+                  <tr>
+                    <th></th>
+                    <th>Surname</th>
+                    <th>First Name</th>
+                    <th>Level</th>
+                  </tr>
+                  <div id='appendhere'></div>
+                </table>
+            </div>
+        </main>
+        <div class="add-student-lightbox">
+            <img class="exit-button-student" src="../static/public/images/exit.png">
+            <form action="/api/addTeacher" method="POST" autocomplete="off">
+                <input type="text" name="firstname" id="firstname" placeholder="firstname">
+                <input type="text" name="surname" id="surname" placeholder="surname">
+                <input type="text" name="username" id="username" placeholder="username">
+                <input type="text" name="password" id="password" placeholder="password">
+                <p>Is a Teacher:</p>
+                <input type="checkbox" name="isTeacher" id="isTeacher" value="true">
+                <input type="submit" name="Submit" value="Submit">
+            </form>
         </div>
-
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="/static/public/js/script.js"></script>
     </body>
 </html>
