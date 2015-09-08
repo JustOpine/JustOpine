@@ -1,7 +1,5 @@
 [![david-dm](https://david-dm.org/JustOpine/justopine.svg)](https://david-dm.org/)
 [![bitHound Score](https://www.bithound.io/github/JustOpine/JustOpine/badges/score.svg)](https://www.bithound.io/github/JustOpine/JustOpine)
-![Build Status](https://travis-ci.org/foundersandcoders/JustOpine.svg?branch=master)
-[![Test Coverage](https://codeclimate.com/github/foundersandcoders/JustOpine/badges/coverage.svg)](https://codeclimate.com/github/foundersandcoders/JustOpine/coverage)
 [![Code Climate](https://codeclimate.com/github/foundersandcoders/JustOpine/badges/gpa.svg)](https://codeclimate.com/github/foundersandcoders/JustOpine)
 [![Codecrystal](https://img.shields.io/badge/code-crystal-5CB3FF.svg)](http://codecrystal.herokuapp.com/crystalise/justopine/justopine/master)
 
