@@ -4,6 +4,7 @@ button, input[type="submit"] {
     font-size: 14px;
     letter-spacing: 2px;
     padding: 8px 17px;
+    -webkit-appearance: none;
 }
 
 button:hover, input[type="submit"]:hover {
