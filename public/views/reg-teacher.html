@@ -2,25 +2,36 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>register</title>
+        <title>Register a teacher</title>
+        <link rel="stylesheet" href="/static/public/css/main.css">
+        <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic" rel="stylesheet" type="text/css">
         <link rel='shortcut icon' href='/static/public/images/favicon.ico' type='image/x-icon'/ >
     </head>
     <body>
         <h1>REGISTER A TEACHER</h1>
-        <form action="/api/addTeacher" method="POST">
+        <form action="/api/addTeacher" method="POST" autocomplete="off">
             <input type="text" name="userID" id="userID" placeholder="userID">
             <input type="text" name="firstname" id="firstname" placeholder="firstname">
             <input type="text" name="surname" id="surname" placeholder="surname">
             <input type="text" name="username" id="username" placeholder="username">
             <input type="text" name="password" id="password" placeholder="password">
                 isTeacher
-            <input type="checkbox" name="isTeacher" id="isTeacher" value="true">
-                isAdmin
-            <input type="checkbox" name="isAdmin" id="isAdmin" value="true">
+            <input type="checkbox" name="isTeacher" id="isTeacher" value="true">    
             <input type="submit" name="Submit" value="Submit">
         </form>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="/static/public/js/addUser.js" charset="utf-8"></script>
+        <div class="student-list">
+            <h3>Registered teachers</h3>
+            <table>
+              <tr>
+                <th></th>
+                <th>Surname</th>
+                <th>First Name</th>
+                <th>Level</th>
+              </tr>
+              <div id='appendhere'></div>
+            </table>
+        </div>
 
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     </body>
 </html>
