@@ -6,7 +6,8 @@ button, input[type="submit"] {
   box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   font-size: 14px;
   letter-spacing: 2px;
-  padding: 8px 17px; }
+  padding: 8px 17px;
+  -webkit-appearance: none; }
 
 button:hover, input[type="submit"]:hover {
   cursor: pointer;
@@ -32,17 +33,19 @@ a {
   text-decoration: none; }
 
 body {
+  color: #1A1A1A;
+  height: 100%;
+  margin: 0; }
+
+.landing-top {
   background-attachment: fixed;
   background-image: url("../../../static/public/images/marbles.jpg");
   background-position: center center;
   background-size: cover;
-  color: #1A1A1A;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1.4s ease-in-out; }
-
-.fade-in {
-  opacity: 1; }
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  padding: 50px; }
 
 .landing-back-icon {
   text-align: left; }
@@ -58,8 +61,8 @@ body {
   box-shadow: 3px 5px 20px -1px rgba(0, 0, 0, 0.52);
   height: 250px;
   margin: 100px auto 100px auto;
-  overflow: hidden;
   padding: 50px;
+  overflow: hidden;
   width: 500px; }
   .landing-container .landing-logo {
     height: auto;
@@ -93,11 +96,24 @@ body {
       margin: 10px auto;
       padding: 5px; }
 
+.landing-info {
+  background-color: #E0F7FA;
+  font-size: 18px;
+  line-height: 1.5;
+  padding: 50px 100px;
+  text-align: center; }
+
 @media (max-width: 700px) {
   .landing-back-icon {
     display: none; }
 
   .landing-container {
-    width: 200px; } }
+    margin: 50px auto 50px auto;
+    width: 200px; }
+
+  .landing-info {
+    line-height: 1.5;
+    padding: 50px 35px;
+    text-align: center; } }
 
 /*# sourceMappingURL=landing.css.map */

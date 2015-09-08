@@ -1,6 +1,6 @@
 {
   "name": "JustOpine",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Pupils opinion making platform",
   "main": "server.js",
   "scripts": {

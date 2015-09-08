@@ -4,18 +4,20 @@
 @import '../components/fonts';
 
 body {
+    color: $fontgrey;
+    height: 100%;
+    margin: 0;
+}
+
+.landing-top {
     background-attachment: fixed;
     background-image: url('../../../static/public/images/marbles.jpg');
     background-position: center center;
     background-size: cover;
-    color: $fontgrey;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1.4s ease-in-out;
-}
-
-.fade-in {
-    opacity: 1;
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0;
+    padding: 50px;
 }
 
 .landing-back-icon {
@@ -31,9 +33,8 @@ body {
     @include box-shadow(3px 5px 20px -1px rgba(0,0,0,0.52));
     height: 250px;
     margin: 100px auto 100px auto;
-    overflow: hidden;
     padding: 50px;
-    // position: absolute;
+    overflow: hidden;
     width: 500px;
 
     .landing-logo {
@@ -87,6 +88,14 @@ body {
     }
 }
 
+.landing-info {
+    background-color: $turquoise4;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 50px 100px;
+    text-align: center;
+}
+
 @media (max-width: 700px) {
 
     .landing-back-icon {
@@ -94,6 +103,13 @@ body {
     }
 
     .landing-container {
+        margin: 50px auto 50px auto;
         width: 200px;
+    }
+
+    .landing-info {
+        line-height: 1.5;
+        padding: 50px 35px;
+        text-align: center;
     }
 }
