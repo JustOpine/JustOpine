@@ -138,5 +138,3 @@ $(".response").on("keyup", function(){
         $(".words-left").text(250 - (wordCount || 0));
     }
 });
-
-// registering line breaks in assignment text
