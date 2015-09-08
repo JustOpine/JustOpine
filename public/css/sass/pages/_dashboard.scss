@@ -88,6 +88,7 @@
     .dashboard-assignment {
 
         min-height: 100px;
+        padding: 0 0 10px 0;
 
         .assignment-icon {
             display: inline-block;
@@ -99,7 +100,7 @@
 
         h2 {
             display: block;
-            font-size: 20px;
+            font-size: 18px;
             margin: 0;
             padding: 10px;
         }
@@ -108,8 +109,8 @@
         }
 
         .tag {
-            font-size: 14px;
-            margin: 10px 10px 20px 10px;
+            font-size: 12px;
+            margin: 0 0 0 10px;
         }
     }
 
