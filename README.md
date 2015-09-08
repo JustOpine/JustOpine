@@ -1,5 +1,4 @@
-[![Code Climate](https://david-dm.org/JustOpine/justopine.svg
-)](https://david-dm.org/)
+[![david-dm](https://david-dm.org/JustOpine/justopine.svg)](https://david-dm.org/)
 [![bitHound Score](https://www.bithound.io/github/JustOpine/JustOpine/badges/score.svg)](https://www.bithound.io/github/JustOpine/JustOpine)
 ![Build Status](https://travis-ci.org/foundersandcoders/JustOpine.svg?branch=master)
 [![Test Coverage](https://codeclimate.com/github/foundersandcoders/JustOpine/badges/coverage.svg)](https://codeclimate.com/github/foundersandcoders/JustOpine/coverage)

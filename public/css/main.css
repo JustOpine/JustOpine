@@ -29,7 +29,7 @@ main {
     display: none; }
 
   main {
-    padding: 20px 30px; } }
+    padding: 20px 0; } }
 button, input[type="submit"] {
   border: none;
   -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
@@ -38,7 +38,8 @@ button, input[type="submit"] {
   box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   font-size: 14px;
   letter-spacing: 2px;
-  padding: 8px 17px; }
+  padding: 8px 17px;
+  -webkit-appearance: none; }
 
 button:hover, input[type="submit"]:hover {
   cursor: pointer;
@@ -133,12 +134,13 @@ nav {
   margin: 20px auto;
   padding: 40px;
   text-align: center; }
+  .classes-container .add-class-button-container {
+    display: block;
+    margin-bottom: 40px; }
   .classes-container button {
     background-color: #26C6DA;
-    display: block;
+    display: inline-block;
     float: right; }
-  .classes-container div:first-of-type {
-    margin-top: 40px; }
 
 .class-div {
   background-color: #E0F7FA;
@@ -174,14 +176,15 @@ nav {
   -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   display: none;
-  height: 200px;
+  max-height: 200px;
   left: 30%;
   margin: 0 auto;
   padding: 20px;
   position: absolute;
+  text-align: center;
   right: 30%;
-  top: 40%;
-  width: 500px; }
+  top: 30%;
+  max-width: 500px; }
   .add-class-lightbox img {
     cursor: pointer;
     float: right;
@@ -200,6 +203,20 @@ nav {
       display: block;
       margin: 15px auto 0 auto; }
 
+@media (max-width: 900px) {
+  .add-class-lightbox {
+    left: 10%;
+    right: 10%; }
+
+  .classes-container {
+    padding: 20px 10px; }
+
+  .class-div {
+    margin: 20px; } }
+@media (max-width: 500px) {
+  .add-class-lightbox {
+    left: 0%;
+    right: 0%; } }
 .student-list {
   background-color: white;
   -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
@@ -230,14 +247,14 @@ nav {
   -ms-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
   display: none;
-  height: 320px;
+  max-height: 500px;
   left: 30%;
   margin: 0 auto;
   padding: 20px;
   position: absolute;
   right: 30%;
-  top: 40%;
-  width: 500px; }
+  top: 30%;
+  max-width: 600px; }
   .add-student-lightbox img {
     cursor: pointer;
     float: right;
@@ -249,7 +266,7 @@ nav {
     text-align: center; }
     .add-student-lightbox form p, .add-student-lightbox form input[type="text"], .add-student-lightbox form input[type="password"] {
       display: inline-block;
-      font-size: 18px;
+      font-size: 16px;
       margin: 5px;
       padding: 5px; }
     .add-student-lightbox form input[type="submit"] {
@@ -257,6 +274,24 @@ nav {
       display: block;
       margin: 15px auto 0 auto; }
 
+@media (max-width: 1000px) {
+  .add-student-lightbox {
+    left: 10%;
+    right: 10%; }
+    .add-student-lightbox p, .add-student-lightbox input[type="text"], .add-student-lightbox input[type="password"] {
+      font-size: 10px; } }
+@media (max-width: 500px) {
+  .add-student-lightbox {
+    left: 0%;
+    top: 20%;
+    right: 0%; }
+
+  .student-list {
+    font-size: 16px;
+    padding: 20px 10px; }
+
+  .student-icon {
+    display: none; } }
 .dashboard-container {
   background-color: white;
   -webkit-box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
@@ -289,10 +324,10 @@ nav {
     margin: 30px 20px 10px 30px;
     padding: 10px; }
   .dashboard-assignment img {
-    height: 200px;
+    height: 220px;
     object-fit: cover;
     object-position: center;
-    width: 200px; }
+    width: 220px; }
   .dashboard-assignment h2 {
     display: block;
     padding: 35px 30px 10px 0;
@@ -309,7 +344,7 @@ nav {
     box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, 0.25);
     display: inline-block;
     letter-spacing: 2px;
-    margin: 10px 0 30px 20px;
+    margin: 10px 10px 30px 0px;
     padding: 8px 17px; }
 
 .dashboard-assignment:hover {
@@ -319,23 +354,36 @@ nav {
   -o-transform: scale(1.01);
   transform: scale(1.01); }
 
+@media (max-width: 1050px) {
+  .dashboard-assignment h2 {
+    font-size: 20px;
+    padding-bottom: 5px; }
+  .dashboard-assignment p {
+    font-size: 14px;
+    padding-bottom: 5px;
+    padding-top: 5px; }
+  .dashboard-assignment .tag {
+    font-size: 14px;
+    margin-bottom: 35px;
+    margin-top: 5px; } }
 @media (max-width: 880px) {
   .dashboard-assignment {
-    min-height: 100px; }
+    min-height: 100px;
+    padding: 0 0 10px 0; }
     .dashboard-assignment .assignment-icon {
       display: inline-block; }
     .dashboard-assignment .dashboard-image {
       display: none; }
     .dashboard-assignment h2 {
       display: block;
-      font-size: 20px;
+      font-size: 18px;
       margin: 0;
       padding: 10px; }
     .dashboard-assignment p {
       display: none; }
     .dashboard-assignment .tag {
-      font-size: 14px;
-      margin: 10px 10px 20px 10px; }
+      font-size: 12px;
+      margin: 0 0 0 10px; }
 
   .dashboard-assignment:hover {
     -webkit-transform: scale(1);
