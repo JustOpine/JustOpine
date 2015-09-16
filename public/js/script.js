@@ -104,7 +104,6 @@ $(".exit-button-student").on('click', function() {
 // limiting threewords input to three words
 
 $('.threewords').keyup(function () {
-    console.log("here");
     var input = this.value.split(" ").filter(function(e) {
         return e !== ' ';
     }).filter(function(e) {
