@@ -38,7 +38,7 @@ env.json
 .DS_Store
 
 # Sass stuff
-public/css/.sass-cache/
+/public/css/.sass-cache/
 
 # for heroku
 node_modules/
