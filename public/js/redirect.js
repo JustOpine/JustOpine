@@ -11,7 +11,6 @@ $(document).ready(function(){
             window.location.href = "/registration";
         }, 2700);
     }
-
 });
 $('.go-back').click(function() {
     window.history.back();
